@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+const templates = await getCollection('templates');
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Templates | GPT Prompt Engine</title>
+</head>
+<body>
+  <main style="max-width:780px;margin:0 auto;padding:3rem 1.5rem;">
+    <h1>All Templates</h1>
+    {templates.length === 0 && <p>No templates yet. Check back soon!</p>}
+    <ul>
+      {templates.map(t => (
+        <li>
+          <a href={`/templates/${t.id}`}>{t.data.title}</a>
+          <p>{t.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  </main>
+</body>
+</html>
