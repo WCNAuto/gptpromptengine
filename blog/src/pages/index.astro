@@ -73,7 +73,7 @@ const professions = [...new Set(allContent.map(p => p.data.profession))];
       <h2>Latest Resources</h2>
       <div class='grid'>
         {allContent.slice(0, 12).map(post => (
-          <a href={`/${post.collection}/${post.slug}`} class='card'>
+          <a href={`/${post.collection}/${post.id}`} class='card'>
             <span class='type-badge'>{post.data.contentType}</span>
             <h3>{post.data.title}</h3>
             <p class='meta'>{post.data.profession}</p>
