@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+const workflows = await getCollection('workflows');
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Workflows | GPT Prompt Engine</title>
+</head>
+<body>
+  <main style="max-width:780px;margin:0 auto;padding:3rem 1.5rem;">
+    <h1>All Workflows</h1>
+    {workflows.length === 0 && <p>No workflows yet. Check back soon!</p>}
+    <ul>
+      {workflows.map(w => (
+        <li>
+          <a href={`/workflows/${w.id}`}>{w.data.title}</a>
+          <p>{w.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  </main>
+</body>
+</html>
