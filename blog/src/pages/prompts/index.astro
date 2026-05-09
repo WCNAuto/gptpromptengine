@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+const prompts = await getCollection('prompts');
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prompts | GPT Prompt Engine</title>
+</head>
+<body>
+  <main style="max-width:780px;margin:0 auto;padding:3rem 1.5rem;">
+    <h1>All Prompts</h1>
+    <ul>
+      {prompts.map(p => (
+        <li>
+          <a href={`/prompts/${p.id}`}>{p.data.title}</a>
+          <p>{p.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  </main>
+</body>
+</html>
