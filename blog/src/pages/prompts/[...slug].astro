@@ -1,11 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+
 export async function getStaticPaths() {
   const posts = await getCollection('prompts');
   return posts.map(post => ({ params: { slug: post.id }, props: post }));
 }
+
 const post = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);  // ← changed from post.render()
 ---
 <!DOCTYPE html>
 <html lang='en'>
