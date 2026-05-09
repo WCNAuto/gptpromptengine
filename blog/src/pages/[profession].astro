@@ -1,0 +1,116 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const prompts = await getCollection('prompts');
+  const workflows = await getCollection('workflows');
+  const templates = await getCollection('templates');
+  const allContent = [...prompts, ...workflows, ...templates];
+
+  // Get all unique professions
+  const professions = [...new Set(allContent.map(p => p.data.profession))];
+
+  return professions.map(profession => ({
+    params: { 
+      profession: profession.toLowerCase().replace(/\s+/g, '-') 
+    },
+    props: { 
+      profession,
+      items: allContent.filter(p => p.data.profession === profession)
+    }
+  }));
+}
+
+const { profession, items } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{profession} AI Resources | GPT Prompt Engine</title>
+  <meta name="description" content={`Free AI prompts, workflows and templates for ${profession}`} />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:-apple-system,system-ui,sans-serif; color:#1a1a2e; background:#f8fafc; }
+    header { background:white; border-bottom:1px solid #e5e7eb; padding:1rem 2rem; }
+    nav { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+    .logo { font-weight:800; font-size:1.3rem; text-decoration:none; color:#1a1a2e; }
+    .nav-links a { margin-left:1.5rem; text-decoration:none; color:#6b7280; font-size:0.9rem; }
+    .hero { max-width:1100px; margin:0 auto; padding:3rem 2rem 2rem; }
+    .hero h1 { font-size:2rem; font-weight:800; }
+    .hero p { margin-top:0.5rem; color:#6b7280; }
+    .back { display:inline-block; margin-top:1rem; font-size:0.9rem; color:#2563eb; text-decoration:none; }
+    .filters { max-width:1100px; margin:0 auto; padding:0 2rem 1.5rem; display:flex; gap:0.5rem; }
+    .filter-btn { padding:6px 16px; border-radius:20px; border:1px solid #e5e7eb;
+      background:white; font-size:0.85rem; cursor:pointer; color:#6b7280; text-decoration:none; }
+    .filter-btn.active { background:#2563eb; color:white; border-color:#2563eb; }
+    section { max-width:1100px; margin:0 auto; padding:0 2rem 3rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem; }
+    .card { display:block; background:white; border:1px solid #e5e7eb;
+      border-radius:8px; padding:1rem; text-decoration:none; color:inherit; }
+    .card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.08); }
+    .card h3 { font-size:0.95rem; margin:0.5rem 0; line-height:1.4; }
+    .card .meta { font-size:0.8rem; color:#9ca3af; }
+    .type-badge { font-size:0.7rem; font-weight:600; text-transform:uppercase;
+      letter-spacing:0.05em; padding:2px 8px; border-radius:4px; }
+    .badge-prompt { background:#f0f7ff; color:#2563eb; }
+    .badge-workflow { background:#f0fdf4; color:#16a34a; }
+    .badge-template { background:#fdf4ff; color:#9333ea; }
+    .empty { color:#9ca3af; padding:2rem 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">GPT Prompt Engine</a>
+      <div class="nav-links">
+        <a href="/prompts">Prompts</a>
+        <a href="/workflows">Workflows</a>
+        <a href="/templates">Templates</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <a href="/" class="back">← All Professions</a>
+      <h1>AI Resources for {profession}</h1>
+      <p>{items.length} resource{items.length !== 1 ? 's' : ''} available</p>
+    </div>
+
+    <!-- Filter tabs by content type -->
+    <div class="filters">
+      <a href={`/${profession.toLowerCase().replace(/\s+/g, '-')}`} class="filter-btn active">
+        All ({items.length})
+      </a>
+      {['prompt','workflow','template'].map(type => {
+        const count = items.filter(i => i.data.contentType === type).length;
+        return count > 0 ? (
+          <a href={`/${profession.toLowerCase().replace(/\s+/g, '-')}?type=${type}`} class="filter-btn">
+            {type.charAt(0).toUpperCase() + type.slice(1)}s ({count})
+          </a>
+        ) : null;
+      })}
+    </div>
+
+    <section>
+      {items.length === 0 ? (
+        <p class="empty">No resources yet for this profession. Check back soon!</p>
+      ) : (
+        <div class="grid">
+          {items.map(post => (
+            <a href={`/${post.collection}/${post.id}`} class="card">
+              <span class={`type-badge badge-${post.data.contentType}`}>
+                {post.data.contentType}
+              </span>
+              <h3>{post.data.title}</h3>
+              <p class="meta">{post.data.category}</p>
+            </a>
+          ))}
+        </div>
+      )}
+    </section>
+  </main>
+</body>
+</html>
