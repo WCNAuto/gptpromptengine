@@ -1,0 +1,3 @@
+User-agent: *       
+Allow: /            
+Sitemap: https://gptpromptengine.com/sitemap-index.xml  
