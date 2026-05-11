@@ -1,243 +1,329 @@
 ---
-title: "Free ChatGPT Prompts for HR Performance Reviews: 25 Expert Templates"
-description: "Transform your performance review process with 25 proven ChatGPT prompts designed for HR managers. Get actionable templates for evaluations, feedback, and development planning."
+title: "25 Free ChatGPT Prompts for HR Performance Reviews (2026)"
+description: "Copy-paste ChatGPT prompts for HR performance reviews. Write year-end reviews, coaching scripts, and feedback emails in seconds. 25 ready-to-use prompts."
 profession: "HR Managers"
 category: "Performance"
-contentType: "prompt"
-tags: ["performance reviews", "employee evaluation", "hr templates", "feedback management", "performance assessment"]
-pubDate: 2026-05-09
-featured: false
+contentType: prompt
+tags: ["free chatgpt prompts for hr performance reviews", "chatgpt prompts for employee evaluations", "ai performance review templates", "hr chatgpt prompts", "performance review automation"]
+pubDate: 2026-05-11
+featured: true
 promptCount: 25
 ---
 
-🚀 **Supercharge your HR content creation with AI!** Try [Jasper AI](https://jasper.ai) for professional HR communications or [Copy.ai](https://copy.ai) for quick performance review templates and feedback generation.
+Copy-paste prompts that write performance reviews, coaching conversations, and feedback emails for you. Each prompt takes 30 seconds to customize and produces a finished draft you can use immediately.
 
-## Employee Self-Assessment Prompts
+These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for HR Managers-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
 
-> Create a comprehensive self-assessment questionnaire for [job role] that includes 10-12 reflection questions covering goal achievement, skill development, challenges faced, and future aspirations. Format it as a structured template with rating scales and open-ended questions.
+## Annual Review Drafts
 
-**When to use it:** When preparing annual or quarterly performance reviews to gather employee perspectives before manager evaluations.
+> You are an HR manager writing a year-end performance review for a high performer being considered for promotion.
+> 
+> Employee: {employee_name}
+> Role: {job_title}, {tenure} at the company
+> Rating: {exceeds_expectations / meets_expectations / below_expectations}
+> Key wins this year: {three_major_accomplishments}
+> Growth areas: {two_development_opportunities}
+> Promotion readiness: {ready / needs_development / not_ready}
+> Company tone: {formal / supportive / direct}
+> 
+> Write a 400-500 word performance review using the SBI model (Situation, Behavior, Impact). Open with specific recognition of their biggest win. Address growth areas as development opportunities, not deficits. Close with promotion recommendation and two concrete goals for next year.
 
-**Pro tip:** Customize the questions based on specific role competencies and company values for more relevant insights.
+When to use it: You're staring at a blank review form for someone who's performed well but needs specific feedback to advance.
 
----
-
-> Generate a self-reflection prompt for employees to evaluate their collaboration and teamwork skills over the past [time period]. Include questions about conflict resolution, communication effectiveness, and contribution to team goals.
-
-**When to use it:** For team-based roles where collaboration is a key performance indicator.
-
-**Pro tip:** Send this 1-2 weeks before the actual review meeting to give employees time for thoughtful reflection.
-
----
-
-> Design a goal-setting self-assessment that helps employees analyze their progress on [specific goals/objectives] and identify barriers they encountered. Include sections for lessons learned and proposed solutions.
-
-**When to use it:** During mid-year reviews or when pivoting strategic objectives.
-
-**Pro tip:** Reference specific SMART goals set in previous reviews to maintain consistency and track progress effectively.
+Pro tip: If they're not promotion-ready, frame it as "strong performer building toward advancement" rather than "not ready for promotion."
 
 ---
 
-> Create a skills gap analysis template for [department/role] employees to identify areas where they need additional training or development. Include current proficiency levels and desired competency targets.
+> You are an HR manager writing a performance review for an employee who met expectations but had significant challenges mid-year.
+> 
+> Employee: {employee_name}
+> Current role: {job_title}
+> Time in role: {tenure}
+> Mid-year challenge: {specific_performance_issue}
+> Recovery actions taken: {steps_employee_took}
+> Current performance level: {rating}
+> Manager's relationship with employee: {collaborative / needs_repair / strong}
+> 
+> Write a 350-400 word balanced review that acknowledges the mid-year difficulties without dwelling on them. Use a narrative structure: context, challenge, response, current state, future focus. Emphasize growth and resilience. End with two specific goals that build on their recovery.
 
-**When to use it:** When planning professional development budgets and training initiatives.
+When to use it: An employee stumbled but recovered, and you need to document both parts of their story fairly.
 
-**Pro tip:** Align skill categories with your organization's competency framework for better resource allocation.
-
----
-
-> Generate a customer/stakeholder impact assessment for employees to evaluate how their work has affected internal and external relationships over the review period.
-
-**When to use it:** For client-facing roles or positions with significant internal stakeholder interaction.
-
-**Pro tip:** Include specific metrics or examples to make the assessment more concrete and measurable.
-
-## Manager Evaluation Templates
-
-> Create a balanced performance evaluation template for [employee name/role] that addresses strengths, areas for improvement, goal achievement, and behavioral competencies. Include specific examples and measurable outcomes.
-
-**When to use it:** For comprehensive annual performance reviews requiring detailed documentation.
-
-**Pro tip:** Use the SBI (Situation-Behavior-Impact) model when providing specific examples to make feedback more actionable.
+Pro tip: Lead with their recovery actions, not the original problem. It sets a forward-looking tone that employees respond better to.
 
 ---
 
-> Generate a performance improvement plan template for an employee struggling with [specific performance issue]. Include clear expectations, measurable goals, timeline, support resources, and consequences.
+> You are writing a performance review for a long-tenured employee whose performance has plateaued.
+> 
+> Employee: {employee_name}
+> Role: {job_title}
+> Years with company: {tenure}
+> Performance trend: {consistent_but_static / slight_decline / disengaged}
+> Strengths they still demonstrate: {core_competencies}
+> Areas needing refresh: {skills_or_motivation}
+> Relationship with team: {strong / neutral / challenging}
+> Your goal: {re-engage / maintain / transition}
+> 
+> Write a 300-350 word review that honors their experience while addressing the plateau. Use an appreciative but honest tone. Structure: recognition of tenure and contributions, acknowledgment of current state, specific development plan. Focus on reigniting growth rather than criticism.
 
-**When to use it:** When formal performance management intervention is required.
+When to use it: A reliable employee has stopped growing and you need to address it without damaging their confidence.
 
-**Pro tip:** Always involve the employee in creating the improvement plan to increase buy-in and ownership of the process.
-
----
-
-> Design a high-performer recognition template that captures exceptional contributions, quantifies impact, and recommends appropriate rewards or advancement opportunities for [employee name/role].
-
-**When to use it:** For top performers who deserve recognition and potential promotion consideration.
-
-**Pro tip:** Include peer feedback and cross-departmental impact to strengthen the case for advancement or significant rewards.
-
----
-
-> Create a 360-degree feedback compilation template that synthesizes input from peers, direct reports, and stakeholders for [management position]. Include themes, patterns, and development recommendations.
-
-**When to use it:** For leadership positions where multi-source feedback provides valuable insights.
-
-**Pro tip:** Look for consistency across feedback sources and highlight both strengths and blind spots in leadership behavior.
+Pro tip: Reference specific examples from their early years to remind them of their capability for growth.
 
 ---
 
-> Generate a new employee probationary review template for [role] covering job performance, cultural fit, training progress, and recommendation for permanent status or additional support needed.
+> You are writing a first-year performance review for a new hire who exceeded expectations.
+> 
+> Employee: {employee_name}
+> Role: {job_title}
+> Start date: {hire_date}
+> Onboarding speed: {fast / typical / slow}
+> Standout achievements: {specific_wins}
+> Areas still developing: {normal_learning_areas}
+> Team integration: {excellent / good / needs_work}
+> Promotion timeline: {accelerated / normal / extended}
+> 
+> Write a 250-300 word review celebrating their strong start while setting realistic expectations. Structure: recognition of quick wins, acknowledgment of learning curve, clear path forward. Use an encouraging tone that maintains momentum without inflating expectations.
 
-**When to use it:** At the end of probationary periods to make retention decisions.
+When to use it: A new hire is crushing it and you want to reinforce their success while keeping them grounded.
 
-**Pro tip:** Reference specific onboarding objectives and competency milestones established during the hiring process.
-
-## Feedback and Communication Scripts
-
-> Write a constructive feedback script for addressing [specific behavior/performance issue] with an employee. Include opening statements, specific examples, impact explanation, and collaborative solution development.
-
-**When to use it:** When delivering difficult feedback that requires behavior change.
-
-**Pro tip:** Practice the script beforehand and prepare for potential employee responses to maintain conversation flow.
-
----
-
-> Create a positive reinforcement script for recognizing [specific achievement/behavior] that can be used in performance discussions to motivate continued excellence.
-
-**When to use it:** When acknowledging good performance during regular check-ins or formal reviews.
-
-**Pro tip:** Be specific about what the employee did well and connect it to broader organizational impact for maximum motivation.
+Pro tip: Mention specific feedback from colleagues or clients to make the praise concrete and credible.
 
 ---
 
-> Generate a career development conversation guide for discussing advancement opportunities, skill building, and long-term career goals with [employee role/level].
+> You are writing a review for an employee who consistently delivers but struggles with team collaboration.
+> 
+> Employee: {employee_name}
+> Role: {job_title}
+> Individual performance: {strong / acceptable / weak}
+> Collaboration issues: {communication_style / conflict_tendency / isolation}
+> Impact on team: {significant / moderate / minimal}
+> Previous conversations: {multiple / few / none}
+> Improvement commitment: {high / uncertain / resistant}
+> Business need for change: {critical / important / preferred}
+> 
+> Write a 400-450 word review using the STAR method. Balance recognition of their individual contributions with clear expectations for collaboration. Address the team impact directly but constructively. Include specific behavioral goals and support offers.
 
-**When to use it:** During performance reviews focused on retention and employee development.
+When to use it: Someone delivers results but creates friction, and you need to document both sides clearly.
 
-**Pro tip:** Come prepared with concrete development opportunities and resources to show genuine investment in their growth.
+Pro tip: Include specific quotes or examples of the collaboration issues to avoid vague feedback they can dismiss.
 
----
+## Difficult Conversation Scripts
 
-> Design a difficult conversation framework for discussing compensation decisions, role changes, or organizational restructuring impacts with affected employees.
+> You are preparing talking points for a performance conversation with an underperforming employee.
+> 
+> Employee: {employee_name}
+> Performance issues: {specific_problems}
+> Impact on team/business: {consequences}
+> Previous discussions: {dates_and_outcomes}
+> Employee's usual response: {defensive / receptive / blame_shifting}
+> Your goal: {improvement / documentation / final_warning}
+> Support available: {training / coaching / resources}
+> Timeline: {improvement_deadline}
+> 
+> Write a 5-part conversation script: opening that sets collaborative tone, specific issue description using examples, impact explanation, improvement expectations with timeline, support and follow-up plan. Keep it direct but not punitive. Include likely pushback responses and your replies.
 
-**When to use it:** When delivering news that may disappoint or concern employees.
+When to use it: You have a tough conversation scheduled and need to stay focused and fair under pressure.
 
-**Pro tip:** Be transparent about decision-making factors while maintaining confidentiality about sensitive organizational information.
-
----
-
-> Create an exit interview script that gathers valuable feedback about management, culture, processes, and improvement opportunities while maintaining positive relationships.
-
-**When to use it:** When conducting exit interviews with departing employees.
-
-**Pro tip:** Focus on learning opportunities rather than trying to convince the employee to stay, which can yield more honest feedback.
-
-## Goal Setting and Development Planning
-
-> Generate SMART goals template for [role/department] that includes specific metrics, timelines, and success criteria aligned with organizational objectives for the upcoming review period.
-
-**When to use it:** At the beginning of performance review cycles or when setting new objectives.
-
-**Pro tip:** Ensure each goal connects to broader departmental or company strategic initiatives for better alignment and meaning.
-
----
-
-> Create a professional development plan template that outlines learning objectives, training resources, mentorship opportunities, and progress tracking for [career level/role].
-
-**When to use it:** When employees express interest in skill development or career advancement.
-
-**Pro tip:** Include both formal training and stretch assignments to provide diverse learning opportunities.
+Pro tip: Write down the employee's likely excuses beforehand so you can address them calmly rather than reactively.
 
 ---
 
-> Design a succession planning discussion guide that explores employee aspirations, readiness for advancement, and development needs for future leadership roles.
+> You are preparing to discuss a promotion denial with a strong performer who expected advancement.
+> 
+> Employee: {employee_name}
+> Their expectation: {assumed_promotion / requested_promotion}
+> Decision factors: {skills_gap / timing / competition}
+> Development needed: {specific_areas}
+> Timeline for reconsideration: {next_cycle / specific_months}
+> Their likely reaction: {disappointed / angry / motivated}
+> Alternative recognition: {raise / project_lead / title_adjustment}
+> 
+> Write a 300-word conversation outline that delivers the news respectfully while maintaining their motivation. Structure: acknowledge their expectations, explain decision factors objectively, provide specific development path, offer alternative recognition, commit to future timeline.
 
-**When to use it:** With high-potential employees during career development conversations.
+When to use it: You're about to disappoint someone who deserves an explanation and a path forward.
 
-**Pro tip:** Be realistic about timelines and available opportunities while encouraging ambitious goal-setting.
-
----
-
-> Generate a cross-functional project assignment framework that identifies skills to be developed, success metrics, and support structures for employees taking on stretch assignments.
-
-**When to use it:** When assigning developmental projects or cross-departmental initiatives.
-
-**Pro tip:** Clearly define learning objectives alongside project deliverables to maximize developmental impact.
-
----
-
-> Create a mentorship matching and goal-setting template that pairs employees with mentors based on development needs and establishes clear expectations for the relationship.
-
-**When to use it:** When launching or maintaining formal mentorship programs.
-
-**Pro tip:** Set specific meeting cadences and discussion topics to ensure productive mentor-mentee relationships.
-
-## Performance Analytics and Documentation
-
-> Generate a performance trend analysis template that tracks employee progress over multiple review periods, identifying patterns, improvements, and areas of concern.
-
-**When to use it:** For long-term employees with multiple review cycles or when preparing for promotion decisions.
-
-**Pro tip:** Use visual indicators or rating scales to make performance trends easily identifiable at a glance.
+Pro tip: Lead with what they need to develop, not why they didn't get promoted. It keeps the conversation future-focused.
 
 ---
 
-> Create a team performance dashboard template that aggregates individual performances to identify team strengths, development needs, and resource allocation requirements.
+> You are coaching a manager who received feedback about their leadership style being too directive.
+> 
+> Manager: {manager_name}
+> Team size: {number_of_reports}
+> Feedback source: {360_review / team_survey / complaints}
+> Specific behaviors: {micromanaging / poor_delegation / communication_issues}
+> Business impact: {turnover / morale / productivity}
+> Their awareness level: {surprised / defensive / acknowledging}
+> Coaching goal: {behavior_change / skill_building / self_awareness}
+> 
+> Write a coaching conversation script that helps them understand the feedback without becoming defensive. Use the GROW model: Goal (leadership effectiveness), Reality (current impact), Options (behavior changes), Way forward (action plan). Include reflection questions and specific behavior alternatives.
 
-**When to use it:** For department-wide performance planning and resource allocation decisions.
+When to use it: A manager needs to change their leadership approach but might resist the feedback.
 
-**Pro tip:** Include both quantitative metrics and qualitative assessments to get a complete picture of team performance.
-
----
-
-> Design a performance calibration worksheet for ensuring consistency across managers when evaluating similar roles and performance levels within the organization.
-
-**When to use it:** Before performance review meetings to align management expectations and ratings.
-
-**Pro tip:** Include specific behavioral examples for each performance level to reduce subjective interpretation variations.
-
----
-
-> Generate a legal compliance checklist for performance review documentation that ensures proper record-keeping and protects against potential employment disputes.
-
-**When to use it:** When conducting reviews for employees with performance concerns or legal considerations.
-
-**Pro tip:** Consult with legal counsel when developing templates to ensure they meet current employment law requirements.
+Pro tip: Ask them to describe their best boss first, then help them see the contrast with their current style.
 
 ---
 
-> Create a performance review summary template that distills key points, action items, and follow-up requirements for HR records and future reference.
+> You are preparing to address attendance issues with a reliable employee whose performance hasn't suffered.
+> 
+> Employee: {employee_name}
+> Attendance pattern: {frequent_late / long_lunches / early_departures}
+> Work quality: {unchanged / improving / excellent}
+> Team impact: {resentment / coverage_issues / none}
+> Personal circumstances: {known_issues / unknown / family_situation}
+> Company policy: {flexible / strict / unclear}
+> Your relationship: {strong / professional / strained}
+> 
+> Write a 200-word conversation starter that addresses the pattern without attacking their character. Focus on fairness to the team and policy consistency. Include open-ended questions to understand their situation and collaborative problem-solving approach.
 
-**When to use it:** After completing performance review meetings to document outcomes and next steps.
+When to use it: You need to address a pattern that's not affecting work quality but could create team equity issues.
 
-**Pro tip:** Share the summary with employees within 48 hours of the review meeting to ensure alignment and demonstrate professionalism.
+Pro tip: Start by asking if there's something you should know about their situation before diving into the policy violation.
 
-## Frequently Asked Questions
+---
 
-### How can I use ChatGPT prompts to make performance reviews more objective and fair?
+> You are having a stay interview with a high performer who seems disengaged lately.
+> 
+> Employee: {employee_name}
+> Recent changes in behavior: {less_participation / quality_decline / isolation}
+> Possible causes: {workload / career_stagnation / team_dynamics}
+> Their value to organization: {critical / important / developing}
+> Retention risk: {high / moderate / low}
+> Available solutions: {role_change / project_assignment / development}
+> Your leverage: {budget / authority / influence}
+> 
+> Write a conversation guide that uncovers what's changed and what would re-engage them. Use open-ended questions to understand their perspective before offering solutions. Include probing follow-ups for common responses like "everything's fine" or "just busy."
 
-Use structured ChatGPT prompts to create standardized evaluation criteria and questions that focus on specific behaviors and measurable outcomes. This helps reduce bias by ensuring all employees are assessed against the same standards. Incorporate the SBI (Situation-Behavior-Impact) model into your prompts to generate more objective feedback frameworks that focus on observable actions rather than personality traits.
+When to use it: Someone you can't afford to lose is showing early warning signs of disengagement.
 
-### What are the best ChatGPT prompts for handling underperforming employees during reviews?
+Pro tip: Ask what part of their role energizes them most, then explore how to expand that element.
 
-Focus on prompts that generate constructive improvement plans with clear expectations, timelines, and support resources. Use prompts that help you script difficult conversations with empathy while maintaining accountability. The most effective prompts for underperformance create frameworks for collaborative problem-solving rather than punitive approaches, helping employees understand the gap between current and expected performance.
+## Team Performance Communications
 
-### How do I customize free ChatGPT performance review prompts for different job roles and seniority levels?
+> You are writing an email to announce performance review calibration results to your management team.
+> 
+> Review cycle: {annual / mid_year / quarterly}
+> Team size reviewed: {number_of_employees}
+> Rating distribution: {percentages_by_rating}
+> Calibration changes: {number_of_adjustments}
+> Key themes: {common_strengths_and_gaps}
+> Next steps: {manager_actions_required}
+> Deadline: {completion_date}
+> HR support: {available_resources}
+> 
+> Write a 250-300 word email that presents the data clearly and sets expectations for review completion. Use bullet points for action items. Include a reminder about confidentiality and consistency in messaging.
 
-Modify the core prompts by inserting specific role competencies, industry requirements, and seniority-appropriate expectations. For entry-level positions, focus prompts on learning and development, while senior roles should emphasize leadership, strategic thinking, and mentoring capabilities. Always include your organization's specific values, goals, and performance standards in the prompt customization to ensure relevance and alignment.
+When to use it: Calibration is done and you need managers to complete their reviews with consistent standards.
 
-## Take Your Performance Reviews to the Next Level
+Pro tip: Include the specific language managers should use when explaining rating changes to avoid confusion.
 
-Ready to revolutionize your entire performance management process? Our comprehensive **"Ultimate HR Performance Management Toolkit"** includes 100+ additional prompts, templates, and frameworks that go beyond what's covered here.
+---
 
-**What you'll get:**
-- 50+ Advanced performance review templates
-- Employee coaching conversation scripts
-- Performance improvement plan generators
-- 360-degree feedback frameworks
-- Legal compliance checklists
-- Customizable evaluation rubrics
+> You are writing a memo about performance review process changes for the upcoming cycle.
+> 
+> Changes being implemented: {new_rating_scale / different_timeline / updated_forms}
+> Reason for changes: {feedback_incorporation / system_upgrade / policy_update}
+> Impact on managers: {additional_training / new_deadlines / different_requirements}
+> Training available: {sessions_offered / resources_provided}
+> Timeline: {key_dates}
+> Point of contact: {support_person}
+> Pilot feedback: {what_worked / what_didnt}
+> 
+> Write a 200-word memo that explains changes clearly without overwhelming recipients. Lead with benefits, explain what's different, provide clear next steps. Use a confident tone that addresses likely concerns proactively.
 
-**[Get the Complete Toolkit on Gumroad →](https://gumroad.com)**
+When to use it: You're rolling out process changes and need buy-in from managers who are already busy.
 
-*Transform your performance reviews from dreaded annual tasks into powerful development conversations that drive engagement and results.*
+Pro tip: Include a comparison table showing old vs. new process side-by-side for visual clarity.
+
+---
+
+> You are drafting an email to an employee's skip-level manager about performance concerns.
+> 
+> Employee: {employee_name}
+> Direct manager: {manager_name}
+> Performance issues: {specific_concerns}
+> Direct manager's actions: {steps_already_taken}
+> Skip-level involvement needed: {coaching_support / decision_authority / resource_approval}
+> Urgency level: {immediate / developing / monitoring}
+> Confidentiality needs: {high / normal / open}
+> 
+> Write a 150-200 word email that briefs the skip-level manager without undermining the direct manager. Present facts objectively, explain what support is needed, request specific action or input. Maintain professional tone while conveying appropriate urgency.
+
+When to use it: A performance issue needs senior leadership awareness or input but you want to protect reporting relationships.
+
+Pro tip: Frame it as supporting the direct manager's efforts rather than escalating around them.
+
+---
+
+> You are writing talking points for a team meeting about performance expectations after organizational changes.
+> 
+> Recent changes: {restructuring / new_leadership / strategy_shift}
+> Team impact: {role_changes / new_priorities / different_metrics}
+> Performance implications: {updated_expectations / new_skills_needed}
+> Timeline for adjustment: {immediate / gradual_transition}
+> Support provided: {training / coaching / resources}
+> Accountability measures: {check_ins / milestones / reviews}
+> Team morale: {anxious / excited / resistant}
+> 
+> Write a 10-minute presentation outline that acknowledges the changes, clarifies new expectations, and provides reassurance about support. Include anticipated questions and suggested responses.
+
+When to use it: Your team needs clarity about how organizational changes affect their individual performance expectations.
+
+Pro tip: Acknowledge that change is hard before diving into new expectations - it builds trust and reduces resistance.
+
+---
+
+> You are preparing a performance summary for budget planning discussions.
+> 
+> Department: {department_name}
+> Review period: {time_frame}
+> Team performance distribution: {ratings_breakdown}
+> High performers: {number_and_retention_risk}
+> Development needs: {common_skill_gaps}
+> Promotion candidates: {number_ready}
+> Compensation recommendations: {merit_increase_suggestions}
+> Training budget needs: {estimated_costs}
+> 
+> Write a 400-word executive summary that connects performance data to budget requests. Use data to support recommendations for salary increases, training investments, and hiring needs. Include risk assessment for key talent retention.
+
+When to use it: Budget season is here and you need to translate performance outcomes into financial requests.
+
+Pro tip: Lead with business impact rather than individual stories - executives think in terms of organizational outcomes.
+
+## Documentation and Follow-up
+
+> You are writing a performance improvement plan (PIP) for an employee who needs specific skill development.
+> 
+> Employee: {employee_name}
+> Role: {job_title}
+> Performance gaps: {specific_deficiencies}
+> Success metrics: {measurable_outcomes}
+> Timeline: {improvement_period}
+> Support provided: {training / mentoring / resources}
+> Check-in frequency: {weekly / bi_weekly / monthly}
+> Consequences: {next_steps_if_unsuccessful}
+> 
+> Write a 300-400 word PIP that focuses on development rather than punishment. Structure: current state, specific expectations, support plan, timeline, success measures. Use encouraging language while being clear about consequences.
+
+When to use it: Someone needs structured improvement support but you believe they can succeed with the right plan.
+
+Pro tip: Include early win opportunities in the first 30 days to build momentum and confidence.
+
+---
+
+> You are documenting a performance conversation for an employee's file.
+> 
+> Employee: {employee_name}
+> Meeting date: {conversation_date}
+> Issues discussed: {performance_topics}
+> Employee responses: {their_perspective}
+> Agreements reached: {commitments_made}
+> Next steps: {follow_up_actions}
+> Timeline: {check_in_schedule}
+> Witnesses present: {if_applicable}
+> 
+> Write a 200-250 word file memo that documents the conversation objectively. Focus on facts, agreements, and next steps. Use neutral language that protects both the employee and the organization. Include direct quotes only when they add important context.
+
+When to use it: You need documentation that could be reviewed by legal, HR leadership, or the employee themselves later.
+
+Pro tip: Write this within
