@@ -3,7 +3,7 @@ title: "Free ChatGPT Prompts for HR Performance Reviews 2026 - 25 Ready-to-Use T
 description: "25 ready-to-paste ChatGPT prompts for HR performance reviews. Copy, fill variables, get polished drafts in seconds. Updated for 2026."
 profession: "HR Managers"
 category: "Performance"
-contentType: prompt
+contentType: "prompt"
 tags: ["free chatgpt prompts for hr performance reviews", "performance review templates", "hr chatgpt prompts", "employee evaluation prompts", "performance appraisal ai"]
 pubDate: 2026-05-12
 featured: true
