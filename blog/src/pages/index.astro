@@ -7,85 +7,331 @@ const allContent = [...prompts, ...workflows, ...templates]
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const professions = [...new Set(allContent.map(p => p.data.profession))];
 ---
+// src/pages/index.astro
+// Homepage — GPT Prompt Engine
+---
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='UTF-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-  <meta name="google-site-verification" content="gjUL5wyQWJ-XepAwNcijP1DmWImgerIhEDOuHEujdJc" />
-  <title>Free AI Prompts, Workflows and Templates by Profession</title>
-  <meta name='description' content='The most comprehensive free AI resource library
-    organised by job role. Prompts, n8n workflows and Notion templates.' />
-  <link rel='sitemap' href='/sitemap-index.xml' />
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: -apple-system, system-ui, sans-serif; color:#1a1a2e; background:#f8fafc; }
-    header { background:white; border-bottom:1px solid #e5e7eb; padding:1rem 2rem; }
-    nav { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
-    .logo { font-weight:800; font-size:1.3rem; text-decoration:none; color:#1a1a2e; }
-    .nav-links a { margin-left:1.5rem; text-decoration:none; color:#6b7280; font-size:0.9rem; }
-    .hero { max-width:1100px; margin:0 auto; padding:4rem 2rem 3rem; text-align:center; }
-    .hero h1 { font-size:2.5rem; font-weight:800; line-height:1.2; }
-    .hero p { margin-top:1rem; font-size:1.1rem; color:#6b7280; }
-    section { max-width:1100px; margin:0 auto; padding:2rem; }
-    h2 { font-size:1.4rem; font-weight:700; margin-bottom:1rem; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem; }
-    .card, .profession-card { display:block; background:white; border:1px solid #e5e7eb;
-      border-radius:8px; padding:1rem; text-decoration:none; color:inherit; }
-    .card:hover, .profession-card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.08); }
-    .profession-card { display:flex; flex-direction:column; gap:0.3rem; }
-    .profession-card strong { font-size:1rem; }
-    .profession-card span { font-size:0.8rem; color:#9ca3af; }
-    .card h3 { font-size:0.95rem; margin:0.5rem 0; line-height:1.4; }
-    .card .meta { font-size:0.8rem; color:#9ca3af; }
-    .type-badge { font-size:0.7rem; font-weight:600; text-transform:uppercase;
-      letter-spacing:0.05em; background:#f0f7ff; color:#2563eb; padding:2px 8px;
-      border-radius:4px; }
-  </style>
-<!-- Google tag (gtag.js) --> 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-30G6MSESFG">
-</script>
-<script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());   gtag('config', 'G-30G6MSESFG'); </script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GPT Prompt Engine — Free AI Resources Built for Your Profession</title>
+<meta name="description" content="Free prompt libraries, n8n automation workflows, and Notion templates — organised by profession, not by tool." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="sitemap" href="/sitemap-index.xml" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root {
+  --bg: #FFFFFF; --bg-soft: #F2F2F2; --bg-dark: #0C1D5B; --bg-deeper: #0A1645;
+  --text: #0C1D5B; --text-soft: #6B7699; --text-muted: #8B93AB;
+  --rule: #E5E8F0; --rule-strong: #C8CEDD;
+  --blue: #0C1D5B; --blue-tint: #EAEDF5;
+  --green: #CDE954; --green-deep: #B5D344;
+  --display: 'Fraunces', Georgia, serif;
+  --body: 'Instrument Sans', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+body { font-family: var(--body); background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+.nav { position: sticky; top: 0; z-index: 100; background: var(--bg); border-bottom: 1px solid var(--rule); padding: 0 48px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.nav-logo { font-family: var(--display); font-size: 21px; font-weight: 500; font-variation-settings: "opsz" 144; letter-spacing: -0.02em; color: var(--blue); display: flex; align-items: center; gap: 7px; }
+.nav-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); display: inline-block; animation: blink 2.5s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
+.nav-center { display: flex; gap: 4px; background: var(--bg-soft); padding: 4px; border-radius: 8px; }
+.nav-link { padding: 8px 16px; font-size: 13px; font-weight: 500; color: var(--text-soft); border-radius: 5px; transition: all 0.15s; }
+.nav-link:hover { color: var(--blue); background: rgba(12,29,91,0.04); }
+.nav-cta { background: var(--green); color: var(--blue); padding: 9px 20px; font-size: 13px; font-weight: 700; border-radius: 6px; letter-spacing: 0.01em; transition: all 0.15s; }
+.nav-cta:hover { background: var(--green-deep); transform: translateY(-1px); }
+.hero { border-bottom: 1px solid var(--rule); padding: 80px 48px 72px; }
+.hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 400px; gap: 64px; align-items: center; }
+.hero-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+.hero-eyebrow::before { content:''; display:block; width:18px; height:2px; background:var(--green); }
+.hero h1 { font-family: var(--display); font-weight: 500; font-variation-settings: "opsz" 144; font-size: clamp(40px, 5vw, 60px); line-height: 1.05; letter-spacing: -0.025em; color: var(--text); margin-bottom: 20px; }
+.hero h1 em { font-style: italic; }
+.hero .lede { font-family: var(--display); font-weight: 300; font-variation-settings: "opsz" 90; font-style: italic; font-size: 19px; line-height: 1.55; color: var(--text-soft); max-width: 520px; margin-bottom: 36px; }
+.hero-actions { display: flex; gap: 12px; align-items: center; }
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--blue); color: white; padding: 14px 28px; font-family: var(--body); font-size: 14px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; border-radius: 4px; transition: all 0.2s; }
+.btn-primary:hover { background: var(--bg-deeper); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(12,29,91,0.2); }
+.btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--blue); padding: 14px 24px; font-family: var(--body); font-size: 14px; font-weight: 600; border: 1.5px solid var(--rule-strong); border-radius: 4px; transition: all 0.15s; }
+.btn-secondary:hover { border-color: var(--blue); }
+.hero-right { display: flex; flex-direction: column; gap: 12px; }
+.preview-card { background: var(--bg); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s; }
+.preview-card:hover { box-shadow: 0 6px 20px rgba(12,29,91,0.08); }
+.preview-head { display: flex; align-items: center; gap: 10px; padding: 11px 16px; background: var(--bg-soft); border-bottom: 1px solid var(--rule); }
+.chip { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; background: var(--blue-tint); color: var(--blue); }
+.chip.green { background: var(--green); color: var(--blue); }
+.chip-dot { width:5px; height:5px; border-radius:50%; background:currentColor; flex-shrink:0; }
+.preview-prof { margin-left:auto; font-size:11px; font-weight:600; color:var(--text-muted); }
+.preview-body { padding: 14px 16px; }
+.preview-title { font-size:14px; font-weight:600; color:var(--blue); margin-bottom:8px; line-height:1.35; }
+.preview-prompt { background: var(--bg-dark); border-radius:6px; padding:10px 14px; font-family: var(--mono); font-size:11px; line-height:1.65; color: rgba(255,255,255,0.85); }
+.preview-prompt .var { color: var(--green); font-weight:600; }
+.mini-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.mini-card { background: var(--bg); border: 1px solid var(--rule); border-radius: 10px; padding: 14px; transition: box-shadow 0.2s; }
+.mini-card:hover { box-shadow: 0 4px 12px rgba(12,29,91,0.06); }
+.mini-title { font-size:12px; font-weight:600; color:var(--blue); margin:8px 0 4px; line-height:1.3; }
+.mini-sub { font-size:11px; color:var(--text-muted); line-height:1.5; }
+.ticker-wrap { background: var(--bg-dark); overflow:hidden; padding:11px 0; border-bottom:3px solid var(--green); }
+.ticker-track { display:flex; width:max-content; animation: slide 30s linear infinite; }
+@keyframes slide { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.ticker-item { display:flex; align-items:center; gap:10px; padding:0 28px; font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); white-space:nowrap; }
+.ticker-item strong { color:rgba(255,255,255,0.85); }
+.ticker-pip { width:5px; height:5px; border-radius:50%; background:var(--green); flex-shrink:0; }
+.types { background: var(--bg-soft); border-bottom: 1px solid var(--rule); }
+.types-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+.type-block { padding: 40px 36px; border-right: 1px solid var(--rule); position: relative; background: var(--bg-soft); transition: background 0.2s; }
+.type-block:last-child { border-right: none; }
+.type-block:hover { background: var(--bg); }
+.type-block::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background: transparent; transition: background 0.2s; }
+.type-block:hover::before { background: var(--green); }
+.type-icon { width:40px; height:40px; background:var(--bg-dark); color:var(--green); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px; margin-bottom:16px; }
+.type-block h3 { font-size:16px; font-weight:700; color:var(--blue); margin-bottom:8px; }
+.type-block p { font-size:13px; color:var(--text-soft); line-height:1.65; margin-bottom:12px; }
+.type-url { font-family:var(--mono); font-size:11px; color:var(--text-muted); }
+.type-num { position:absolute; bottom:18px; right:22px; font-family:var(--display); font-style:italic; font-variation-settings:"opsz" 144; font-size:52px; font-weight:300; color:var(--rule); line-height:1; pointer-events:none; }
+.professions { background: var(--bg-dark); padding: 80px 48px; }
+.prof-inner { max-width: 1100px; margin: 0 auto; }
+.section-eyebrow { font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--green); margin-bottom:16px; display:flex; align-items:center; gap:10px; }
+.section-eyebrow::before { content:''; display:block; width:18px; height:2px; background:var(--green); }
+.section-heading { font-family:var(--display); font-weight:500; font-variation-settings:"opsz" 144; font-size:clamp(28px, 3.5vw, 42px); line-height:1.1; letter-spacing:-0.02em; margin-bottom:12px; }
+.section-heading em { font-style:italic; }
+.section-sub { font-size:15px; line-height:1.65; max-width:500px; font-weight:400; margin-bottom:40px; }
+.professions .section-heading { color:white; }
+.professions .section-sub { color:rgba(255,255,255,0.5); }
+.prof-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+.prof-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:20px; display:block; transition:all 0.2s; }
+.prof-card:hover { background:rgba(255,255,255,0.09); border-color:rgba(205,233,84,0.4); transform:translateY(-2px); }
+.prof-wave { display:inline-block; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:3px 8px; border-radius:999px; margin-bottom:10px; background:rgba(205,233,84,0.15); color:var(--green); }
+.prof-wave.soon { background:rgba(255,255,255,0.06); color:rgba(255,255,255,0.3); }
+.prof-name { font-size:14px; font-weight:700; color:white; margin-bottom:4px; }
+.prof-sub { font-size:12px; font-family:var(--mono); color:rgba(255,255,255,0.3); line-height:1.5; }
+.prof-arrow { margin-top:14px; font-size:14px; color:rgba(255,255,255,0.15); transition:color 0.2s; }
+.prof-card:hover .prof-arrow { color:var(--green); }
+.cta-section { background: var(--bg-dark); padding: 88px 48px; text-align: center; position: relative; overflow: hidden; }
+.cta-section::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--green); }
+.cta-inner { max-width: 680px; margin: 0 auto; }
+.cta-eyebrow { font-size:11px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--green); margin-bottom:20px; display:flex; align-items:center; justify-content:center; gap:10px; }
+.cta-eyebrow::before,.cta-eyebrow::after { content:''; display:block; width:18px; height:2px; background:var(--green); }
+.cta-heading { font-family:var(--display); font-weight:500; font-variation-settings:"opsz" 144; font-size:clamp(28px,3.5vw,42px); line-height:1.1; letter-spacing:-0.02em; color:white; margin-bottom:16px; }
+.cta-heading em { font-style:italic; color:var(--green); }
+.cta-sub { font-size:15px; color:rgba(255,255,255,0.5); line-height:1.65; margin-bottom:40px; }
+.cta-buttons { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.btn-green { display:inline-flex; align-items:center; gap:8px; background:var(--green); color:var(--blue); padding:16px 32px; font-family:var(--body); font-size:14px; font-weight:700; letter-spacing:0.03em; text-transform:uppercase; border-radius:4px; transition:all 0.2s; }
+.btn-green:hover { background:var(--green-deep); transform:translateY(-2px); box-shadow:0 8px 24px rgba(205,233,84,0.3); }
+.btn-ghost { display:inline-flex; align-items:center; gap:8px; background:transparent; color:rgba(255,255,255,0.55); padding:16px 28px; font-family:var(--body); font-size:14px; font-weight:600; border:1.5px solid rgba(255,255,255,0.2); border-radius:4px; transition:all 0.15s; }
+.btn-ghost:hover { border-color:rgba(255,255,255,0.5); color:white; }
+footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06); padding:28px 48px; }
+.footer-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+.footer-logo { font-family:var(--display); font-size:16px; font-weight:500; font-variation-settings:"opsz" 144; color:rgba(255,255,255,0.45); display:flex; align-items:center; gap:6px; }
+.footer-logo-dot { width:6px; height:6px; border-radius:50%; background:var(--green); }
+.footer-links { display:flex; gap:24px; list-style:none; }
+.footer-links a { font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.25); transition:color 0.15s; }
+.footer-links a:hover { color:rgba(255,255,255,0.7); }
+.footer-copy { font-family:var(--mono); font-size:11px; color:rgba(255,255,255,0.2); }
+.reveal { opacity:0; transform:translateY(16px); transition:opacity 0.55s ease, transform 0.55s ease; }
+.reveal.on { opacity:1; transform:translateY(0); }
+@media (max-width: 960px) {
+  .hero-inner { grid-template-columns:1fr; }
+  .hero-right { display:none; }
+  .types-grid { grid-template-columns:1fr; }
+  .type-block { border-right:none; border-bottom:1px solid var(--rule); }
+  nav,.hero,.professions,.cta-section,footer { padding-left:24px; padding-right:24px; }
+}
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href='/' class='logo'>GPT Prompt Engine</a>
-      <div class='nav-links'>
-        <a href='/prompts'>Prompts</a>
-        <a href='/workflows'>Workflows</a>
-        <a href='/templates'>Templates</a>
+
+<nav class="nav">
+  <a href="/" class="nav-logo"><span class="nav-dot"></span>GPT Prompt Engine</a>
+  <div class="nav-center">
+    <a href="/prompts" class="nav-link">Prompts</a>
+    <a href="/workflows" class="nav-link">Workflows</a>
+    <a href="/templates" class="nav-link">Templates</a>
+  </div>
+  <a href="/hr-managers" class="nav-cta">Browse Free</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">Free AI resources by profession</div>
+      <h1>AI prompts built for<br/><em>your actual job.</em></h1>
+      <p class="lede">Prompt libraries, automation workflows, and Notion templates — organised by profession. Not by tool, not by topic. By the work you actually do.</p>
+      <div class="hero-actions">
+        <a href="/hr-managers" class="btn-primary">Browse Resources &rarr;</a>
+        <a href="/prompts" class="btn-secondary">See all prompts</a>
       </div>
-    </nav>
-  </header>
-  <main>
-    <section class='hero'>
-      <h1>AI Resources Built for Your Profession</h1>
-      <p>Prompt libraries, automation workflows, and templates — organised by job role.</p>
-    </section>
-    <section class='professions'>
-      <h2>Browse by Profession</h2>
-      <div class='grid'>
-        {professions.map(p => (
-          <a href={`/${p.toLowerCase().replace(/\s+/g, '-')}`} class='profession-card'>
-            <strong>{p}</strong>
-            <span>{allContent.filter(c => c.data.profession === p).length} resources</span>
-          </a>
-        ))}
+    </div>
+    <div class="hero-right">
+      <div class="preview-card">
+        <div class="preview-head">
+          <span class="chip green"><span class="chip-dot"></span>Prompt</span>
+          <span class="preview-prof">HR Managers</span>
+        </div>
+        <div class="preview-body">
+          <div class="preview-title">25 Prompts for Writing Performance Reviews</div>
+          <div class="preview-prompt">Write a professional performance review for <span class="var">{employee_name}</span>, a <span class="var">{job_title}</span> who exceeded targets by <span class="var">{percentage}</span>...</div>
+        </div>
       </div>
-    </section>
-    <section class='latest'>
-      <h2>Latest Resources</h2>
-      <div class='grid'>
-        {allContent.slice(0, 12).map(post => (
-          <a href={`/${post.collection}/${post.id}`} class='card'>
-            <span class='type-badge'>{post.data.contentType}</span>
-            <h3>{post.data.title}</h3>
-            <p class='meta'>{post.data.profession}</p>
-          </a>
-        ))}
+      <div class="mini-grid">
+        <div class="mini-card">
+          <span class="chip"><span class="chip-dot"></span>Workflow</span>
+          <div class="mini-title">n8n Job Posting Automation</div>
+          <div class="mini-sub">Auto-post roles to LinkedIn + Notion</div>
+        </div>
+        <div class="mini-card">
+          <span class="chip"><span class="chip-dot"></span>Template</span>
+          <div class="mini-title">Notion HR Manager Hub</div>
+          <div class="mini-sub">Recruitment, onboarding, reviews</div>
+        </div>
       </div>
-    </section>
-  </main>
+      <div class="preview-card">
+        <div class="preview-head">
+          <span class="chip green"><span class="chip-dot"></span>Prompt</span>
+          <span class="preview-prof">Marketing Managers</span>
+        </div>
+        <div class="preview-body">
+          <div class="preview-title">AI Prompts for Campaign Briefs &amp; Reports</div>
+          <div class="preview-prompt">Write a campaign brief for <span class="var">{campaign_name}</span> targeting <span class="var">{audience}</span> with a goal of <span class="var">{kpi}</span>...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>HR Managers</strong>&nbsp;Performance · Recruitment · Onboarding</div>
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>Marketing Managers</strong>&nbsp;Campaigns · Social · Reporting</div>
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>Operations Managers</strong>&nbsp;SOPs · Process · Daily Ops</div>
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>Sales Reps</strong>&nbsp;Follow-ups · Cold Outreach · CRM</div>
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>Finance Advisors</strong>&nbsp;Client Comms · Reports</div>
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>Project Managers</strong>&nbsp;Status Reports · Stakeholder Comms</div>
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>HR Managers</strong>&nbsp;Performance · Recruitment · Onboarding</div>
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>Marketing Managers</strong>&nbsp;Campaigns · Social · Reporting</div>
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>Operations Managers</strong>&nbsp;SOPs · Process · Daily Ops</div>
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>Sales Reps</strong>&nbsp;Follow-ups · Cold Outreach · CRM</div>
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>Finance Advisors</strong>&nbsp;Client Comms · Reports</div>
+    <div class="ticker-item"><span class="ticker-pip"></span><strong>Project Managers</strong>&nbsp;Status Reports · Stakeholder Comms</div>
+  </div>
+</div>
+
+<div class="types">
+  <div class="types-grid">
+    <div class="type-block reveal">
+      <div class="type-icon">💬</div>
+      <h3>Prompt Libraries</h3>
+      <p>25 ready-to-use prompts per page, across 5 categories. Each includes the prompt, when to use it, and a pro tip.</p>
+      <div class="type-url">/prompts/[profession]/[task]</div>
+      <div class="type-num">01</div>
+    </div>
+    <div class="type-block reveal" style="transition-delay:0.08s">
+      <div class="type-icon">⚡</div>
+      <h3>Automation Workflows</h3>
+      <p>Node-by-node n8n workflow guides with downloadable JSON. Import directly — no coding, no terminal.</p>
+      <div class="type-url">/workflows/[use-case]</div>
+      <div class="type-num">02</div>
+    </div>
+    <div class="type-block reveal" style="transition-delay:0.16s">
+      <div class="type-icon">📋</div>
+      <h3>Notion Templates</h3>
+      <p>Free Notion and Airtable templates built for specific job titles. Duplicate into your workspace in one click.</p>
+      <div class="type-url">/templates/notion/[job-title]</div>
+      <div class="type-num">03</div>
+    </div>
+  </div>
+</div>
+
+<section class="professions">
+  <div class="prof-inner">
+    <div class="section-eyebrow reveal">Profession hubs</div>
+    <h2 class="section-heading reveal">Pick your profession.<br/><em>Everything's there.</em></h2>
+    <p class="section-sub reveal">Each hub has its own prompt library, workflows, and templates — built around how that profession actually uses AI.</p>
+    <div class="prof-grid">
+      <a href="/hr-managers" class="prof-card reveal">
+        <div class="prof-wave">Wave 1 — Live</div>
+        <div class="prof-name">HR Managers</div>
+        <div class="prof-sub">Performance · Recruitment · Onboarding</div>
+        <div class="prof-arrow">→</div>
+      </a>
+      <a href="/marketing-managers" class="prof-card reveal" style="transition-delay:0.05s">
+        <div class="prof-wave">Wave 1 — Live</div>
+        <div class="prof-name">Marketing Managers</div>
+        <div class="prof-sub">Campaigns · Social · Reporting</div>
+        <div class="prof-arrow">→</div>
+      </a>
+      <a href="/operations-managers" class="prof-card reveal" style="transition-delay:0.1s">
+        <div class="prof-wave">Wave 1 — Live</div>
+        <div class="prof-name">Operations Managers</div>
+        <div class="prof-sub">SOPs · Process · Daily Ops</div>
+        <div class="prof-arrow">→</div>
+      </a>
+      <a href="/sales-reps" class="prof-card reveal" style="transition-delay:0.15s">
+        <div class="prof-wave soon">Coming Soon</div>
+        <div class="prof-name">Sales Reps</div>
+        <div class="prof-sub">Follow-ups · Pitches · CRM</div>
+        <div class="prof-arrow">→</div>
+      </a>
+      <a href="/finance" class="prof-card reveal" style="transition-delay:0.2s">
+        <div class="prof-wave soon">Coming Soon</div>
+        <div class="prof-name">Finance Advisors</div>
+        <div class="prof-sub">Client Comms · Reports</div>
+        <div class="prof-arrow">→</div>
+      </a>
+      <a href="/customer-service" class="prof-card reveal" style="transition-delay:0.25s">
+        <div class="prof-wave soon">Coming Soon</div>
+        <div class="prof-name">Customer Service</div>
+        <div class="prof-sub">Response Templates · Escalations</div>
+        <div class="prof-arrow">→</div>
+      </a>
+      <a href="/project-managers" class="prof-card reveal" style="transition-delay:0.3s">
+        <div class="prof-wave soon">Coming Soon</div>
+        <div class="prof-name">Project Managers</div>
+        <div class="prof-sub">Status Reports · Stakeholder Comms</div>
+        <div class="prof-arrow">→</div>
+      </a>
+      <a href="/real-estate" class="prof-card reveal" style="transition-delay:0.35s">
+        <div class="prof-wave soon">Coming Soon</div>
+        <div class="prof-name">Real Estate Agents</div>
+        <div class="prof-sub">Listing Copy · Client Emails</div>
+        <div class="prof-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner reveal">
+    <div class="cta-eyebrow">Start here</div>
+    <h2 class="cta-heading">Stop searching for prompts.<br/><em>Use the ones that work.</em></h2>
+    <p class="cta-sub">Everything is free. Organised by your profession. Not by the tool someone wants to sell you.</p>
+    <div class="cta-buttons">
+      <a href="/hr-managers" class="btn-green">Browse HR Manager Resources &rarr;</a>
+      <a href="/prompts" class="btn-ghost">See all prompts</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><span class="footer-logo-dot"></span>GPT Prompt Engine</div>
+    <ul class="footer-links">
+      <li><a href="/prompts">Prompts</a></li>
+      <li><a href="/workflows">Workflows</a></li>
+      <li><a href="/templates">Templates</a></li>
+    </ul>
+    <div class="footer-copy">gptpromptengine.com &middot; A WDC property &middot; 2026</div>
+  </div>
+</footer>
+
+<script is:inline>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(el => { if(el.isIntersecting){ el.target.classList.add('on'); obs.unobserve(el.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
