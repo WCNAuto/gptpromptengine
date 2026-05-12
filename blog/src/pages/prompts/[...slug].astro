@@ -1,57 +1,820 @@
 ---
-import { getCollection, render } from 'astro:content';
+// =============================================================================
+// src/pages/prompts/[...slug].astro
+//
+// The single, canonical page template for all auto-generated prompt pages.
+// Every markdown file in src/content/prompts/ renders through this template.
+//
+// Design: Option B · Workspace · WDC Palette
+// Brand: Deep Authority Blue (#0C1D5B), Signal Green (#CDE954)
+//
+// Author: White Digital CANVAS
+// Project: gptpromptengine.com
+// =============================================================================
+
+import { getCollection } from 'astro:content';
+import Analytics from '../../components/Analytics.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('prompts');
-  return posts.map(post => ({ params: { slug: post.id }, props: post }));
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
 }
 
 const post = Astro.props;
-const { Content } = await render(post);  // ← changed from post.render()
+const { Content, headings } = await post.render();
+
+// Pull section names (H2s) from the rendered content for the on-page nav.
+// Skip the FAQ heading so it doesn't appear in the category list.
+const sections = headings.filter(
+  (h) => h.depth === 2 && !/frequently asked|want every|faq/i.test(h.text)
+);
+
+// Build profession URL slug (e.g. "HR Managers" -> "hr-managers")
+const professionSlug = post.data.profession.toLowerCase().replace(/\s+/g, '-');
+
+// Canonical URL
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 ---
+
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='UTF-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-  <title>{post.data.title}</title>
-  <meta name='description' content={post.data.description} />
-  <style>
-    body { font-family:-apple-system,system-ui,sans-serif; color:#1a1a2e; background:#f8fafc; }
-    .page { max-width:780px; margin:0 auto; padding:3rem 1.5rem; }
-    .badge { display:inline-block; background:#f0f7ff; color:#2563eb; padding:3px 10px;
-      border-radius:4px; font-size:0.75rem; font-weight:600; margin-right:6px; }
-    h1 { font-size:2rem; line-height:1.2; margin:0.5rem 0; }
-    .subtitle { font-size:1.1rem; color:#4b5563; margin:0.75rem 0; }
-    .affiliate-bar { background:#fffbeb; border:1px solid #fde68a; border-radius:8px;
-      padding:0.75rem 1rem; margin:1.5rem 0; font-size:0.9rem; }
-    .affiliate-bar a { color:#d97706; font-weight:600; }
-    .content { line-height:1.7; }
-    .content h2 { font-size:1.3rem; margin:2rem 0 1rem; border-bottom:1px solid #f3f4f6; padding-bottom:0.5rem; }
-    .content blockquote { background:#f8fafc; border-left:4px solid #2563eb;
-      padding:1rem 1.25rem; margin:0.75rem 0; border-radius:0 6px 6px 0; }
-    .pack-cta { background:#1e293b; color:white; border-radius:12px; padding:2rem;
-      text-align:center; margin-top:3rem; }
-    .btn { display:inline-block; background:#f59e0b; color:#1e293b; padding:12px 28px;
-      border-radius:8px; font-weight:700; text-decoration:none; margin-top:1rem; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{post.data.title}</title>
+<meta name="description" content={post.data.description} />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={post.data.title} />
+<meta property="og:description" content={post.data.description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:type" content="article" />
+
+<!-- Fonts: Instrument Sans (display + body) + JetBrains Mono (code) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- Sitemap -->
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- GA4 + Search Console (imported as separate component) -->
+<Analytics />
+
+<style is:global>
+  /* =========================================================================
+     ROOT TOKENS (WDC PALETTE)
+     ========================================================================= */
+  :root {
+    --bg: #FFFFFF;
+    --bg-soft: #F2F2F2;
+    --bg-dark: #0C1D5B;
+    --bg-deeper: #0A1645;
+    --text: #0C1D5B;
+    --text-soft: #6B7699;
+    --text-muted: #8B93AB;
+    --rule: #E5E8F0;
+    --rule-strong: #C8CEDD;
+    --blue: #0C1D5B;
+    --blue-tint: #EAEDF5;
+    --blue-deeper: #0A1645;
+    --green: #CDE954;
+    --green-deep: #B5D344;
+    --green-soft-tint: #F7FBE6;
+    --on-dark: #FFFFFF;
+    --display: 'Instrument Sans', sans-serif;
+    --body: 'Instrument Sans', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  /* =========================================================================
+     RESET + BASE
+     ========================================================================= */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  button { font: inherit; cursor: pointer; border: none; background: none; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* =========================================================================
+     NAV (sticky)
+     ========================================================================= */
+  .nav {
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: var(--blue);
+  }
+  .nav-mark {
+    width: 30px;
+    height: 30px;
+    background: var(--blue);
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+  }
+  .nav-mark::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+    width: 10px;
+    height: 10px;
+    background: var(--green);
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+  }
+  .nav-center {
+    display: flex;
+    gap: 4px;
+    background: var(--bg-soft);
+    padding: 4px;
+    border-radius: 8px;
+  }
+  .nav-link {
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-soft);
+    border-radius: 5px;
+    transition: all 0.15s;
+  }
+  .nav-link:hover { color: var(--blue); }
+  .nav-link.current {
+    background: var(--bg);
+    color: var(--blue);
+    box-shadow: 0 1px 2px rgba(12, 29, 91, 0.06);
+    font-weight: 600;
+  }
+  .nav-cta {
+    background: var(--green);
+    color: var(--blue);
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.15s;
+    letter-spacing: 0.01em;
+  }
+  .nav-cta:hover {
+    background: var(--green-deep);
+    transform: translateY(-1px);
+  }
+
+  /* =========================================================================
+     HERO
+     ========================================================================= */
+  .hero {
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+    padding: 56px 32px 44px;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: end;
+  }
+  .crumbs {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .crumbs a { color: var(--text-muted); }
+  .crumbs a:hover { color: var(--blue); }
+  .crumbs span { color: var(--rule-strong); }
+  .crumbs strong { color: var(--blue); font-weight: 600; }
+  .badges { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--blue-tint);
+    color: var(--blue);
+  }
+  .chip.green {
+    background: var(--green);
+    color: var(--blue);
+  }
+  .chip-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+    max-width: 700px;
+    color: var(--blue);
+  }
+  .hero .lede {
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--text-soft);
+    max-width: 600px;
+  }
+  .hero-side {
+    background: var(--bg-soft);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 240px;
+    position: relative;
+  }
+  .hero-side::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--green);
+    border-radius: 10px 10px 0 0;
+  }
+  .hero-side-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    margin-bottom: 14px;
+  }
+  .hero-side-list { display: grid; gap: 8px; }
+  .hero-side-item {
+    display: block;
+    font-size: 13px;
+    color: var(--text-soft);
+    padding: 4px 0;
+    border-bottom: 1px solid var(--rule);
+    transition: color 0.15s;
+  }
+  .hero-side-item:last-child { border-bottom: none; }
+  .hero-side-item:hover { color: var(--blue); }
+
+  /* =========================================================================
+     TOOL STRIP
+     ========================================================================= */
+  .tool-strip {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 32px 0;
+  }
+  .tool-strip-inner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    background: var(--blue-tint);
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--blue);
+  }
+  .tool-strip-icon {
+    width: 30px;
+    height: 30px;
+    background: var(--blue);
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+    color: white;
+    flex-shrink: 0;
+    font-size: 14px;
+  }
+  .tool-strip a {
+    color: var(--blue);
+    font-weight: 600;
+    border-bottom: 1px dotted var(--blue);
+  }
+
+  /* =========================================================================
+     CONTENT (the rendered markdown lives here)
+     ========================================================================= */
+  .content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 32px 24px;
+  }
+
+  /* Opening paragraph(s) before any H2 */
+  .content > p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--text-soft);
+    margin-bottom: 16px;
+    max-width: 800px;
+  }
+  .content > p a {
+    color: var(--blue);
+    font-weight: 600;
+    border-bottom: 1px dotted var(--blue);
+  }
+
+  /* Section headings (categories) */
+  .content h2 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: -0.015em;
+    color: var(--blue);
+    margin: 56px 0 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .content h2::before {
+    content: "";
+    width: 4px;
+    height: 24px;
+    background: var(--green);
+    border-radius: 2px;
+  }
+  .content > h2:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  /* The prompt box itself (rendered from markdown blockquote) */
+  .content blockquote {
+    background: var(--bg-dark);
+    color: rgba(255, 255, 255, 0.92);
+    padding: 22px 22px 64px;
+    border-radius: 12px 12px 0 0;
+    margin: 20px 0 0;
+    position: relative;
+    overflow: visible;
+  }
+  .content blockquote p {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.75;
+    color: inherit;
+    margin: 0;
+    white-space: pre-wrap;
+  }
+  .content blockquote p + p {
+    margin-top: 0.75em;
+  }
+  .content blockquote .var {
+    color: var(--green);
+    font-weight: 600;
+  }
+
+  /* Copy button overlaid on every blockquote */
+  .content blockquote::after {
+    content: "";
+    display: block;
+  }
+
+  /* When-to-use-it block (first paragraph after blockquote) */
+  .content blockquote + p {
+    background: var(--bg-soft);
+    border-left: 3px solid var(--blue);
+    border-radius: 0;
+    padding: 14px 20px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-soft);
+  }
+
+  /* Pro tip block (second paragraph after blockquote) */
+  .content blockquote + p + p {
+    background: var(--bg-soft);
+    border-left: 3px solid var(--green);
+    border-radius: 0 0 12px 12px;
+    padding: 14px 20px;
+    margin: 0 0 28px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-soft);
+  }
+
+  /* Bold prefix labels (When to use it: / Pro tip:) */
+  .content blockquote + p > strong:first-child,
+  .content blockquote + p + p > strong:first-child {
+    font-family: var(--display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+    color: var(--blue);
+  }
+
+  /* Horizontal rule between prompts (rendered from markdown ---) */
+  .content hr {
+    border: none;
+    height: 0;
+    margin: 12px 0;
+  }
+
+  /* FAQ section: h3 questions, p answers */
+  .content h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--blue);
+    margin: 28px 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .content h3 + p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--text-soft);
+    margin-bottom: 12px;
+  }
+
+  /* =========================================================================
+     COPY BUTTON (injected via JS)
+     ========================================================================= */
+  .copy-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: var(--green);
+    color: var(--blue);
+    font-family: var(--display);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 9px 16px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: all 0.15s;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+  }
+  .copy-btn:hover {
+    background: var(--green-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(205, 233, 84, 0.35);
+  }
+  .copy-btn.copied {
+    background: var(--green-deep);
+  }
+  .copy-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  /* =========================================================================
+     CTA
+     ========================================================================= */
+  .cta-wrap {
+    max-width: 1100px;
+    margin: 48px auto;
+    padding: 0 32px;
+  }
+  .cta {
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-deeper) 100%);
+    color: white;
+    border-radius: 16px;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--green);
+  }
+  .cta::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 50%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(205, 233, 84, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .cta-content { position: relative; z-index: 1; }
+  .cta-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 14px;
+  }
+  .cta-eyebrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 10px var(--green);
+  }
+  .cta h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    color: white;
+  }
+  .cta p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 15px;
+    max-width: 500px;
+  }
+  .cta-action {
+    position: relative;
+    z-index: 1;
+    text-align: right;
+  }
+  .cta-price {
+    font-family: var(--display);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: white;
+  }
+  .cta-price small {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    margin-left: 6px;
+  }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--green);
+    color: var(--blue);
+    padding: 14px 26px;
+    font-family: var(--display);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: 8px;
+    transition: all 0.2s;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  .cta-btn:hover {
+    background: var(--green-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(205, 233, 84, 0.35);
+  }
+
+  /* =========================================================================
+     FOOTER
+     ========================================================================= */
+  .footer {
+    background: var(--bg-soft);
+    border-top: 1px solid var(--rule);
+    padding: 32px;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--text-soft);
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-mark {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .footer-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+  }
+
+  /* =========================================================================
+     RESPONSIVE
+     ========================================================================= */
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 30px; }
+    .cta { grid-template-columns: 1fr; padding: 32px; }
+    .cta-action { text-align: left; }
+    .nav { padding: 12px 16px; flex-wrap: wrap; gap: 12px; }
+    .nav-center { order: 3; width: 100%; justify-content: center; }
+    .hero, .tool-strip, .content, .cta-wrap { padding-left: 20px; padding-right: 20px; }
+    .content { padding-top: 36px; }
+    .content blockquote { padding-bottom: 70px; }
+  }
+</style>
 </head>
 <body>
-  <article class='page'>
-    <span class='badge'>{post.data.profession}</span>
-    <span class='badge'>{post.data.contentType}</span>
-    <h1>{post.data.title}</h1>
-    <p class='subtitle'>{post.data.description}</p>
-    <div class='affiliate-bar'>
-      These prompts work best with <a href='JASPER_AFFILIATE_LINK'>Jasper AI</a>
-      or <a href='COPYAI_AFFILIATE_LINK'>Copy.ai</a>
+
+<!-- ========== NAV ========== -->
+<nav class="nav">
+  <a href="/" class="nav-logo">
+    <div class="nav-mark">G</div>
+    <span>Prompt Engine</span>
+  </a>
+  <div class="nav-center">
+    <a class="nav-link current" href="/prompts">Prompts</a>
+    <a class="nav-link" href="/workflows">Workflows</a>
+    <a class="nav-link" href="/templates">Templates</a>
+  </div>
+  <a class="nav-cta" href="#cta">Get the pack →</a>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="crumbs">
+        <a href="/prompts">Prompts</a><span>/</span>
+        <a href={`/${professionSlug}`}>{post.data.profession}</a><span>/</span>
+        <strong>{post.data.category}</strong>
+      </div>
+      <div class="badges">
+        <span class="chip"><span class="chip-dot"></span>{post.data.profession}</span>
+        <span class="chip green"><span class="chip-dot"></span>{post.data.promptCount} prompts · Free</span>
+      </div>
+      <h1>{post.data.title}</h1>
+      <p class="lede">{post.data.description}</p>
     </div>
-    <div class='content'><Content /></div>
-    <div class='pack-cta'>
-      <h3 style='color:white'>Want the complete prompt pack?</h3>
-      <p style='color:#94a3b8;margin:0.5rem 0'>500+ prompts, organised and ready to use.</p>
-      <a href='GUMROAD_LINK' class='btn'>Download the Full Pack — $19</a>
+    {sections.length > 0 && (
+      <aside class="hero-side">
+        <div class="hero-side-label">On this page</div>
+        <div class="hero-side-list">
+          {sections.map((s) => (
+            <a href={`#${s.slug}`} class="hero-side-item">{s.text}</a>
+          ))}
+        </div>
+      </aside>
+    )}
+  </div>
+</header>
+
+<!-- ========== TOOL STRIP ========== -->
+<div class="tool-strip">
+  <div class="tool-strip-inner">
+    <div class="tool-strip-icon">→</div>
+    <div>
+      Best paired with <a href="https://jasper.ai/?via=PLACEHOLDER">Jasper AI</a> for tone control
+      or <a href="https://copy.ai/?via=PLACEHOLDER">Copy.ai</a> for fast iteration.
     </div>
-  </article>
+  </div>
+</div>
+
+<!-- ========== RENDERED MARKDOWN CONTENT ========== -->
+<main class="content">
+  <Content />
+</main>
+
+<!-- ========== CTA ========== -->
+<div class="cta-wrap" id="cta">
+  <div class="cta">
+    <div class="cta-content">
+      <div class="cta-eyebrow">
+        <span class="cta-eyebrow-dot"></span>
+        The full collection
+      </div>
+      <h3>200+ {post.data.profession} prompts in one pack</h3>
+      <p>Every prompt for this role, organised by use case. Ready to paste. Updated monthly.</p>
+    </div>
+    <div class="cta-action">
+      <div class="cta-price">$19<small>one-time</small></div>
+      <a href="https://gumroad.com/PLACEHOLDER" class="cta-btn">Get the pack →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-mark">
+      <div class="footer-dot"></div>
+      GPT Prompt Engine · A WDC property
+    </div>
+    <div>Made for working professionals.</div>
+  </div>
+</footer>
+
+<!-- ========== COPY BUTTON SCRIPT ========== -->
+<script is:inline>
+  // Inject a Copy button into every prompt blockquote at runtime.
+  // Clicking copies the plain-text prompt to the clipboard.
+  document.addEventListener('DOMContentLoaded', () => {
+    const blockquotes = document.querySelectorAll('.content blockquote');
+
+    blockquotes.forEach((bq) => {
+      const btn = document.createElement('button');
+      btn.className = 'copy-btn';
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('aria-label', 'Copy prompt to clipboard');
+
+      btn.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <span class="copy-btn-text">Copy prompt</span>
+      `;
+
+      btn.addEventListener('click', async () => {
+        // Get the prompt text (preserving line breaks)
+        const text = bq.innerText.trim();
+        const textEl = btn.querySelector('.copy-btn-text');
+
+        try {
+          await navigator.clipboard.writeText(text);
+          btn.classList.add('copied');
+          textEl.textContent = 'Copied';
+
+          // Fire GA event if gtag is available
+          if (typeof gtag === 'function') {
+            gtag('event', 'prompt_copied', {
+              event_category: 'engagement',
+              event_label: document.title,
+            });
+          }
+        } catch (err) {
+          textEl.textContent = 'Press Cmd+C';
+        }
+
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          textEl.textContent = 'Copy prompt';
+        }, 1800);
+      });
+
+      bq.appendChild(btn);
+    });
+  });
+</script>
+
 </body>
 </html>
