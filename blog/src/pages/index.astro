@@ -6,9 +6,7 @@ const templates = await getCollection('templates');
 const allContent = [...prompts, ...workflows, ...templates]
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const professions = [...new Set(allContent.map(p => p.data.profession))];
----
-// src/pages/index.astro
-// Homepage — GPT Prompt Engine
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -173,7 +171,7 @@ footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06
         </div>
         <div class="preview-body">
           <div class="preview-title">25 Prompts for Writing Performance Reviews</div>
-          <div class="preview-prompt">Write a professional performance review for <span class="var">{employee_name}</span>, a <span class="var">{job_title}</span> who exceeded targets by <span class="var">{percentage}</span>...</div>
+          <div class="preview-prompt">Write a professional performance review for <span class="var">&#123;employee_name&#125;</span>, a <span class="var">&#123;job_title&#125;</span> who exceeded targets by <span class="var">&#123;percentage&#125;</span>...</div>
         </div>
       </div>
       <div class="mini-grid">
@@ -195,7 +193,7 @@ footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06
         </div>
         <div class="preview-body">
           <div class="preview-title">AI Prompts for Campaign Briefs &amp; Reports</div>
-          <div class="preview-prompt">Write a campaign brief for <span class="var">{campaign_name}</span> targeting <span class="var">{audience}</span> with a goal of <span class="var">{kpi}</span>...</div>
+          <div class="preview-prompt">Write a campaign brief for <span class="var">&#123;campaign_name&#125;</span> targeting <span class="var">&#123;audience&#125;</span> with a goal of <span class="var">&#123;kpi&#125;</span>...</div>
         </div>
       </div>
     </div>
