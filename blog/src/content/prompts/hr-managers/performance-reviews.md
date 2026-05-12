@@ -1,414 +1,431 @@
 ---
-title: "25 Free ChatGPT Prompts for HR Performance Reviews That Actually Work (2026)"
-description: "Ready-to-use ChatGPT prompts for HR performance reviews. Copy, paste, fill variables, get finished reviews in 30 seconds. No templates or frameworks."
+title: "Free ChatGPT Prompts for HR Performance Reviews - 25 Ready-to-Use Templates (2026)"
+description: "25 free ChatGPT prompts for HR performance reviews. Copy, paste, fill variables, get usable drafts in 30 seconds. For busy HR managers."
 profession: "HR Managers"
 category: "Performance"
 contentType: prompt
-tags: ["free chatgpt prompts for hr performance reviews", "chatgpt performance review prompts", "hr performance evaluation prompts", "employee review chatgpt templates", "performance appraisal ai prompts"]
+tags: ["free chatgpt prompts for hr performance reviews", "performance review templates", "hr chatgpt prompts", "employee evaluation prompts", "performance management ai"]
 pubDate: 2026-05-12
 featured: true
 promptCount: 25
 ---
 
-You're an HR Manager with performance reviews due this week. These 25 prompts give you finished review drafts, not templates to fill out later. Copy the prompt, fill in the variables, paste into ChatGPT, and get usable output in seconds.
+Ready-to-use ChatGPT prompts for HR performance reviews that busy managers can copy, paste, and customize. Each prompt produces a finished draft you can edit lightly and use immediately, saving hours of writing time.
 
 These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for HR Managers-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
 
 ## Annual Review Drafts
 
-> You are writing an annual performance review for a solid performer who's ready for more responsibility.
+> You are an HR manager writing a year-end performance review for a solid performer with promotion potential.
+> 
+> Employee: {employee_name}
+> Role: {job_title}, {years_at_company} years at the company
+> Rating: {exceeds_expectations / meets_expectations / developing}
+> Three key wins this year: {win_1}, {win_2}, {win_3}
+> Two growth areas: {growth_area_1}, {growth_area_2}
+> Promotion timeline: {ready_now / 6_months / 12_months}
+> Manager tone: {supportive / direct / formal}
+> 
+> Write a 400-500 word performance review using the SBI model (Situation, Behavior, Impact). Start with specific recognition of their biggest win. Address growth areas as development opportunities, not failures. End with clear next steps for promotion readiness.
+
+When to use it: When you're staring at a blank review form for a good employee who deserves thoughtful feedback but you're behind on deadlines.
+
+Pro tip: If the employee is promotion-ready but no role exists, change the closing to focus on expanded responsibilities rather than promotion timeline.
+
+---
+
+> You are writing a performance review for an underperforming employee who needs a clear improvement plan.
+> 
+> Employee: {employee_name}
+> Position: {job_title}
+> Tenure: {months_or_years}
+> Performance rating: {below_expectations / needs_improvement}
+> Specific performance gaps: {gap_1}, {gap_2}, {gap_3}
+> Previous coaching attempts: {coaching_history}
+> Improvement deadline: {30_days / 60_days / 90_days}
+> HR consultation: {yes / no}
+> 
+> Write a 350-400 word performance review that documents performance issues clearly while maintaining professional tone. Use specific examples, not generalizations. Include measurable improvement expectations and consequences for not meeting them. Structure as: Current state, Required improvements, Timeline, Support offered.
+
+When to use it: When you need to document performance issues for potential disciplinary action but want to give the employee a fair chance to improve.
+
+Pro tip: Always run underperformance reviews past HR before delivery. Add a sentence requiring the employee to acknowledge receipt in writing.
+
+---
+
+> You are completing a performance review for a high performer being considered for leadership development.
 > 
 > Employee: {employee_name}
 > Current role: {job_title}
-> Years in role: {tenure_years}
-> Overall rating: {meets_expectations / exceeds_expectations}
-> Three biggest wins this year: {win_1}, {win_2}, {win_3}
-> Two development areas: {development_area_1}, {development_area_2}
-> Promotion readiness: {ready_now / ready_in_6_months / needs_more_development}
-> Review tone: {encouraging / direct / formal}
-> 
-> Write a 400-500 word annual review using the STAR method (Situation, Task, Action, Result) for the wins section. Start with specific recognition. Address development areas as growth opportunities with concrete next steps. End with clear expectations for the coming year tied to potential advancement.
-
-When to use it: When you're writing annual reviews for employees who consistently deliver but need clearer development paths.
-
-Pro tip: If the employee is promotion-ready, mention specific roles or levels they could move into. Vague "leadership opportunities" don't help career planning.
-
----
-
-> You are writing a year-end review for a high performer who exceeded all major goals.
-> 
-> Employee: {employee_name}
-> Department: {department}
+> Time in role: {duration}
+> Leadership interest: {expressed_interest / manager_identified / both}
 > Key achievements: {achievement_1}, {achievement_2}, {achievement_3}
-> Quantifiable results: {metrics_or_numbers}
-> Leadership examples: {leadership_situation}
-> One minor development area: {small_growth_area}
-> Salary increase recommended: {percentage_or_amount}
-> Company tone: {corporate / casual / startup}
+> Leadership skills shown: {skill_1}, {skill_2}
+> Development areas: {development_need_1}, {development_need_2}
+> Leadership track: {management / technical_lead / project_lead}
 > 
-> Write a 350-400 word performance review that opens with strong recognition tied to business impact. Use specific numbers and examples. Address the minor development area as "expanding strengths" not fixing problems. Close with enthusiasm for their future contributions and hint at the salary recommendation without stating the exact amount.
+> Write a 450-550 word review highlighting their readiness for leadership development. Open with their strongest leadership moment this year. Detail their achievements with quantifiable impact. Address development needs as prerequisites for leadership success. Close with recommended leadership development activities and timeline.
 
-When to use it: For your top 10% performers where the review needs to justify a significant raise or bonus.
+When to use it: When you need to make a case for including someone in leadership development programs or succession planning.
 
-Pro tip: Lead with business impact metrics first, personal qualities second. Finance teams care about ROI when approving big increases.
+Pro tip: Include peer feedback quotes if available. Leadership reviews carry more weight when they show 360-degree impact, not just upward management.
 
 ---
 
-> You are writing a performance review for someone who started strong but performance dropped in the second half of the year.
+> You are writing a review for a new employee completing their first year.
 > 
 > Employee: {employee_name}
 > Role: {job_title}
-> Strong first half examples: {early_wins}
-> Recent performance concerns: {specific_issues}
-> Possible contributing factors: {workload / personal / training / team_changes}
-> Current rating: {meets_expectations / below_expectations}
-> Support offered: {training_plan / mentoring / workload_adjustment}
-> Timeline for improvement: {30_days / 60_days / 90_days}
+> Start date: {start_date}
+> Onboarding completion: {smooth / rocky / delayed}
+> Key learning milestones: {milestone_1}, {milestone_2}, {milestone_3}
+> Integration with team: {excellent / good / needs_work}
+> Areas exceeding expectations: {strength_1}, {strength_2}
+> Areas needing focus: {development_area_1}, {development_area_2}
+> Manager satisfaction: {very_satisfied / satisfied / concerned}
 > 
-> Write a 300-350 word review using a supportive but clear tone. Start by acknowledging early successes. Address the performance decline directly with specific examples, not generalizations. Focus on partnership and support while being clear about expectations. End with concrete next steps and timeline.
+> Create a 300-400 word first-year review that balances encouragement with realistic development needs. Structure as: Integration success, Key achievements, Growth areas, Year 2 expectations. Acknowledge the learning curve while setting clear performance standards going forward.
 
-When to use it: When someone's performance declined and you need to document it while maintaining the relationship.
+When to use it: For employees approaching their one-year anniversary who need clear direction for their second year.
 
-Pro tip: Always include what support you're providing. Reviews that only criticize without offering help create legal risks and don't improve performance.
+Pro tip: Reference specific onboarding goals or 90-day objectives if they were set. It shows you track progress systematically.
 
 ---
 
-> You are conducting a mid-year performance review focused on goal adjustment and course correction.
+> You are documenting a mid-year review for an employee who started strong but performance has declined recently.
 > 
 > Employee: {employee_name}
-> Original annual goals: {goal_1}, {goal_2}, {goal_3}
-> Progress on each goal: {progress_1}, {progress_2}, {progress_3}
-> External changes affecting goals: {market_changes / org_restructure / new_priorities}
-> Skills demonstrated well: {strength_1}, {strength_2}
-> Skills needing focus: {development_area}
-> Adjusted goals for second half: {new_goal_1}, {new_goal_2}
+> Position: {job_title}
+> Strong period: {timeframe_of_good_performance}
+> Decline noticed: {when_decline_started}
+> Possible causes: {personal_issues / workload / skills_gap / motivation}
+> Recent performance issues: {issue_1}, {issue_2}
+> Previous strong contributions: {past_strength_1}, {past_strength_2}
+> Support offered: {training / reduced_workload / mentoring / other}
+> Improvement expectation: {return_to_previous_level / modified_expectations}
 > 
-> Write a 250-300 word mid-year review that acknowledges changed circumstances without making excuses. Celebrate progress made despite challenges. Pivot to refreshed goals that reflect current business needs. Keep the tone collaborative and forward-looking, not defensive about missed original targets.
+> Write a 350-400 word mid-year review acknowledging their proven capabilities while addressing current concerns. Balance recognition of past success with clear expectations for improvement. Offer specific support and set a timeline for seeing progress.
 
-When to use it: Mid-year when business priorities shifted and you need to reset expectations without penalizing the employee.
+When to use it: When a previously reliable employee's performance has dropped and you need to address it before annual reviews.
 
-Pro tip: Document the business reasons for goal changes clearly. It protects both you and the employee if year-end reviews reference mid-year pivots.
-
----
-
-> You are writing a performance review for a new manager who was recently promoted from individual contributor.
-> 
-> Employee: {employee_name}
-> Time in management role: {months_in_role}
-> Previous IC performance: {strong / adequate}
-> Management wins: {leadership_example_1}, {leadership_example_2}
-> Management growing edges: {challenge_1}, {challenge_2}
-> Team feedback themes: {team_sentiment}
-> Management training completed: {training_programs}
-> Next development focus: {next_skill_to_develop}
-> 
-> Write a 400-450 word review that acknowledges the transition challenge upfront. Celebrate specific management moments, not just IC work. Address growing edges as normal parts of the leadership learning curve with concrete development plans. Reference team feedback diplomatically. End with confidence in their management potential and clear next steps.
-
-When to use it: First performance review after someone moved from individual contributor to people management.
-
-Pro tip: New managers often get defensive about criticism. Frame challenges as "typical first-year manager experiences" to reduce defensiveness and increase buy-in.
+Pro tip: If personal issues are suspected but not disclosed, focus on performance impact only. Offer EAP resources without diagnosing causes.
 
 ## Difficult Conversation Scripts
 
-> You are preparing talking points for a performance review with someone who consistently misses deadlines.
+> You are preparing talking points for delivering a poor performance review in person.
 > 
 > Employee: {employee_name}
-> Role: {job_title}
-> Recent missed deadlines: {example_1}, {example_2}, {example_3}
-> Impact on team/clients: {specific_impact}
-> Previous conversations about this: {date_of_last_discussion}
-> Their usual explanations: {common_excuses_they_give}
-> Support you're willing to provide: {time_management_training / workload_review / tools}
-> Consequence if no improvement: {performance_plan / role_change / termination}
-> Timeline for improvement: {specific_timeframe}
+> Meeting date: {date}
+> Performance rating: {below_expectations / unsatisfactory}
+> Main performance issues: {issue_1}, {issue_2}, {issue_3}
+> Employee's likely reaction: {defensive / surprised / accepting / emotional}
+> Previous discussions: {none / informal / formal_warnings}
+> Next steps: {improvement_plan / final_warning / termination_discussion}
+> HR involvement: {present / consulted / will_follow_up}
+> Documentation: {written_review / incident_reports / witness_statements}
 > 
-> Write a 200-250 word script for the verbal portion of this review. Start with specific examples, not generalizations. Acknowledge their explanations without accepting them as ongoing solutions. Be clear about business impact. Offer concrete support. End with explicit consequences and timeline. Keep tone firm but not punitive.
+> Create a 250-300 word script for delivering this review conversation. Include: Opening statement, specific examples, expected employee questions and your responses, clear next steps. Structure for a 15-20 minute conversation with space for employee input.
 
-When to use it: When you've had multiple informal conversations about deadlines and need to formalize the discussion.
+When to use it: The night before delivering a difficult review when you need to practice your key messages and anticipate reactions.
 
-Pro tip: Don't ask "why" questions about missed deadlines during the review. You'll get excuses instead of commitment to change. Focus on "how will you ensure this doesn't happen again."
+Pro tip: Print this script and keep it in front of you during the meeting. Difficult conversations make managers forget key points they meant to cover.
 
 ---
 
-> You are writing a performance review for someone who has good technical skills but struggles with team collaboration.
+> You need to deliver feedback about attitude and interpersonal issues that are affecting team dynamics.
 > 
 > Employee: {employee_name}
-> Technical strengths: {skill_1}, {skill_2}, {skill_3}
-> Collaboration challenges: {specific_behavior_1}, {specific_behavior_2}
-> Team feedback: {what_colleagues_say}
-> Impact on projects: {how_it_affects_work}
-> Previous coaching attempts: {what_youve_tried}
-> Their perspective on teamwork: {their_usual_response}
-> Improvement plan: {specific_behavioral_changes_needed}
+> Specific behavior concerns: {behavior_1}, {behavior_2}
+> Impact on team: {team_impact_description}
+> Complaints received: {number_and_source}
+> Previous informal discussions: {yes_no_when}
+> Employee's work quality: {good / acceptable / poor}
+> Team role: {individual_contributor / team_lead / client_facing}
+> Behavior change required: {specific_behavior_changes_needed}
 > 
-> Write a 350-400 word review using the SBI model (Situation, Behavior, Impact). Lead with genuine appreciation for technical contributions. Address collaboration issues with specific situations, not personality judgments. Explain business impact of teamwork challenges. Outline clear behavioral expectations going forward. Balance accountability with recognition of their technical value.
+> Write a 200-250 word conversation opener for discussing behavioral issues. Focus on specific observable behaviors and their impact, not personality judgments. Include examples, expected standards, and consequences for continued issues. End with asking for their perspective.
 
-When to use it: For technically strong employees whose interpersonal issues are affecting team dynamics.
+When to use it: When you need to address "soft skill" issues that are harder to quantify but seriously impact the workplace.
 
-Pro tip: Avoid words like "attitude" or "personality conflict." Stick to observable behaviors and their business impact. It's harder to argue with and easier to change.
+Pro tip: Stick to behaviors you can observe or that others have reported with specifics. Avoid words like "attitude problem" or "negative personality."
 
 ---
 
-> You are preparing for a performance review with someone who argues about feedback and gets defensive.
+> You are preparing to discuss a promotion denial with an employee who expected to be promoted.
 > 
 > Employee: {employee_name}
-> Recent feedback they pushed back on: {feedback_topic}
-> How they typically respond to criticism: {defensive_behaviors}
-> Specific examples you need to address: {example_1}, {example_2}
-> Business impact of their defensiveness: {impact_on_team / clients / projects}
-> What you want them to do differently: {specific_behavior_change}
-> Consequences for continued defensiveness: {next_steps_if_no_change}
-> Meeting approach: {direct / gentle_but_firm / formal}
+> Position they wanted: {target_role}
+> Who got promoted instead: {selected_candidate / external_hire / role_eliminated}
+> Employee's strengths: {strength_1}, {strength_2}
+> Gap areas that prevented promotion: {gap_1}, {gap_2}
+> Development time needed: {6_months / 1_year / 18_months}
+> Future opportunities: {specific_upcoming_roles}
+> Retention risk: {high / medium / low}
+> Development support available: {training / mentoring / stretch_assignments}
 > 
-> Write a 250-300 word script that anticipates pushback. Start with a clear statement about the purpose being improvement, not criticism. Present examples as facts, not opinions. When they get defensive, redirect to business impact. Don't debate their feelings, focus on required behaviors. End with clear expectations about receiving feedback professionally.
+> Create a 300-350 word script explaining the promotion decision and outlining their development path. Acknowledge their disappointment, explain decision criteria objectively, provide specific development steps, and reinforce their value to the organization.
 
-When to use it: When you need to address both performance issues and how they respond to feedback about performance.
+When to use it: After promotion decisions are announced but before the disappointed employee hears through the grapevine.
 
-Pro tip: If they start arguing during the review, say "I can see you disagree, let's schedule time tomorrow to discuss your perspective" and continue with your points. Don't get drawn into debates.
+Pro tip: Schedule this conversation immediately after promotion announcements. Waiting makes it look like you're avoiding them, which damages trust.
 
 ---
 
-> You are writing a performance review for someone being placed on a Performance Improvement Plan (PIP).
+> You need to discuss salary expectations with an employee requesting a raise outside of normal review cycles.
 > 
 > Employee: {employee_name}
-> Specific performance gaps: {gap_1}, {gap_2}, {gap_3}
-> Previous improvement attempts: {coaching_provided}
-> Business impact of current performance: {specific_consequences}
-> PIP duration: {30_days / 60_days / 90_days}
-> Measurable improvement targets: {target_1}, {target_2}, {target_3}
-> Support being provided: {training / coaching / resources}
-> Check-in schedule: {weekly / biweekly}
-> Consequences if targets not met: {termination / role_change}
+> Requested increase: {dollar_amount_or_percentage}
+> Current salary vs market: {below_market / at_market / above_market}
+> Last increase: {date_of_last_raise}
+> Performance level: {exceeds / meets / below_expectations}
+> Budget constraints: {no_budget / limited_budget / discretionary_funds}
+> Salary review cycle: {annual_in_month / performance_based / flexible}
+> Other compensation options: {bonus / benefits / title_change / none}
+> Retention importance: {critical / important / replaceable}
 > 
-> Write a 400-500 word review that documents the PIP decision clearly. Start with context about previous improvement efforts. List specific, measurable gaps that led to this decision. Outline the PIP terms with precise success metrics and timeline. Emphasize support being provided while being clear about consequences. Use professional, documented language suitable for HR files.
+> Write a 200-300 word response script addressing their salary request. Acknowledge their value, explain the decision process, provide timeline for formal review, and offer alternative recognition if raise isn't possible now.
 
-When to use it: When informal improvement efforts haven't worked and you need to begin formal documentation.
+When to use it: When an employee approaches you informally about compensation and you need a thoughtful response that doesn't shut down the conversation.
 
-Pro tip: Every sentence should be written knowing it might be read by legal teams later. Avoid emotional language or personal judgments. Stick to business impact and measurable performance gaps.
+Pro tip: Never give a flat "no" without explanation. If you can't increase salary, be specific about what would need to change or when it could be reconsidered.
 
 ---
 
-> You are writing a final performance review for someone whose PIP period ended unsuccessfully.
+> You are preparing to discuss work-from-home policy violations with an employee who has been abusing remote work flexibility.
 > 
 > Employee: {employee_name}
-> PIP start date: {date}
-> PIP requirements: {requirement_1}, {requirement_2}, {requirement_3}
-> Actual performance during PIP: {actual_result_1}, {actual_result_2}, {actual_result_3}
-> Support provided: {coaching / training / resources_given}
-> Check-in meetings held: {dates_of_meetings}
-> Final decision: {termination / role_change / extended_PIP}
-> Last day of employment: {date}
-> Transition plan: {handover_details}
+> WFH days allowed: {days_per_week}
+> Policy violations: {specific_violations_observed}
+> Impact on work: {missed_meetings / delayed_responses / quality_issues}
+> Team coverage issues: {coverage_problems}
+> Previous reminders: {informal / email / verbal_warning}
+> Current WFH arrangement: {flexible / fixed_days / as_needed}
+> Proposed consequences: {reduced_WFH / return_to_office / written_warning}
+> Performance otherwise: {good / acceptable / concerning}
 > 
-> Write a 300-350 word final review that documents the unsuccessful PIP completion. Present facts chronologically without editorial comments. Show that support was provided and meetings were held. Compare required targets to actual results objectively. State the final decision and transition plans clearly. Use neutral, professional language appropriate for final employment documentation.
+> Create a 250-300 word conversation script addressing WFH policy compliance. Reference specific policy requirements, document violations with examples, explain impact on the team, and clarify expectations going forward.
 
-When to use it: Final documentation when terminating someone after an unsuccessful Performance Improvement Plan.
+When to use it: When remote work arrangements aren't working but you want to preserve flexibility for compliant employees.
 
-Pro tip: This review will definitely be scrutinized by legal and potentially unemployment offices. Every statement should be factual and supportable with documentation you have in the file.
+Pro tip: Focus on accountability and communication issues, not trust. Frame it as professional standards, not personal failure.
 
-## Quick Check-In Templates
+## Team-Wide Review Communications
 
-> You are writing a brief quarterly check-in summary for a solid performer who's on track.
+> You are writing an email to your team about the upcoming performance review cycle.
 > 
-> Employee: {employee_name}
-> Quarter: {Q1 / Q2 / Q3 / Q4} 2026
-> Key accomplishments this quarter: {achievement_1}, {achievement_2}
-> Goal progress: {on_track / ahead / slightly_behind}
-> One area to focus on next quarter: {focus_area}
-> Support they need: {resource / training / time / nothing_specific}
-> Overall status: {exceeding / meeting / approaching expectations}
-> Next check-in date: {date}
+> Team size: {number_of_direct_reports}
+> Review period: {start_date} to {end_date}
+> Review timeline: {submission_deadline}
+> Self-assessment required: {yes / no}
+> Peer feedback component: {yes / no}
+> Rating scale: {rating_scale_description}
+> Calibration meetings: {dates}
+> Salary/promotion decisions: {timing}
+> One-on-one scheduling: {your_availability}
+> HR support: {hr_contact_person}
 > 
-> Write a 150-200 word quarterly check-in that's positive and brief. Acknowledge good work specifically. Note any course corrections needed without making them dramatic. Confirm what support you'll provide. Keep tone appreciative and forward-looking. This should take you 2 minutes to customize and send.
+> Write a 300-400 word team email explaining the performance review process, timelines, and expectations. Include what employees need to prepare, key dates, and how to get help. Tone should be informative and supportive, not bureaucratic.
 
-When to use it: Regular quarterly touchpoints with people who don't need intensive management.
+When to use it: Six weeks before review deadlines when you need to give your team time to prepare properly.
 
-Pro tip: Send these via email right after your check-in meeting while it's fresh. People appreciate immediate follow-up and you won't forget key points.
+Pro tip: Send this email on a Tuesday morning when people are planning their week. Avoid Mondays (too busy) and Fridays (gets forgotten over weekend).
 
 ---
 
-> You are writing a quick monthly update for someone who's new to the team and needs frequent feedback.
+> You need to send a follow-up email to team members who haven't completed their self-assessments.
 > 
-> Employee: {employee_name}
-> Month: {month_and_year}
-> Onboarding progress: {systems / processes / relationships}
-> What they're doing well: {strength_1}, {strength_2}
-> One thing to adjust: {specific_feedback}
-> Questions they should ask: {suggestion_for_learning}
-> Next month's focus: {priority_for_next_30_days}
-> Your confidence level: {high / moderate / needs_attention}
+> Outstanding submissions: {number_of_missing_assessments}
+> Original deadline: {original_due_date}
+> Extended deadline: {new_deadline}
+> Consequences of missing deadline: {delayed_reviews / impacts_salary_decisions / other}
+> Available support: {hr_help / your_availability / peer_examples}
+> Completion time estimate: {time_needed}
+> Review meeting schedule: {when_meetings_start}
+> Names of compliant team members: {keep_anonymous / recognize_publicly}
 > 
-> Write a 100-150 word monthly update that balances encouragement with clear direction. New employees need frequent positive reinforcement and specific guidance. Address any concerns early before they become problems. Give them something concrete to focus on for the next month. Keep tone supportive and accessible.
+> Create a 200-250 word reminder email that's firm but supportive. Explain the impact of delays on the entire process, offer help, and set clear final deadline. Avoid shaming language while emphasizing importance.
 
-When to use it: Monthly check-ins during someone's first 90 days when frequent feedback prevents problems.
+When to use it: When self-assessment deadlines have passed but you need the input to write fair reviews.
 
-Pro tip: New employees often don't know what questions to ask. Suggest specific people to talk to or processes to learn about rather than generic "let me know if you have questions."
+Pro tip: Send individual emails, not a group message. People who submitted on time don't need to see others being reminded.
 
 ---
 
-> You are documenting a brief mid-project performance check-in.
+> You are announcing performance review results and salary changes to your team.
 > 
-> Employee: {employee_name}
-> Project: {project_name}
-> Project phase: {planning / execution / finishing}
-> What's going well: {positive_element}
-> Potential risk you see: {concern_or_challenge}
-> Adjustment needed: {specific_change_request}
-> Resources you can provide: {support_offering}
-> Next milestone: {upcoming_deadline}
-> Confidence in project success: {high / medium / low}
+> Review cycle: {annual / mid_year / special_cycle}
+> Team performance summary: {exceeded_goals / met_expectations / mixed_results}
+> Salary increase budget: {percentage_or_amount}
+> Promotion announcements: {number_promoted}
+> Performance improvement plans: {number_on_pips}
+> Individual meeting schedule: {timeline_for_individual_discussions}
+> Effective date for changes: {salary_effective_date}
+> Appeals process: {yes_no_how}
+> Next review cycle: {timing}
 > 
-> Write a 100-125 word project check-in note that addresses any concerns while maintaining momentum. Focus on keeping the project on track, not comprehensive performance evaluation. Be specific about what needs adjustment and what support you'll provide. This should be more coaching than evaluating.
+> Write a 250-350 word team announcement email about review outcomes. Celebrate successes, acknowledge hard work, explain next steps for individual discussions, and maintain confidentiality about individual results.
 
-When to use it: Mid-project when you need to give feedback that affects current work, not wait for formal reviews.
+When to use it: After all individual review meetings are scheduled but before they begin, so people know what to expect.
 
-Pro tip: Frame project feedback as "course correction" not performance issues. People are more receptive to change when it's about project success, not personal improvement.
+Pro tip: Send this after 5 PM on the day before individual meetings start. Gives people time to process but not enough time to speculate over multiple days.
 
 ---
 
-> You are writing a brief recognition note after someone handled a difficult situation well.
+> You are writing to your team about changes to the performance review process based on feedback from last cycle.
 > 
-> Employee: {employee_name}
-> Difficult situation: {what_happened}
-> How they handled it: {their_specific_actions}
-> Positive outcome: {result_of_their_actions}
-> Skills they demonstrated: {skill_1}, {skill_2}
-> Impact on team/clients: {broader_positive_effect}
-> Why this matters: {business_value}
+> Previous process issues: {what_didn't_work}
+> Employee feedback themes: {common_complaints}
+> Changes being implemented: {specific_improvements}
+> Timeline for new process: {when_changes_take_effect}
+> Training/support for changes: {what_help_is_available}
+> Pilot testing: {yes_no_scope}
+> Feedback mechanism: {how_to_provide_input}
+> HR involvement: {increased / decreased / same}
+> Your role changes: {how_your_approach_will_change}
 > 
-> Write a 75-100 word recognition note that captures their good work while it's fresh. Be specific about what they did and why it mattered. This isn't a full performance review, just timely appreciation for good work. Send this immediately, don't wait for formal review cycles.
+> Create a 300-400 word email explaining performance review process improvements. Acknowledge previous problems, explain how employee input shaped changes, and build confidence in the new approach.
 
-When to use it: Right after someone handles a crisis, difficult client, or challenging situation well.
+When to use it: When rolling out process improvements but you need buy-in from a team that's skeptical about performance reviews.
 
-Pro tip: Copy their manager (if you're not their direct manager) and consider cc'ing their teammates. Public recognition is more valuable than private praise.
+Pro tip: Reference specific feedback you received, even if anonymized. Shows you actually listened to their concerns rather than making arbitrary changes.
 
 ---
 
-> You are sending a quick "course correction" message about something that needs immediate adjustment.
+> You need to communicate about performance review timeline delays due to organizational changes.
 > 
-> Employee: {employee_name}
-> Specific behavior to adjust: {what_needs_to_change}
-> When you observed this: {recent_situation}
-> Why it needs to change: {business_impact}
-> What to do instead: {alternative_behavior}
-> Timeline for change: {immediately / this_week / by_end_of_month}
-> Follow-up plan: {when_youll_check_back}
+> Original review timeline: {planned_dates}
+> Reason for delay: {merger / layoffs / system_change / leadership_change}
+> New timeline: {revised_dates}
+> What remains the same: {unchanged_elements}
+> What's different: {process_changes}
+> Impact on salary decisions: {delayed / unchanged / accelerated}
+> Employee actions needed: {what_they_should_do}
+> Your availability: {how_to_reach_you}
+> Updates frequency: {how_often_you'll_communicate}
 > 
-> Write a 75-100 word direct message that addresses the issue quickly without making it bigger than it needs to be. Be specific about what to change and when. Don't over-explain or apologize for giving feedback. This should feel like normal course correction, not formal discipline.
+> Write a 250-300 word email explaining review delays caused by organizational factors. Be transparent about what you know and don't know, maintain confidence in the process, and give people clear next steps.
 
-When to use it: Small issues that need immediate attention but don't warrant formal documentation.
+When to use it: When external factors disrupt your review timeline and your team is anxious about career and salary impacts.
 
-Pro tip: Send these via direct message or in-person conversation first. Email makes small corrections feel bigger and more formal than they need to be.
+Pro tip: Follow up weekly with short updates even if nothing has changed. During uncertainty, no communication feels like bad communication.
 
 ## Exit and Transition Reviews
 
-> You are writing a final performance review for someone who's leaving for a better opportunity.
+> You are conducting a final performance review for an employee who is leaving for another opportunity.
 > 
 > Employee: {employee_name}
-> Time with company: {years_and_months}
-> Their new role: {new_job_title_and_company}
-> Key contributions during tenure: {contribution_1}, {contribution_2}, {contribution_3}
-> Projects they led successfully: {project_examples}
-> Skills they developed here: {growth_areas}
-> Impact on team culture: {cultural_contribution}
-> Knowledge transfer status: {handover_progress}
-> Last day: {final_date}
+> Tenure: {time_with_company}
+> Reason for leaving: {new_opportunity / career_change / relocation / other}
+> Notice period: {two_weeks / one_month / other}
+> Final day: {last_working_day}
+> Key contributions: {major_accomplishment_1}, {major_accomplishment_2}
+> Knowledge transfer status: {complete / in_progress / not_started}
+> Rehire eligibility: {yes / no / conditional}
+> Exit interview completed: {yes / no / scheduled}
+> Reference policy: {will_provide / will_not_provide / limited}
 > 
-> Write a 300-350 word final review that celebrates their contributions and documents their impact. Focus on what they accomplished and how they grew rather than what you'll miss. Include specific examples that could be referenced for future job references. End on a positive note about their future success. This should read like a strong reference letter.
+> Write a 300-400 word final performance review that serves as a positive record of their contributions. Focus on achievements and growth during tenure, acknowledge their professionalism in transitioning, and leave the door open for future opportunities.
 
-When to use it: Final reviews for good employees leaving for career advancement.
+When to use it: For departing employees who gave proper notice and are leaving on good terms.
 
-Pro tip: Ask them what accomplishments they want highlighted for future references. This review might be the documentation you reference years later when they ask for a recommendation.
+Pro tip: File this review immediately - departing employees often get forgotten in performance records, which hurts them and you if they want to return later.
 
 ---
 
-> You are conducting an exit interview review with someone leaving due to management concerns.
+> You are writing transition notes for the manager inheriting an employee after a reorganization.
 > 
 > Employee: {employee_name}
-> Their stated reason for leaving: {their_official_reason}
-> Management issues they mentioned: {feedback_about_supervision}
-> System/process frustrations: {operational_complaints}
-> What they wish had been different: {their_suggestions}
-> Positive aspects they mentioned: {what_they_liked}
-> Advice for their replacement: {their_recommendations}
-> Would they recommend company to others: {yes / no / depends}
+> Current role: {job_title}
+> Time on your team: {duration}
+> New manager: {new_manager_name}
+> Transition date: {effective_date}
+> Strengths: {strength_1}, {strength_2}, {strength_3}
+> Development needs: {development_area_1}, {development_area_2}
+> Working style: {communication_preferences_and_motivators}
+> Current projects: {project_1}, {project_2}
+> Performance trajectory: {improving / steady / declining}
+> Salary/promotion considerations: {relevant_timing_or_commitments}
 > 
-> Write a 250-300 word exit review that captures their feedback objectively without being defensive. Focus on learning opportunities for the organization. Document both criticisms and positives they shared. This is for organizational improvement, not defending current practices. Keep tone neutral and fact-based.
+> Create a 400-500 word transition memo for the new manager covering everything they need to know to manage this employee effectively. Include performance history, management approach that works, and any commitments you've made.
 
-When to use it: Exit interviews where they're leaving due to management or organizational issues.
+When to use it: During reorganizations when you're handing off direct reports to other managers.
 
-Pro tip: Don't argue with their feedback during exit interviews. Your job is to gather information for organizational learning, not convince them they're wrong about their experience.
+Pro tip: Schedule a verbal handoff meeting in addition to this written summary. New managers need context for the relationship, not just performance data.
 
 ---
 
-> You are writing a transition review for someone moving to a different department internally.
+> You are writing a performance improvement plan completion review for an employee who successfully turned around their performance.
 > 
 > Employee: {employee_name}
-> Current role: {current_job_title}
-> New role: {new_department_and_position}
-> Time in current role: {duration}
-> Key handover items: {project_1}, {project_2}, {process_knowledge}
-> Skills they're taking to new role: {transferable_skill_1}, {transferable_skill_2}
-> Development areas for new role: {growth_opportunity}
-> Transition timeline: {handover_schedule}
-> New manager: {new_supervisor_name}
+> PIP start date: {start_date}
+> PIP completion date: {end_date}
+> Original performance issues: {issue_1}, {issue_2}
+> Improvement goals met: {goal_1_status}, {goal_2_status}, {goal_3_status}
+> Support provided: {training / coaching / resources_given}
+> Current performance level: {exceeds / meets / approaching_expectations}
+> Ongoing monitoring needed: {yes / no}
+> Return to normal review cycle: {when}
+> Team reintegration: {smooth / needs_attention}
 > 
-> Write a 200-250 word transition review that serves as a handoff document to their new manager. Highlight strengths they're bringing to the new role and any development areas the new manager should know about. Include practical handover information. Frame this as setting them up for success in their new position.
+> Write a 300-400 word review documenting successful PIP completion. Acknowledge their hard work and improvement, confirm they've met requirements, outline ongoing expectations, and officially return them to standard performance management.
 
-When to use it: Internal transfers where you need to brief their new manager on their performance and potential.
+When to use it: When an employee has successfully completed a performance improvement plan and you need to document their return to good standing.
 
-Pro tip: Have a verbal conversation with their new manager in addition to this written handoff. Written reviews miss nuances that help new managers support the employee better.
+Pro tip: Celebrate this privately with the employee but don't announce it team-wide. They've earned a fresh start without everyone watching for backslides.
 
 ---
 
-> You are writing a final review for someone who's retiring after many years with the company.
+> You are documenting the performance of an employee being promoted to another department.
 > 
 > Employee: {employee_name}
-> Years of service: {total_tenure}
-> Career progression: {roles_they_held}
-> Major accomplishments: {legacy_achievement_1}, {legacy_achievement_2}
-> People they mentored: {mentoring_examples}
-> Institutional knowledge they're taking: {expertise_areas}
-> Transition plan: {knowledge_transfer_approach}
-> Retirement date: {final_day}
-> Future plans: {what_theyre_doing_next}
+> Current role: {job_title}
+> Time in role: {duration}
+> New position: {promotion_title}
+> New department: {department_name}
+> Promotion effective: {start_date}
+> Achievements in current role: {achievement_1}, {achievement_2}
+> Skills that earned promotion: {skill_1}, {skill_2}, {skill_3}
+> Areas for development in new role: {development_need_1}, {development_need_2}
+> Transition timeline: {handoff_period}
+> Replacement planning: {status_of_backfill}
 > 
-> Write a 400-450 word retirement review that honors their career and documents their institutional contributions. This should feel celebratory while capturing their professional legacy. Include specific examples that demonstrate their impact over time. Frame this as a career capstone, not just a final review. Consider that this might be referenced in retirement celebrations.
+> Create a 350-450 word performance summary for their personnel file and new manager. Highlight what made them promotion-ready, document their contributions to your team, and provide insights for their success in the new role.
 
-When to use it: Final reviews for long-term employees transitioning to retirement.
+When to use it: When one of your high performers earns a promotion to a different department or division.
 
-Pro tip: Interview colleagues about their impact before writing this review. Long-tenured employees often have contributions you haven't directly observed that should be documented.
+Pro tip: Copy the new manager on this review and offer to discuss in person. Internal promotions succeed when managers collaborate on the transition.
 
 ---
 
-> You are writing a performance review for someone in their final weeks during layoffs or restructuring.
+> You are completing a review for an employee returning from extended leave.
 > 
 > Employee: {employee_name}
-> Reason for departure: {layoffs / restructuring / position_elimination}
-> Final day: {last_date}
-> Performance during notice period: {how_theyve_handled_transition}
-> Key projects completed: {final_contributions}
-> Handover completion: {transition_status}
-> Attitude during difficult period: {professional_behavior}
-> Severance package: {reference_to_separation_agreement}
-> Reference policy: {what_references_youll_provide}
+> Leave type: {medical / parental / personal / sabbatical}
+> Leave duration: {time_away}
+> Return date: {back_to_work_date}
+> Pre-leave performance: {performance_level}
+> Accommodation needs: {yes_no_what}
+> Transition back plan: {gradual / full_time / modified_duties}
+> Catch-up required: {systems / processes / team_changes}
+> Goal adjustments: {yes_no_how}
+> Review cycle alignment: {standard_timeline / adjusted_timeline}
 > 
-> Write a 250-300 word final review that acknowledges the involuntary nature of their departure while documenting their professionalism during the transition. Focus on their work quality and professional behavior during the notice period. This should be supportive documentation for their job search while protecting company interests.
+> Write a 250-350 word return-to-work performance review that reestablishes expectations, acknowledges the transition period, sets realistic goals for reintegration, and documents any accommodation agreements.
 
-When to use it: Final reviews during layoffs, restructuring, or position eliminations.
+When to use it: Within the first month of an employee returning from significant leave to reset expectations and document accommodation agreements.
 
-Pro tip: Be especially generous in documenting good work and professional behavior during layoffs. These reviews often become reference letters, and job searching after layoffs is already difficult.
+Pro tip: Focus on forward-looking goals rather than what they missed while away. Make them feel welcomed back, not penalized for taking leave.
 
 ## Frequently Asked Questions
 
-### What's the difference between ChatGPT prompts for performance reviews versus traditional templates?
-These prompts produce finished review drafts you can edit and send immediately. Traditional templates give you blank forms to fill out yourself, which still requires you to write the actual review content from scratch.
+### How long should ChatGPT performance review prompts be for best results?
+Performance review prompts should include 5-10 specific variables and produce 250-500 word outputs. Shorter prompts miss important context, while longer ones create rambling reviews that need heavy editing.
 
-### How do I modify these prompts for different company cultures or review systems?
-Change the tone variable (formal/casual/direct), adjust the word count in the constraints, and swap frameworks (replace "SBI model" with "STAR method" or your company's preferred structure). The core prompt structure works across different review systems.
+### Can I use ChatGPT prompts for performance reviews with legal implications?
+Use AI-generated drafts as starting points for difficult performance discussions, but always have HR review content for underperforming employees, improvement plans, or potential termination situations before delivery.
 
-### Can I use these prompts for reviews in industries with specific compliance requirements?
-Yes, but add compliance-specific constraints to the prompt. For example, add "ensure language complies with healthcare employment regulations" or "avoid any language that could be considered discriminatory under financial services guidelines." The AI will adjust accordingly.
+### What's the best way to customize these HR performance review prompts for my company?
+Add your company's performance rating scale, core values, and review framework (like SBI or STAR) to each prompt. Include specific role competencies and your organization's tone preferences for consistent results.
 
 ## Want every prompt for HR Managers in one pack?
 
