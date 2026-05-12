@@ -1,23 +1,207 @@
 ---
+// src/pages/prompts/index.astro
+// Prompts category listing page — GPT Prompt Engine
 import { getCollection } from 'astro:content';
-const prompts = await getCollection('prompts');
+
+const allPrompts = await getCollection('prompts');
+
+// Group by profession
+const grouped = allPrompts.reduce((acc, post) => {
+  const prof = post.data.profession;
+  if (!acc[prof]) acc[prof] = [];
+  acc[prof].push(post);
+  return acc;
+}, {});
+
+const professionIcons = {
+  'HR Managers': '👥',
+  'Marketing Managers': '📣',
+  'Operations Managers': '⚙️',
+  'Sales Reps': '💼',
+  'Finance Advisors': '💰',
+  'Project Managers': '📊',
+};
+
+const totalCount = allPrompts.length;
 ---
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Prompts | GPT Prompt Engine</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prompt Libraries — GPT Prompt Engine</title>
+<meta name="description" content="Free AI prompt libraries organised by profession. 25 prompts per page across HR, Marketing, Operations, Sales and more." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="sitemap" href="/sitemap-index.xml" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root {
+  --bg: #FFFFFF; --bg-soft: #F2F2F2; --bg-dark: #0C1D5B; --bg-deeper: #0A1645;
+  --text: #0C1D5B; --text-soft: #6B7699; --text-muted: #8B93AB;
+  --rule: #E5E8F0; --rule-strong: #C8CEDD;
+  --blue: #0C1D5B; --blue-tint: #EAEDF5;
+  --green: #CDE954; --green-deep: #B5D344;
+  --display: 'Fraunces', Georgia, serif;
+  --body: 'Instrument Sans', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+body { font-family:var(--body); background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; line-height:1.6; }
+a { color:inherit; text-decoration:none; }
+.nav { position:sticky; top:0; z-index:100; background:var(--bg); border-bottom:1px solid var(--rule); padding:0 48px; display:flex; align-items:center; justify-content:space-between; height:64px; }
+.nav-logo { font-family:var(--display); font-size:21px; font-weight:500; font-variation-settings:"opsz" 144; letter-spacing:-0.02em; color:var(--blue); display:flex; align-items:center; gap:7px; }
+.nav-dot { width:8px; height:8px; border-radius:50%; background:var(--green); display:inline-block; animation:blink 2.5s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
+.nav-center { display:flex; gap:4px; background:var(--bg-soft); padding:4px; border-radius:8px; }
+.nav-link { padding:8px 16px; font-size:13px; font-weight:500; color:var(--text-soft); border-radius:5px; transition:all 0.15s; }
+.nav-link:hover { color:var(--blue); background:rgba(12,29,91,0.04); }
+.nav-link.active { background:var(--bg); color:var(--blue); font-weight:700; box-shadow:0 1px 3px rgba(12,29,91,0.08); }
+.nav-cta { background:var(--green); color:var(--blue); padding:9px 20px; font-size:13px; font-weight:700; border-radius:6px; letter-spacing:0.01em; transition:all 0.15s; }
+.nav-cta:hover { background:var(--green-deep); transform:translateY(-1px); }
+.page-header { background:var(--bg-dark); padding:56px 48px 48px; border-bottom:3px solid var(--green); }
+.page-header-inner { max-width:1100px; margin:0 auto; }
+.page-header-crumb { font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:20px; display:flex; align-items:center; gap:8px; }
+.page-header-crumb a { color:rgba(255,255,255,0.4); transition:color 0.15s; }
+.page-header-crumb a:hover { color:var(--green); }
+.page-header-crumb span { color:rgba(255,255,255,0.2); }
+.page-header h1 { font-family:var(--display); font-weight:500; font-variation-settings:"opsz" 144; font-size:clamp(32px, 4vw, 48px); line-height:1.08; letter-spacing:-0.025em; color:white; margin-bottom:14px; }
+.page-header h1 em { font-style:italic; color:var(--green); }
+.page-header .lede { font-size:15px; color:rgba(255,255,255,0.55); line-height:1.65; max-width:560px; font-weight:400; }
+.page-header-meta { display:flex; align-items:center; gap:24px; margin-top:28px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.1); }
+.meta-stat-num { font-family:var(--mono); font-size:20px; font-weight:600; color:white; line-height:1; margin-bottom:3px; }
+.meta-stat-label { font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); }
+.meta-divider { width:1px; height:32px; background:rgba(255,255,255,0.1); }
+.main { max-width:1100px; margin:0 auto; padding:40px 48px 80px; }
+.profession-group { margin-bottom:56px; }
+.group-header { display:flex; align-items:center; gap:14px; margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid var(--rule); }
+.group-icon { width:36px; height:36px; background:var(--bg-dark); color:var(--green); border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:16px; }
+.group-title { font-size:18px; font-weight:700; color:var(--blue); }
+.group-count { margin-left:auto; font-family:var(--mono); font-size:11px; font-weight:600; color:var(--blue); background:var(--blue-tint); padding:4px 12px; border-radius:999px; }
+.group-link { font-size:12px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); transition:color 0.15s; display:flex; align-items:center; gap:5px; }
+.group-link:hover { color:var(--blue); }
+.cards-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:14px; }
+.card { background:var(--bg); border:1px solid var(--rule); border-radius:10px; overflow:hidden; display:block; transition:all 0.2s; }
+.card:hover { border-color:var(--rule-strong); box-shadow:0 6px 20px rgba(12,29,91,0.07); transform:translateY(-1px); }
+.card-head { display:flex; align-items:center; gap:10px; padding:12px 16px; background:var(--bg-soft); border-bottom:1px solid var(--rule); }
+.chip { display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:4px 10px; border-radius:999px; background:var(--blue-tint); color:var(--blue); }
+.chip.green { background:var(--green); color:var(--blue); }
+.chip-dot { width:5px; height:5px; border-radius:50%; background:currentColor; flex-shrink:0; }
+.card-meta { margin-left:auto; font-family:var(--mono); font-size:10px; color:var(--text-muted); }
+.card-body { padding:16px; }
+.card-title { font-size:14px; font-weight:700; color:var(--blue); line-height:1.35; margin-bottom:6px; }
+.card-desc { font-size:12px; color:var(--text-soft); line-height:1.6; margin-bottom:14px; }
+.card-footer { display:flex; align-items:center; justify-content:space-between; padding:10px 16px; border-top:1px solid var(--rule); background:var(--bg-soft); }
+.card-tags { display:flex; gap:6px; flex-wrap:wrap; }
+.card-tag { font-size:10px; font-weight:600; color:var(--text-muted); background:var(--bg); border:1px solid var(--rule); padding:2px 8px; border-radius:4px; }
+.card-arrow { font-size:13px; color:var(--text-muted); transition:color 0.15s; }
+.card:hover .card-arrow { color:var(--blue); }
+.empty-group { background:var(--bg-soft); border:1px dashed var(--rule-strong); border-radius:10px; padding:28px 24px; display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.empty-card { background:var(--bg); border:1px solid var(--rule); border-radius:8px; padding:14px; opacity:0.5; }
+.empty-card-line { height:10px; background:var(--rule); border-radius:4px; margin-bottom:8px; }
+.empty-card-line.short { width:60%; }
+.empty-card-line.shorter { width:40%; }
+.empty-badge { height:18px; width:60px; background:var(--rule); border-radius:999px; margin-bottom:10px; }
+.coming-label { grid-column:1/-1; text-align:center; padding:8px 0 0; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); }
+footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06); padding:28px 48px; }
+.footer-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+.footer-logo { font-family:var(--display); font-size:16px; font-weight:500; font-variation-settings:"opsz" 144; color:rgba(255,255,255,0.45); display:flex; align-items:center; gap:6px; }
+.footer-logo-dot { width:6px; height:6px; border-radius:50%; background:var(--green); }
+.footer-links { display:flex; gap:24px; list-style:none; }
+.footer-links a { font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.25); transition:color 0.15s; }
+.footer-links a:hover { color:rgba(255,255,255,0.7); }
+.footer-copy { font-family:var(--mono); font-size:11px; color:rgba(255,255,255,0.2); }
+@media (max-width:960px) {
+  nav,.page-header,.main,footer { padding-left:20px; padding-right:20px; }
+  .cards-grid { grid-template-columns:1fr; }
+}
+</style>
 </head>
 <body>
-  <main style="max-width:780px;margin:0 auto;padding:3rem 1.5rem;">
-    <h1>All Prompts</h1>
-    <ul>
-      {prompts.map(p => (
-        <li>
-          <a href={`/prompts/${p.id}`}>{p.data.title}</a>
-          <p>{p.data.description}</p>
-        </li>
-      ))}
+
+<nav class="nav">
+  <a href="/" class="nav-logo"><span class="nav-dot"></span>GPT Prompt Engine</a>
+  <div class="nav-center">
+    <a href="/prompts" class="nav-link active">Prompts</a>
+    <a href="/workflows" class="nav-link">Workflows</a>
+    <a href="/templates" class="nav-link">Templates</a>
+  </div>
+  <a href="/hr-managers" class="nav-cta">Browse Free</a>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-header-crumb">
+      <a href="/">Home</a><span>/</span>Prompts
+    </div>
+    <h1>Prompt libraries for<br/><em>every profession.</em></h1>
+    <p class="lede">25 ready-to-use prompts per page, organised into 5 categories. Each includes the prompt, when to use it, and a pro tip.</p>
+    <div class="page-header-meta">
+      <div class="meta-stat">
+        <div class="meta-stat-num">{Object.keys(grouped).length}</div>
+        <div class="meta-stat-label">Professions live</div>
+      </div>
+      <div class="meta-divider"></div>
+      <div class="meta-stat">
+        <div class="meta-stat-num">{totalCount * 25}+</div>
+        <div class="meta-stat-label">Prompts published</div>
+      </div>
+      <div class="meta-divider"></div>
+      <div class="meta-stat">
+        <div class="meta-stat-num">100%</div>
+        <div class="meta-stat-label">Free to use</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+  {Object.entries(grouped).map(([profession, posts]) => (
+    <div class="profession-group">
+      <div class="group-header">
+        <div class="group-icon">{professionIcons[profession] || '📄'}</div>
+        <div class="group-title">{profession}</div>
+        <span class="group-count">{posts.length} {posts.length === 1 ? 'page' : 'pages'}</span>
+        <a href={`/${profession.toLowerCase().replace(/\s+/g, '-')}`} class="group-link">View hub →</a>
+      </div>
+      <div class="cards-grid">
+        {posts.map((post) => (
+          <a href={`/prompts/${post.slug}`} class="card">
+            <div class="card-head">
+              <span class="chip green"><span class="chip-dot"></span>Prompt</span>
+              <span class="card-meta">{post.data.promptCount} prompts</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title">{post.data.title}</div>
+              <div class="card-desc">{post.data.description}</div>
+            </div>
+            <div class="card-footer">
+              <div class="card-tags">
+                {post.data.tags.slice(0, 2).map((tag) => (
+                  <span class="card-tag">{tag}</span>
+                ))}
+              </div>
+              <span class="card-arrow">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  ))}
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><span class="footer-logo-dot"></span>GPT Prompt Engine</div>
+    <ul class="footer-links">
+      <li><a href="/prompts">Prompts</a></li>
+      <li><a href="/workflows">Workflows</a></li>
+      <li><a href="/templates">Templates</a></li>
     </ul>
-  </main>
+    <div class="footer-copy">gptpromptengine.com &middot; A WDC property &middot; 2026</div>
+  </div>
+</footer>
+
 </body>
 </html>
