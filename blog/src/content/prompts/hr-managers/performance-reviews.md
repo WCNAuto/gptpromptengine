@@ -1,420 +1,383 @@
 ---
-title: "Free ChatGPT Prompts for HR Performance Reviews 2026 - 25 Ready-to-Use Templates"
-description: "25 ready-to-paste ChatGPT prompts for HR performance reviews. Copy, fill variables, get polished drafts in seconds. Updated for 2026."
+title: "Free ChatGPT Prompts for HR Performance Reviews 2026: 25 Ready-to-Use Templates"
+description: "Copy-paste ChatGPT prompts for HR performance reviews. Get finished drafts in 30 seconds for difficult conversations, promotions, and annual reviews."
 profession: "HR Managers"
 category: "Performance"
-contentType: "prompt"
-tags: ["free chatgpt prompts for hr performance reviews", "performance review templates", "hr chatgpt prompts", "employee evaluation prompts", "performance appraisal ai"]
-pubDate: 2026-05-12
+contentType: prompt
+tags: ["free chatgpt prompts for hr performance reviews", "performance review templates", "employee evaluation prompts", "HR performance management", "annual review scripts"]
+pubDate: 2026-05-13
 featured: true
 promptCount: 25
 ---
 
-Ready-to-paste ChatGPT prompts for HR Managers who need performance review drafts finished today. Each prompt takes 30 seconds to customise and produces a polished document you can edit lightly and send.
+These 25 prompts generate finished performance review drafts, difficult conversation scripts, and follow-up emails you can use immediately. Each prompt produces a complete document you'll edit lightly and send.
 
 These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for HR Managers-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
 
 ## Annual Review Drafts
 
-> You are an HR manager writing a year-end performance review.
+> You are an HR manager writing a year-end performance review for a high performer being considered for promotion.
 > 
 > Employee: {employee_name}
 > Role: {job_title}, {tenure} at the company
-> Rating: {rating: exceeds / meets / below expectations}
-> Wins this year:
-> {three_to_five_wins_in_bullets}
-> Growth areas:
-> {two_to_three_struggles}
-> Tone: {direct / supportive / formal}
-> Promotion consideration: {yes / no / not_yet}
+> Rating: {exceeds_expectations_or_outstanding}
+> Three biggest wins this year: {win_1}, {win_2}, {win_3}
+> Skills to develop: {development_area_1}, {development_area_2}
+> Promotion timeline: {next_6_months_or_next_year}
+> Manager tone: {encouraging_or_direct}
 > 
-> Write a 350 to 450 word performance review using the SBI model (Situation, Behaviour, Impact). Open with recognition that names a specific win. Address growth areas in the middle, framed as development not failure. Close with two forward-looking goals tied to the role.
+> Write a 400-500 word performance review using the SBI model. Open with specific recognition of their top achievement. Address development areas as growth opportunities tied to the promotion path. Close with clear next steps and timeline expectations.
 
-When to use it: You have 15 annual reviews due this week and need consistent, professional drafts that hit all your company's review criteria.
+**When to use it:** Thursday afternoon when you're staring at 12 outstanding annual reviews and the promotion committee meets Monday.
 
-Pro tip: If the employee is promotion-ready, mention specific leadership behaviours you've observed. If not, frame growth areas as "expanding your impact in [specific area]" rather than listing deficits.
+**Pro tip:** If the employee has been asking about promotion timing, mention specific milestones they need to hit rather than vague "continue good work" language.
 
 ---
 
-> You are writing a performance review for an underperforming employee who needs clear improvement expectations.
-> 
-> Employee: {employee_name}
-> Role: {job_title}
-> Time in role: {tenure}
-> Specific performance gaps:
-> {three_concrete_examples}
-> Previous feedback given: {yes_or_no}
-> Company rating system: {rating_scale}
-> Your rating: {specific_rating}
-> Support available: {training_or_resources}
-> 
-> Write a 400 to 500 word review that is direct but constructive. Use the STAR format for examples. Include a 90-day improvement plan with measurable outcomes. Maintain a professional tone that documents concerns while showing commitment to the employee's success.
-
-When to use it: You're documenting performance issues that need to be on record, but you want to give the employee a genuine chance to improve.
-
-Pro tip: Always include what support you're providing. It strengthens your documentation if the situation escalates and shows good faith to the employee.
-
----
-
-> You are writing a glowing review for a high performer being considered for promotion.
+> You are writing a performance review for an employee who meets expectations but has plateaued.
 > 
 > Employee: {employee_name}
 > Current role: {job_title}
-> Target promotion: {new_role_or_level}
-> Standout achievements:
-> {four_to_five_specific_wins}
-> Leadership examples:
-> {two_to_three_instances}
-> Peer feedback theme: {common_praise_point}
-> Salary impact: {revenue_or_cost_savings}
+> Years in current role: {years_in_role}
+> Consistent strengths: {strength_1}, {strength_2}
+> Areas where growth has stalled: {stagnant_area_1}, {stagnant_area_2}
+> Rating: {meets_expectations}
+> Your relationship with them: {collaborative_or_needs_more_direction}
 > 
-> Write a 300 to 400 word review that builds a strong promotion case. Lead with quantified impact. Include specific examples of leadership potential. Address any skill gaps as "areas for growth in the new role" rather than current weaknesses. End with a clear promotion recommendation.
+> Write a 350-400 word review that acknowledges their reliability while creating urgency around growth. Use specific examples in the STAR format. Frame stagnation as untapped potential, not failure. End with two concrete development actions they can start within 30 days.
 
-When to use it: You're advocating for someone's promotion and need to present a compelling case to senior leadership or the promotion committee.
+**When to use it:** For solid performers who've been coasting and need a gentle wake-up call without feeling attacked.
 
-Pro tip: Include peer feedback or cross-functional praise. It shows the employee's impact beyond your direct observation and strengthens the promotion argument.
+**Pro tip:** Avoid the word "plateau" in the actual review—employees hear it as criticism. Use "ready for the next challenge" instead.
 
 ---
 
-> You are writing a mid-year check-in review focused on goal progress and course correction.
+> You are writing a mid-year performance review for someone who started strong but performance has declined recently.
 > 
 > Employee: {employee_name}
 > Role: {job_title}
-> Goals set in January:
-> {three_to_four_original_goals}
-> Current progress: {brief_status_on_each}
-> Unexpected challenges: {two_to_three_obstacles}
-> New priorities: {any_shifted_focus_areas}
-> Support needed: {resources_or_help_required}
+> Strong start examples: {early_win_1}, {early_win_2}
+> Recent concerning patterns: {recent_issue_1}, {recent_issue_2}
+> Possible external factors: {personal_circumstances_or_workload_or_unclear}
+> Your management style with them: {hands_on_or_collaborative_or_directive}
+> Urgency level: {course_correction_or_serious_concern}
 > 
-> Write a 250 to 350 word mid-year review using the GROW model (Goal, Reality, Options, Way forward). Acknowledge progress made. Address obstacles without blame. Adjust goals if business needs have shifted. End with clear actions for the next six months.
+> Write a 300-350 word review that contrasts their strong start with recent patterns. Use curious, not accusatory language about the change. Offer support while setting clear expectations for improvement. Include specific metrics or examples and a 60-day check-in plan.
 
-When to use it: It's mid-year review season and you need to recalibrate goals based on business changes or unexpected challenges your team has faced.
+**When to use it:** When you need to document performance concerns but want to keep the relationship salvageable.
 
-Pro tip: If goals need significant adjustment, explain the business context that drove the change. It prevents the employee from feeling like they failed at the original objectives.
+**Pro tip:** Always include one recent positive example, even if small, to show you're still noticing their efforts.
 
 ---
 
-> You are writing a review for a remote employee whose performance is hard to evaluate through traditional metrics.
+> You are writing a performance review for a consistently underperforming employee who may face termination.
 > 
 > Employee: {employee_name}
 > Role: {job_title}
-> Location: {remote_location}
-> Time zone difference: {hours_difference}
-> Project contributions:
-> {three_to_four_specific_deliverables}
-> Communication style: {strength_or_area_for_growth}
-> Team collaboration: {specific_examples}
-> Self-management: {observed_behaviours}
+> Specific performance gaps: {gap_1}, {gap_2}, {gap_3}
+> Previous improvement attempts: {previous_pip_or_coaching_or_training}
+> Documentation status: {well_documented_or_needs_more_evidence}
+> Timeline pressure: {immediate_action_needed_or_final_warning}
+> Legal considerations: {protected_class_or_none_known}
 > 
-> Write a 350 to 450 word review that evaluates remote work effectiveness. Focus on output quality and team impact rather than hours worked. Address communication and collaboration specifically. Include feedback on their remote work setup and self-management. Provide clear expectations for remote work success.
+> Write a 400-450 word performance review that documents specific, measurable performance failures. Use objective language and cite dates, metrics, and previous conversations. Avoid emotional language or personal characteristics. End with clear consequences and improvement timeline. Include language that protects the company legally while remaining professional.
 
-When to use it: You're reviewing remote employees and need to assess performance based on outcomes and collaboration rather than physical presence.
+**When to use it:** When you're building a termination case and need airtight documentation that HR and legal will approve.
 
-Pro tip: Mention specific examples of proactive communication or problem-solving that you wouldn't have seen with in-office employees. It shows you're evaluating fairly across work arrangements.
+**Pro tip:** Print and save three copies immediately—one for the employee file, one for your records, and one for HR before the meeting.
+
+---
+
+> You are writing a glowing performance review for your top performer who deserves maximum rating and compensation increase.
+> 
+> Employee: {employee_name}
+> Role: {job_title}
+> Quantifiable achievements: {achievement_1_with_numbers}, {achievement_2_with_numbers}, {achievement_3_with_numbers}
+> Leadership examples: {leadership_example_1}, {leadership_example_2}
+> Impact on team: {team_impact}
+> Salary increase recommendation: {percentage_or_amount}
+> Additional recognition: {promotion_or_bonus_or_special_project}
+> 
+> Write a 450-500 word review that builds an unshakeable case for maximum rating and compensation. Lead with quantified business impact. Include specific examples of leadership and peer influence. Use power words that justify budget allocation. Close with strong recommendations for advancement and retention strategies.
+
+**When to use it:** When you need to fight for your best people in budget meetings and compensation discussions.
+
+**Pro tip:** Include peer quotes or client feedback if you have them—external validation carries more weight than manager opinions alone.
 
 ## Difficult Conversation Scripts
 
-> You need to deliver a performance improvement plan during a face-to-face review meeting.
+> You need to have a performance conversation with an employee who doesn't realize they're underperforming.
 > 
 > Employee: {employee_name}
-> Role: {job_title}
-> Main performance issue: {specific_problem}
-> Business impact: {how_it_affects_work}
-> Previous discussions: {dates_and_topics}
-> Improvement timeline: {30_60_or_90_days}
-> Success metrics: {measurable_outcomes}
-> Support provided: {training_resources_mentoring}
+> Their perception: {thinks_theyre_doing_well_or_confused_about_expectations}
+> Specific performance gaps: {gap_1}, {gap_2}
+> Examples they'll recognize: {recent_example_1}, {recent_example_2}
+> Your relationship dynamic: {defensive_or_open_to_feedback_or_conflict_avoidant}
+> Meeting setting: {private_office_or_conference_room_or_virtual}
+> Time available: {15_minutes_or_30_minutes_or_hour}
 > 
-> Write a 200 to 300 word script for delivering this PIP. Start with care and context. Be specific about the problem and its impact. Explain the timeline and support clearly. End by asking for their commitment and questions. Use a firm but supportive tone throughout.
+> Write a 250-300 word conversation script that opens with curiosity, not criticism. Start by asking for their self-assessment, then bridge to specific examples. Use "I've noticed" language rather than "You always" statements. Include two questions that help them reach the conclusion themselves. End with clear next steps and follow-up timing.
 
-When to use it: You're about to have the hardest conversation of your month and need to deliver clear expectations while maintaining the relationship.
+**When to use it:** Monday morning before that awkward conversation you've been avoiding for three weeks.
 
-Pro tip: Pause after explaining the improvement timeline and ask "What questions do you have so far?" It ensures they understand before you move to next steps.
+**Pro tip:** Practice the opening question out loud twice—nervous managers tend to rush the setup and confuse the employee immediately.
 
 ---
 
-> You are having a review conversation with an employee who consistently misses deadlines.
+> You need to tell a valued employee they didn't get the promotion they expected.
 > 
 > Employee: {employee_name}
-> Recent missed deadlines:
-> {three_specific_examples_with_dates}
-> Impact on team: {specific_consequences}
-> Their usual explanation: {common_excuse_pattern}
-> Workload assessment: {realistic_or_overwhelming}
-> Time management observation: {what_you_see}
-> Available support: {tools_or_training}
+> Position they applied for: {job_title}
+> Why they didn't get it: {skills_gap_or_experience_or_internal_candidate_or_budget}
+> Their reaction style: {emotional_or_analytical_or_withdrawn}
+> Relationship with winning candidate: {peer_or_unknown_or_junior_to_them}
+> Future promotion possibility: {likely_next_time_or_different_role_or_unclear}
+> Timeline to try again: {6_months_or_next_year_or_when_ready}
 > 
-> Write a 250 to 350 word conversation script using the SBI model. Address the pattern, not individual incidents. Ask about root causes before offering solutions. Set clear expectations for deadline communication. End with specific next steps and check-in schedule.
+> Write a 200-250 word conversation script that delivers the news directly but kindly. Acknowledge their disappointment without over-apologizing. Give specific, actionable feedback about what would make them successful next time. Include one immediate opportunity or project that demonstrates your continued confidence in them.
 
-When to use it: You're tired of the same deadline excuses and need to have a direct conversation that actually changes behaviour.
+**When to use it:** Right after the promotion decision is final but before they hear through office gossip.
 
-Pro tip: Ask "Walk me through how you plan your week" before offering time management solutions. You might discover process issues, not skill issues.
+**Pro tip:** Schedule this conversation for early in the week so they have work days to process, not a weekend to stew.
 
 ---
 
-> You need to address an employee who received complaints about their attitude or interpersonal behaviour.
+> You need to address an employee who's been complaining about their workload but their productivity doesn't match their peers.
 > 
 > Employee: {employee_name}
-> Complaint source: {peer_customer_or_manager}
-> Specific behaviour described:
-> {two_to_three_examples}
-> Impact on others: {team_morale_or_relationships}
-> Their likely perspective: {how_they_might_see_it}
-> Desired behaviour: {specific_alternative_actions}
-> Follow-up plan: {how_you_will_monitor}
+> Their complaints: {too_much_work_or_unrealistic_deadlines_or_unclear_priorities}
+> Productivity compared to peers: {significantly_lower_or_somewhat_lower}
+> Time management issues you've observed: {distracted_or_inefficient_processes_or_perfectionism}
+> Their typical response to feedback: {defensive_or_accepts_but_doesnt_change_or_overwhelmed}
+> Workload reality: {actually_heavy_or_normal_or_lighter_than_most}
+> Support available: {training_or_tools_or_process_changes}
 > 
-> Write a 300 to 400 word script for this sensitive conversation. Start by stating the issue without naming sources if possible. Use specific behavioural examples, not personality judgements. Ask for their perspective before explaining impact. Agree on specific behaviour changes and follow-up timing.
+> Write a 300-350 word script that validates their feelings while redirecting to solutions. Compare workloads objectively using data, not opinions. Focus on specific time management or efficiency improvements. Offer concrete support while setting expectations for improvement. Include a follow-up plan to track progress.
 
-When to use it: You've received complaints about someone's attitude or behaviour and need to address it without creating defensiveness or drama.
+**When to use it:** When the complaining is affecting team morale and you need to address both the performance gap and the attitude.
 
-Pro tip: Use "I've observed" or "It's been brought to my attention" rather than "People are saying." It keeps the focus on behaviour, not gossip.
+**Pro tip:** Bring actual data to this conversation—hours logged, tasks completed, or deadlines met. Feelings arguments become facts discussions.
 
 ---
 
-> You are discussing a failed project or major mistake during a performance review.
+> You need to counsel an employee who's struggling with remote work performance and accountability.
 > 
 > Employee: {employee_name}
-> Project or situation: {what_went_wrong}
-> Timeline: {when_it_happened}
-> Impact: {cost_delay_or_other_consequences}
-> Their role: {specific_responsibility}
-> Contributing factors: {team_process_or_system_issues}
-> Lessons identified: {what_they_learned}
-> Prevention steps: {how_to_avoid_repeat}
+> Remote work duration: {months_or_years_working_remotely}
+> Specific issues: {missed_meetings_or_delayed_responses_or_incomplete_work}
+> Communication problems: {unresponsive_or_over_communicates_or_unclear_updates}
+> Previous remote work success: {was_better_before_or_always_struggled_or_new_to_remote}
+> Home situation factors: {distractions_or_tech_issues_or_isolation}
+> Office return possibility: {required_or_hybrid_option_or_not_available}
 > 
-> Write a 250 to 350 word review section that addresses the failure constructively. Acknowledge the impact without dwelling on it. Focus on lessons learned and prevention rather than blame. Ask what support they need to handle similar challenges. End with confidence in their ability to apply lessons learned.
+> Write a 275-325 word conversation script that addresses remote work challenges without making assumptions about their home life. Focus on observable work outcomes and communication patterns. Offer specific tools and structures for remote accountability. Set clear expectations for availability and deliverable quality. Include weekly check-in commitments.
 
-When to use it: A major mistake happened months ago, and you need to address it in the formal review without rehashing old drama.
+**When to use it:** When remote work isn't working but you want to give them one solid chance to fix it before requiring office return.
 
-Pro tip: If they've already implemented changes based on the failure, lead with those improvements. It shows growth and prevents the conversation from feeling punitive.
+**Pro tip:** Don't ask about their home situation directly—let them volunteer information and focus on work solutions they can control.
 
 ---
 
-> You need to explain why someone didn't get the promotion they expected.
+> You need to address a good employee whose personal issues are starting to affect their work performance.
 > 
 > Employee: {employee_name}
-> Position they wanted: {specific_role}
-> Who got it: {internal_external_or_no_one}
-> Their strengths: {two_to_three_positives}
-> Gap areas: {specific_skills_or_experience_missing}
-> Development needed: {concrete_improvement_areas}
-> Timeline for growth: {realistic_timeframe}
-> Next opportunity: {when_similar_role_might_open}
+> Performance changes you've noticed: {distracted_or_emotional_or_inconsistent_quality}
+> What you know about personal situation: {family_issues_or_health_concerns_or_nothing_specific}
+> Their usual work quality: {high_performer_or_solid_contributor}
+> Team impact: {others_picking_up_work_or_morale_affected_or_minimal_so_far}
+> Company support available: {eap_or_flexible_schedule_or_leave_options}
+> Your comfort level with personal topics: {comfortable_or_prefer_professional_boundaries}
 > 
-> Write a 200 to 300 word script for this conversation. Start with appreciation for their interest and effort. Be specific about why they weren't selected without comparing them to others. Focus on development opportunities. End with encouragement and concrete next steps for growth.
+> Write a 250-300 word script that shows care while maintaining professional boundaries. Open with specific work observations, not personal questions. Offer company resources without prying into details. Make it clear you want to support them while protecting team performance. Set a timeline for improvement and follow-up check-ins.
 
-When to use it: Someone applied for a promotion, didn't get it, and now you need to keep them motivated while being honest about what they need to develop.
+**When to use it:** When you can see someone struggling personally but need to address the work impact professionally.
 
-Pro tip: Offer to connect them with someone who has the skills they need to develop. It shows investment in their growth beyond just identifying gaps.
+**Pro tip:** Have the EAP contact information written down to hand them—don't make them ask HR later when they're feeling vulnerable.
 
-## Team-Wide Performance Communications
+## Follow-Up and Check-In Messages
 
-> You need to address declining team performance metrics in a team meeting.
+> Write a follow-up email after a difficult performance conversation that didn't go well.
 > 
-> Team: {team_name_or_department}
-> Declining metrics: {specific_numbers_or_kpis}
-> Time period: {how_long_this_has_been_happening}
-> Potential causes: {workload_process_or_external_factors}
-> Individual vs system issues: {your_assessment}
-> Support available: {resources_or_changes_you_can_make}
-> Improvement timeline: {realistic_timeframe}
+> Employee: {employee_name}
+> What happened in the meeting: {got_defensive_or_shut_down_or_became_emotional}
+> Key points they may have missed: {performance_expectation_1}, {performance_expectation_2}
+> Timeline pressure: {immediate_improvement_needed_or_reasonable_runway}
+> Your next step: {formal_pip_or_closer_monitoring_or_hr_involvement}
+> Relationship repair needed: {minor_or_significant_or_may_be_unsalvageable}
+> Documentation requirements: {high_stakes_or_routine_follow_up}
 > 
-> Write a 300 to 400 word team meeting script. Present the data without blame. Ask for their input on causes before sharing your assessment. Discuss solutions collaboratively. Set clear expectations for improvement while offering support. End with next steps and follow-up plan.
+> Write a 150-200 word email that summarizes key points without relitigating the conversation. Use calm, professional tone even if the meeting was heated. Restate expectations and timeline clearly. Offer to answer questions or clarify anything. Include next steps and dates. Keep it factual for documentation purposes.
 
-When to use it: Your team's numbers are down, leadership is asking questions, and you need to address it without destroying morale.
+**When to use it:** Within 24 hours of a conversation that went sideways so expectations are crystal clear.
 
-Pro tip: Bring specific examples of when the team performed well under similar conditions. It reminds everyone that good performance is achievable.
+**Pro tip:** Write the email but don't send it for 2 hours—emotional conversations make you either too harsh or too apologetic in writing.
 
 ---
 
-> You are announcing a reorganisation or role changes that affect performance expectations.
+> Write a check-in email for an employee who's been on a performance improvement plan for 30 days.
 > 
-> Team: {affected_group}
-> Change type: {restructure_new_process_or_role_shifts}
-> Effective date: {when_changes_start}
-> New expectations:
-> {three_to_four_key_changes}
-> Impact on reviews: {how_performance_evaluation_changes}
-> Support during transition: {training_or_resources}
-> Timeline for adjustment: {reasonable_learning_period}
+> Employee: {employee_name}
+> PIP focus areas: {area_1}, {area_2}, {area_3}
+> Progress so far: {strong_improvement_or_some_progress_or_minimal_change}
+> Specific wins to acknowledge: {recent_example_1}, {recent_example_2}
+> Areas still needing work: {ongoing_concern_1}, {ongoing_concern_2}
+> Their attitude toward improvement: {engaged_or_struggling_or_resistant}
+> Remaining PIP timeline: {30_days_or_60_days}
 > 
-> Write a 250 to 350 word announcement that explains changes clearly. Address how it affects their performance evaluation and career development. Acknowledge the adjustment period needed. Provide specific support and training available. End with open door for questions and concerns.
+> Write a 200-250 word email that acknowledges progress while maintaining urgency about remaining issues. Be specific about what's working and what isn't. Include concrete examples from the past week. Remind them of timeline and consequences without being threatening. Offer specific support for remaining challenges.
 
-When to use it: Major organisational changes are happening and your team needs to understand how their job expectations and evaluation criteria are shifting.
+**When to use it:** At the halfway point of any PIP when you need to maintain momentum and document progress.
 
-Pro tip: Schedule one-on-ones within two weeks of this announcement. Group questions will emerge, but individual concerns need private conversation.
+**Pro tip:** Always include at least one specific positive example, even if overall progress is poor—it shows you're paying attention to their efforts.
 
 ---
 
-> You need to reset team expectations after a period of low standards or accountability.
+> Write a post-annual review email that reinforces development goals and next steps.
 > 
-> Team: {team_name}
-> Standards that slipped: {specific_areas_of_decline}
-> Timeline: {how_long_this_has_been_happening}
-> Business impact: {consequences_they_might_not_see}
-> New expectations:
-> {four_to_five_clear_standards}
-> Implementation date: {when_new_standards_start}
-> Support provided: {training_tools_or_resources}
+> Employee: {employee_name}
+> Overall review rating: {exceeds_or_meets_or_below_expectations}
+> Two priority development goals: {goal_1}, {goal_2}
+> Resources you promised: {training_or_mentoring_or_stretch_assignment}
+> Timeline for goal achievement: {quarterly_or_mid_year_or_annual}
+> Their reaction to the review: {pleased_or_disappointed_or_surprised}
+> Next formal check-in: {monthly_or_quarterly}
 > 
-> Write a 300 to 400 word team meeting script that resets standards without attacking past performance. Explain the business need for higher standards. Be specific about new expectations. Provide clear support for meeting them. Address questions about fairness or feasibility directly.
+> Write a 175-225 word email that reinforces the positive aspects of your review conversation. Restate development goals as opportunities, not deficiencies. Include specific next steps with dates. Mention resources you committed to providing. Express confidence in their ability to achieve the goals. Set expectations for ongoing check-ins.
 
-When to use it: Standards have gotten sloppy over time, and you need to raise the bar without making the team feel like they've been doing everything wrong.
+**When to use it:** The day after annual review meetings to reinforce key messages while they're fresh.
 
-Pro tip: Give a specific start date for new standards, ideally 2-3 weeks out. It shows you're serious while giving time for adjustment.
+**Pro tip:** Include yourself in the action items—"I will connect you with Sarah for mentoring by Friday" shows you're invested in their success.
 
 ---
 
-> You are communicating new performance tracking or monitoring tools to your team.
+> Write a recognition email for an employee who exceeded expectations on a difficult project.
 > 
-> Tool or system: {specific_software_or_process}
-> What it tracks: {metrics_or_behaviours_monitored}
-> Frequency: {daily_weekly_or_monthly}
-> Purpose: {coaching_evaluation_or_compliance}
-> Data access: {who_sees_what_information}
-> Implementation timeline: {rollout_schedule}
-> Training provided: {how_they_will_learn_the_system}
+> Employee: {employee_name}
+> Project completed: {project_name_or_description}
+> Specific challenges they overcame: {challenge_1}, {challenge_2}
+> Business impact: {revenue_or_cost_savings_or_client_satisfaction}
+> Skills they demonstrated: {leadership_or_problem_solving_or_technical_expertise}
+> Team members who benefited: {colleague_1}, {colleague_2}
+> Recognition appropriate: {public_praise_or_private_thanks_or_formal_award}
 > 
-> Write a 200 to 300 word communication explaining the new tracking system. Address privacy concerns upfront. Explain how the data will be used constructively. Emphasise coaching and development over punishment. Provide clear training timeline and support resources.
+> Write a 150-200 word email that specifically describes their achievement and impact. Use concrete examples and numbers where possible. Mention skills they demonstrated that align with their development goals. Include the positive effect on team or clients. Make it clear this type of work is what leads to advancement opportunities.
 
-When to use it: You're implementing new performance monitoring technology and need to introduce it without making the team feel micromanaged.
+**When to use it:** Within 48 hours of project completion when the achievement is fresh and visible to others.
 
-Pro tip: Share an example of how the data helped you coach someone successfully (with permission). It demonstrates positive intent rather than surveillance.
+**Pro tip:** Copy their skip-level manager if the achievement is significant—visibility up the chain matters for their career progression.
 
 ---
 
-> You need to address team performance during busy season or high-pressure period.
+> Write a team announcement email about a performance-related personnel change.
 > 
-> Current situation: {specific_busy_period_or_pressure}
-> Duration: {how_long_it_will_last}
-> Performance expectations: {what_cannot_slip}
-> Temporary adjustments: {what_you_are_flexible_on}
-> Support available: {overtime_resources_or_help}
-> Communication schedule: {how_often_you_will_check_in}
-> Recovery plan: {how_you_will_handle_post_busy_period}
+> Employee leaving: {employee_name}
+> Reason for departure: {terminated_for_performance_or_resigned_or_mutual_separation}
+> Their responsibilities: {key_task_1}, {key_task_2}, {key_task_3}
+> Interim coverage: {team_member_1}, {team_member_2}, {you_will_handle}
+> Replacement timeline: {actively_recruiting_or_internal_promotion_or_restructuring}
+> Team concerns to address: {workload_or_client_relationships_or_knowledge_transfer}
+> Tone needed: {matter_of_fact_or_reassuring_or_brief}
 > 
-> Write a 250 to 350 word team communication that acknowledges the pressure while maintaining standards. Be clear about non-negotiable expectations. Offer specific support and flexibility where possible. Set realistic check-in schedule. Address how you'll support recovery after the busy period ends.
+> Write a 125-175 word team email that announces the departure professionally without explaining performance issues. Focus on transition plans and responsibility coverage. Address workload concerns proactively. Set expectations for the replacement process. Keep tone neutral and forward-looking. Avoid personal details or negative language.
 
-When to use it: Your team is entering crunch time, and you need to maintain performance standards while showing you understand the increased pressure.
+**When to use it:** When a performance-related departure affects team workflow and you need to manage the transition professionally.
 
-Pro tip: Identify one specific thing you're temporarily relaxing (meeting frequency, reporting detail, etc.) to show you're genuinely adjusting expectations, not just adding pressure.
+**Pro tip:** Send this email on Tuesday-Thursday morning, never Friday afternoon or Monday morning when people have time to speculate.
 
-## Goal-Setting and Development Planning
+## Coaching and Development Scripts
 
-> You are creating development goals for a high-potential employee ready for stretch assignments.
+> Write a coaching conversation script for an employee who has technical skills but lacks leadership presence.
 > 
 > Employee: {employee_name}
 > Current role: {job_title}
-> Strengths to leverage:
-> {three_key_strengths}
-> Growth areas: {two_skills_to_develop}
-> Career interest: {direction_they_want_to_go}
-> Available stretch opportunities:
-> {specific_projects_or_assignments}
-> Timeline: {6_months_or_1_year}
-> Success metrics: {how_you_will_measure_growth}
+> Technical strengths: {skill_1}, {skill_2}, {skill_3}
+> Leadership gaps: {confidence_in_meetings_or_decision_making_or_team_influence}
+> Career aspirations: {management_track_or_senior_individual_contributor_or_unsure}
+> Recent examples of leadership opportunity missed: {example_1}, {example_2}
+> Personality style: {introverted_or_analytical_or_conflict_avoidant}
 > 
-> Write a 300 to 400 word development plan using the SMART goal framework. Create 2-3 specific development goals that stretch their abilities. Include concrete assignments or projects. Set measurable outcomes and clear timelines. Address how this connects to their career aspirations.
+> Write a 300-350 word coaching script that helps them understand the difference between technical competence and leadership impact. Use specific recent examples where leadership presence would have changed outcomes. Offer concrete practices for building executive presence. Include role-playing or practice opportunities. Focus on authentic leadership that fits their personality.
 
-When to use it: You have a star performer who's ready for bigger challenges, and you need to create a development plan that keeps them engaged and growing.
+**When to use it:** During quarterly development conversations with high-potential individual contributors ready for advancement.
 
-Pro tip: Include at least one cross-functional project or assignment. High performers often need broader perspective, not just deeper expertise in their current area.
+**Pro tip:** Record one of their presentations or meeting contributions (with permission) so they can see their own presence objectively.
 
 ---
 
-> You need to set performance improvement goals for someone who is meeting basic expectations but not excelling.
+> Write a development conversation for a manager who's technically promoted but struggling with people management.
 > 
-> Employee: {employee_name}
-> Current performance level: {meets_basic_requirements}
-> Areas for improvement:
-> {two_to_three_specific_skills_or_behaviours}
-> Business need: {why_higher_performance_matters}
-> Available support: {training_mentoring_or_resources}
-> Measurement approach: {how_you_will_track_progress}
-> Review timeline: {30_60_or_90_day_check_ins}
-> Success definition: {what_exceeds_expectations_looks_like}
+> Manager: {employee_name}
+> Time in management role: {months_managing}
+> Previous role: {individual_contributor_background}
+> Management challenges: {difficult_conversations_or_delegation_or_team_motivation}
+> Team feedback themes: {micromanages_or_unavailable_or_unclear_direction}
+> Their management style preference: {hands_on_or_collaborative_or_directive}
+> Support available: {management_training_or_mentor_or_coaching}
 > 
-> Write a 250 to 350 word goal-setting document that moves someone from adequate to strong performance. Focus on 1-2 key areas rather than everything. Provide specific behavioural indicators of success. Include support and resources. Set realistic but challenging timelines.
+> Write a 350-400 word development conversation that acknowledges the difficult transition from individual contributor to manager. Address specific management challenges with practical solutions. Distinguish between management tasks and leadership behaviors. Offer immediate tools and longer-term development resources. Set expectations for improvement timeline while showing confidence in their potential.
 
-When to use it: Someone is doing fine but not great, and you want to help them level up without making them feel like they're failing.
+**When to use it:** Three to six months after someone's first promotion to management when initial struggles become patterns.
 
-Pro tip: Frame goals around business impact rather than personal improvement. "Increase client retention" feels more meaningful than "improve communication skills."
+**Pro tip:** Connect them with a peer manager who made the transition successfully rather than just sending them to generic management training.
 
 ---
 
-> You are setting goals for a new employee at the end of their probationary period.
+> Write a career development conversation for a high performer who's become bored and disengaged.
 > 
 > Employee: {employee_name}
-> Role: {job_title}
-> Start date: {when_they_started}
-> Onboarding progress: {what_they_have_mastered}
-> Areas still developing:
-> {two_to_three_skills_to_strengthen}
-> Team integration: {how_well_they_fit_in}
-> First year priorities:
-> {three_to_four_key_objectives}
-> Success metrics: {how_you_will_measure_progress}
+> Current role tenure: {years_in_current_role}
+> Performance history: {consistently_high_or_declining_from_high}
+> Signs of disengagement: {less_participation_or_minimal_effort_or_job_searching}
+> Advancement possibilities: {promotion_available_or_lateral_move_or_limited_options}
+> New challenges available: {stretch_assignment_or_special_project_or_cross_training}
+> Risk of losing them: {high_or_moderate_or_low}
 > 
-> Write a 300 to 400 word goal document for their first full year. Acknowledge successful onboarding elements. Set realistic learning and performance goals. Include relationship-building objectives. Create quarterly milestones for the first year. Address both technical and cultural success factors.
+> Write a 275-325 word conversation script that re-engages them through challenge and growth rather than just more money. Explore what type of work energizes them most. Offer specific opportunities that stretch their abilities. Discuss long-term career path options. Create urgency around growth opportunities while acknowledging their value to the organization.
 
-When to use it: Someone has successfully completed their probationary period, and you're setting them up for success in their first full year.
+**When to use it:** When your best people start showing signs of restlessness before they start interviewing elsewhere.
 
-Pro tip: Include one goal about building internal relationships or contributing to team culture. New employees often focus only on task completion and miss the relationship side.
+**Pro tip:** Ask "What would make you excited to come to work on Monday?" and then listen for clues about meaningful challenge, not just advancement.
 
 ---
 
-> You need to create goals for someone transitioning to a new role or increased responsibilities.
+> Write a coaching script for an employee who has great ideas but struggles with execution and follow-through.
 > 
 > Employee: {employee_name}
-> Previous role: {old_position}
-> New role: {new_position_or_added_responsibilities}
-> Transition timeline: {how_long_for_full_transition}
-> Skills to transfer: {what_they_bring_from_before}
-> New skills needed:
-> {three_to_four_capabilities_to_develop}
-> Success in 90 days: {early_wins_needed}
-> Success in 1 year: {full_performance_expectations}
+> Type of ideas they generate: {strategic_or_process_improvement_or_creative_solutions}
+> Execution challenges: {loses_interest_or_gets_overwhelmed_or_lacks_systems}
+> Impact on reputation: {seen_as_unreliable_or_big_picture_only_or_frustrating_to_work_with}
+> Previous coaching attempts: {none_or_informal_or_formal_coaching}
+> Strengths to leverage: {creativity_or_strategic_thinking_or_problem_identification}
+> Support systems needed: {project_management_or_accountability_partner_or_structured_processes}
 > 
-> Write a 350 to 450 word transition goal plan with 30-60-90 day milestones. Acknowledge their existing strengths. Set realistic learning goals for new responsibilities. Include relationship-building with new stakeholders. Create success metrics that account for learning curve.
+> Write a 300-350 word coaching conversation that helps them bridge the gap between ideation and implementation. Acknowledge the value of their strategic thinking while addressing execution gaps. Offer specific systems and tools for follow-through. Discuss partnering strategies that leverage their strengths. Set up accountability measures that feel supportive, not punitive.
 
-When to use it: Someone got promoted or took on significantly new responsibilities, and you need to set them up for success while being realistic about the learning curve.
+**When to use it:** When someone's reputation for great ideas is being undermined by poor execution, affecting their career progression.
 
-Pro tip: Set different expectations for managing former peers versus completely new responsibilities. Role transition challenges vary significantly based on relationship dynamics.
+**Pro tip:** Pair them with a detail-oriented implementer for their next big project—let them see how execution partnership can work.
 
 ---
 
-> You are setting goals for a veteran employee who has become comfortable and needs re-energizing.
+> Write a development conversation for someone who needs to improve their emotional intelligence and interpersonal skills.
 > 
 > Employee: {employee_name}
-> Tenure: {years_with_company}
-> Current performance: {consistent_but_not_growing}
-> Past strengths: {what_they_used_to_excel_at}
-> Potential energy areas:
-> {two_to_three_things_that_might_motivate_them}
-> Available challenges: {new_projects_or_responsibilities}
-> Skills they could mentor: {expertise_to_share_with_others}
-> Career refresh options: {lateral_moves_or_special_assignments}
+> Specific EQ challenges: {reading_social_cues_or_managing_reactions_or_empathy_gaps}
+> Recent interpersonal incidents: {conflict_with_colleague_or_client_complaint_or_team_friction}
+> Their awareness level: {completely_unaware_or_somewhat_aware_or_knows_but_struggles}
+> Impact on work relationships: {avoided_by_colleagues_or_excluded_from_projects_or_direct_complaints}
+> Career implications: {blocking_promotion_or_limiting_assignments_or_team_lead_concerns}
+> Development resources: {eq_assessment_or_communication_training_or_executive_coaching}
 > 
-> Write a 300 to 400 word goal-setting approach that re-engages a long-term employee. Connect goals to their expertise and experience. Include opportunities to mentor or lead others. Offer variety and new challenges. Address both performance improvement and job satisfaction.
+> Write a 325-375 word development conversation that addresses interpersonal skills without attacking their personality. Use specific behavioral examples rather than character judgments. Explain the career impact of strong vs. weak interpersonal skills. Offer concrete development activities and resources. Frame emotional intelligence as a learnable business skill, not a personality flaw.
 
-When to use it: You have a long-term employee who's coasting, and you want to re-engage them rather than manage them out.
+**When to use it:** When technical competence is being undermined by interpersonal challenges that affect team dynamics and career growth.
 
-Pro tip: Ask them what energized them most in past roles before proposing new challenges. Veterans often know what motivates them but haven't been asked recently.
+**Pro tip:** Start with a validated EQ assessment so the conversation is based on objective data rather than subjective feedback that might feel personal.
 
 ## Frequently Asked Questions
 
-### How do I modify these prompts for different performance rating systems?
-Replace the rating variables with your company's specific scale (1-5, exceeds/meets/below, A-B-C, etc.). The prompt structure works with any rating system as long as you're specific about what each rating means.
+### How do I customize these ChatGPT prompts for my specific company culture and performance review process?
+Replace the variable placeholders with your actual employee information and situation details. Adjust the tone variables to match your company's communication style—more formal for traditional industries, more collaborative for tech companies. Add any specific frameworks or rating systems your company uses in place of the generic ones provided.
 
-### Can I use these prompts for 360-degree reviews or peer feedback?
-Yes, but modify the perspective. Change "You are an HR manager" to "You are providing peer feedback" and adjust the variables to focus on collaboration, teamwork, and cross-functional impact rather than direct management observations.
-
-### What if my company requires specific competency frameworks like leadership behaviours?
-Add your framework to the constraints section. For example: "Use our company's five leadership competencies: Vision, Execution, People Development, Innovation, and Results" and include variables for rating each competency area.
-
-## Want every prompt for HR Managers in one pack?
-
-200+ prompts for HR Managers organised by use case. Ready to paste. The full collection.
-
-[Get the full pack for $19](https://gumroad.com/PLACEHOLDER)
+### What's the best way to document performance conversations when using AI-generated scripts?
+Use the AI output as your conversation guide but take notes during the actual meeting about what was said and the employee's responses. Follow up with an email summarizing the key points discussed and next steps agreed upon. The AI script helps you
