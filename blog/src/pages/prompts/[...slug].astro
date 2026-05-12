@@ -18,7 +18,7 @@ import Analytics from '../../components/Analytics.astro';
 export async function getStaticPaths() {
   const posts = await getCollection('prompts');
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: post,
   }));
 }
