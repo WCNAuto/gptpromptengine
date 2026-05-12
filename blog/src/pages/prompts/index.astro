@@ -167,7 +167,7 @@ footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06
       </div>
       <div class="cards-grid">
         {posts.map((post) => (
-          <a href={`/prompts/${post.slug}`} class="card">
+          <a href={`/prompts/${post.id}`} class="card">
             <div class="card-head">
               <span class="chip green"><span class="chip-dot"></span>Prompt</span>
               <span class="card-meta">{post.data.promptCount} prompts</span>
