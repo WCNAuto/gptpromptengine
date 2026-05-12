@@ -14,6 +14,7 @@
 
 import { getCollection } from 'astro:content';
 import Analytics from '../../components/Analytics.astro';
+import { render } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('prompts');
@@ -24,7 +25,7 @@ export async function getStaticPaths() {
 }
 
 const post = Astro.props;
-const { Content, headings } = await post.render();
+const { Content, headings } = await render(post);
 
 // Pull section names (H2s) from the rendered content for the on-page nav.
 // Skip the FAQ heading so it doesn't appear in the category list.
