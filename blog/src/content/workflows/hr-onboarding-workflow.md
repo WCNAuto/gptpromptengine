@@ -1,4 +1,3 @@
-
 ---
 title: "Automated Employee Onboarding Checklist with n8n"
 description: "Streamline your HR onboarding process with this comprehensive n8n workflow that automatically creates and tracks employee onboarding tasks, sends notifications, and ensures nothing falls through the cracks."
