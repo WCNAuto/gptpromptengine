@@ -1,6 +1,49 @@
 ---
-// src/pages/templates/index.astro
-// Templates category listing page — GPT Prompt Engine
+import { getCollection } from 'astro:content';
+
+const allTemplates = await getCollection('templates');
+
+// Sort by pubDate descending
+allTemplates.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+// Normalise profession casing inconsistencies
+function normaliseProfession(p: string): string {
+  const map: Record<string, string> = {
+    'Marketing Manager': 'Marketing Managers',
+    'Project Management': 'Project Managers',
+  };
+  return map[p] ?? p;
+}
+
+// Group by profession
+const professionOrder = ['HR Managers', 'Marketing Managers', 'Operations', 'Sales', 'Project Managers', 'Customer Service'];
+const grouped: Record<string, typeof allTemplates> = {};
+for (const t of allTemplates) {
+  const prof = normaliseProfession(t.data.profession);
+  if (!grouped[prof]) grouped[prof] = [];
+  grouped[prof].push(t);
+}
+
+const orderedProfessions = [
+  ...professionOrder.filter(p => grouped[p]),
+  ...Object.keys(grouped).filter(p => !professionOrder.includes(p)),
+];
+
+const professionMeta: Record<string, { icon: string; hub: string }> = {
+  'HR Managers':        { icon: '👥', hub: '/hr-managers' },
+  'Marketing Managers': { icon: '📣', hub: '/marketing-managers' },
+  'Operations':         { icon: '⚙️', hub: '/operations-managers' },
+  'Sales':              { icon: '💼', hub: '/sales-reps' },
+  'Project Managers':   { icon: '📋', hub: '/project-managers' },
+  'Customer Service':   { icon: '🎧', hub: '/customer-service' },
+};
+const fallbackMeta = { icon: '📝', hub: '/' };
+
+const toolIcons: Record<string, string> = {
+  'Notion':   '📝',
+  'Airtable': '🗃',
+  'Google Sheets': '📊',
+};
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -60,6 +103,7 @@ a { color:inherit; text-decoration:none; }
 .tool-btn-icon { font-size:14px; }
 .main { max-width:1100px; margin:0 auto; padding:40px 48px 80px; }
 .profession-group { margin-bottom:56px; }
+.profession-group[data-hidden] { display:none; }
 .group-header { display:flex; align-items:center; gap:14px; margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid var(--rule); }
 .group-icon { width:36px; height:36px; background:var(--bg-dark); color:var(--green); border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:16px; }
 .group-title { font-size:18px; font-weight:700; color:var(--blue); }
@@ -74,11 +118,6 @@ a { color:inherit; text-decoration:none; }
 .chip.teal { background:#E8F8F4; color:#0A6B50; }
 .chip-dot { width:5px; height:5px; border-radius:50%; background:currentColor; flex-shrink:0; }
 .card-tool-badge { margin-left:auto; display:inline-flex; align-items:center; gap:5px; font-family:var(--mono); font-size:10px; font-weight:600; color:var(--text-muted); background:var(--bg); border:1px solid var(--rule); padding:2px 8px; border-radius:4px; }
-.card-preview { padding:14px 16px; border-bottom:1px solid var(--rule); display:flex; flex-direction:column; gap:5px; }
-.preview-row { display:flex; align-items:center; gap:8px; padding:6px 10px; background:var(--bg-soft); border-radius:5px; border:1px solid var(--rule); }
-.preview-row-icon { font-size:12px; flex-shrink:0; }
-.preview-row-label { font-size:11px; font-weight:600; color:var(--blue); flex:1; }
-.preview-row-type { font-family:var(--mono); font-size:10px; color:var(--text-muted); }
 .card-body { padding:14px 16px; }
 .card-title { font-size:14px; font-weight:700; color:var(--blue); line-height:1.35; margin-bottom:6px; }
 .card-desc { font-size:12px; color:var(--text-soft); line-height:1.6; }
@@ -88,13 +127,6 @@ a { color:inherit; text-decoration:none; }
 .card-duplicate { display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; color:var(--blue); transition:color 0.15s; }
 .card-duplicate:hover { color:var(--green-deep); }
 .card-duplicate-icon { width:22px; height:22px; background:var(--green); color:var(--blue); border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:10px; }
-.empty-group { background:var(--bg-soft); border:1px dashed var(--rule-strong); border-radius:10px; padding:28px 24px; display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
-.empty-card { background:var(--bg); border:1px solid var(--rule); border-radius:8px; padding:14px; opacity:0.5; }
-.empty-card-line { height:10px; background:var(--rule); border-radius:4px; margin-bottom:8px; }
-.empty-card-line.short { width:60%; }
-.empty-card-line.shorter { width:40%; }
-.empty-badge { height:18px; width:60px; background:var(--rule); border-radius:999px; margin-bottom:10px; }
-.coming-label { grid-column:1/-1; text-align:center; padding:8px 0 0; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); }
 footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06); padding:28px 48px; }
 .footer-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
 .footer-logo { font-family:var(--display); font-size:16px; font-weight:500; font-variation-settings:"opsz" 144; color:rgba(255,255,255,0.45); display:flex; align-items:center; gap:6px; }
@@ -128,8 +160,8 @@ footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06
     <p class="lede">Free Notion and Airtable templates organised by job title. Duplicate into your workspace in one click. Premium bundles available on Gumroad.</p>
     <div class="page-header-meta">
       <div class="meta-stat">
-        <div class="meta-stat-num">1</div>
-        <div class="meta-stat-label">Template live</div>
+        <div class="meta-stat-num">{allTemplates.length}</div>
+        <div class="meta-stat-label">{allTemplates.length === 1 ? 'Template' : 'Templates'} live</div>
       </div>
       <div class="meta-divider"></div>
       <div class="meta-stat">
@@ -148,87 +180,54 @@ footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06
 <div class="tool-toggle">
   <div class="tool-toggle-inner">
     <span class="tool-toggle-label">Filter by tool</span>
-    <button class="tool-btn active"><span class="tool-btn-icon">📝</span>Notion</button>
-    <button class="tool-btn"><span class="tool-btn-icon">🗃</span>Airtable</button>
-    <button class="tool-btn"><span class="tool-btn-icon">📊</span>Google Sheets</button>
+    <button class="tool-btn active" data-tool="all"><span class="tool-btn-icon">✦</span>All</button>
+    <button class="tool-btn" data-tool="Notion"><span class="tool-btn-icon">📝</span>Notion</button>
+    <button class="tool-btn" data-tool="Airtable"><span class="tool-btn-icon">🗃</span>Airtable</button>
+    <button class="tool-btn" data-tool="Google Sheets"><span class="tool-btn-icon">📊</span>Google Sheets</button>
   </div>
 </div>
 
 <main class="main">
-  <div class="profession-group">
-    <div class="group-header">
-      <div class="group-icon">👥</div>
-      <div class="group-title">HR Managers</div>
-      <span class="group-count">1 template</span>
-      <a href="/hr-managers" class="group-link">View hub →</a>
-    </div>
-    <div class="cards-grid">
-      <a href="/templates/notion/hr-managers" class="card">
-        <div class="card-head">
-          <span class="chip teal"><span class="chip-dot"></span>Template</span>
-          <span class="card-tool-badge">📝 Notion</span>
+  {orderedProfessions.map(profession => {
+    const templates = grouped[profession];
+    const meta = professionMeta[profession] ?? fallbackMeta;
+    const count = templates.length;
+    return (
+      <div class="profession-group" data-profession={profession}>
+        <div class="group-header">
+          <div class="group-icon">{meta.icon}</div>
+          <div class="group-title">{profession}</div>
+          <span class="group-count">{count} {count === 1 ? 'template' : 'templates'}</span>
+          <a href={meta.hub} class="group-link">View hub →</a>
         </div>
-        <div class="card-preview">
-          <div class="preview-row">
-            <span class="preview-row-icon">👤</span>
-            <span class="preview-row-label">Recruitment Pipeline</span>
-            <span class="preview-row-type">Database</span>
-          </div>
-          <div class="preview-row">
-            <span class="preview-row-icon">📋</span>
-            <span class="preview-row-label">Onboarding Checklist</span>
-            <span class="preview-row-type">Checklist</span>
-          </div>
-          <div class="preview-row">
-            <span class="preview-row-icon">⭐</span>
-            <span class="preview-row-label">Performance Tracker</span>
-            <span class="preview-row-type">Table</span>
-          </div>
+        <div class="cards-grid">
+          {templates.map(t => {
+            const toolIcon = toolIcons[t.data.tool] ?? '📄';
+            return (
+              <a href={`/templates/${t.id}`} class="card" data-tool={t.data.tool}>
+                <div class="card-head">
+                  <span class="chip teal"><span class="chip-dot"></span>Template</span>
+                  <span class="card-tool-badge">{toolIcon} {t.data.tool}</span>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">{t.data.title}</div>
+                  <div class="card-desc">{t.data.description}</div>
+                </div>
+                <div class="card-footer">
+                  <div class="card-tags">
+                    {t.data.tags.slice(0, 3).map((tag: string) => (
+                      <span class="card-tag">{tag}</span>
+                    ))}
+                  </div>
+                  <span class="card-duplicate"><span class="card-duplicate-icon">⧉</span>Duplicate free</span>
+                </div>
+              </a>
+            );
+          })}
         </div>
-        <div class="card-body">
-          <div class="card-title">Free Notion Template for HR Managers 2026</div>
-          <div class="card-desc">Recruitment pipeline, onboarding tracker, and performance review system — all in one Notion workspace.</div>
-        </div>
-        <div class="card-footer">
-          <div class="card-tags">
-            <span class="card-tag">Notion</span>
-            <span class="card-tag">HR Managers</span>
-          </div>
-          <span class="card-duplicate"><span class="card-duplicate-icon">⧉</span>Duplicate free</span>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <div class="profession-group">
-    <div class="group-header">
-      <div class="group-icon">📣</div>
-      <div class="group-title">Marketing Managers</div>
-      <span class="group-count" style="background:var(--bg-soft);color:var(--text-muted);">Coming soon</span>
-      <a href="/marketing-managers" class="group-link">View hub →</a>
-    </div>
-    <div class="empty-group">
-      <div class="empty-card"><div class="empty-badge"></div><div class="empty-card-line"></div><div class="empty-card-line short"></div><div class="empty-card-line shorter"></div></div>
-      <div class="empty-card"><div class="empty-badge"></div><div class="empty-card-line"></div><div class="empty-card-line short"></div><div class="empty-card-line shorter"></div></div>
-      <div class="empty-card"><div class="empty-badge"></div><div class="empty-card-line"></div><div class="empty-card-line short"></div><div class="empty-card-line shorter"></div></div>
-      <div class="coming-label">Campaign planning · Content calendar · Brand tracker — publishing soon</div>
-    </div>
-  </div>
-
-  <div class="profession-group">
-    <div class="group-header">
-      <div class="group-icon">⚙️</div>
-      <div class="group-title">Operations Managers</div>
-      <span class="group-count" style="background:var(--bg-soft);color:var(--text-muted);">Coming soon</span>
-      <a href="/operations-managers" class="group-link">View hub →</a>
-    </div>
-    <div class="empty-group">
-      <div class="empty-card"><div class="empty-badge"></div><div class="empty-card-line"></div><div class="empty-card-line short"></div><div class="empty-card-line shorter"></div></div>
-      <div class="empty-card"><div class="empty-badge"></div><div class="empty-card-line"></div><div class="empty-card-line short"></div><div class="empty-card-line shorter"></div></div>
-      <div class="empty-card"><div class="empty-badge"></div><div class="empty-card-line"></div><div class="empty-card-line short"></div><div class="empty-card-line shorter"></div></div>
-      <div class="coming-label">SOP library · Vendor tracker · Process audit — publishing soon</div>
-    </div>
-  </div>
+      </div>
+    );
+  })}
 </main>
 
 <footer>
@@ -244,10 +243,30 @@ footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06
 </footer>
 
 <script is:inline>
-  document.querySelectorAll('.tool-btn').forEach(btn => {
+  const buttons = document.querySelectorAll('.tool-btn');
+  const cards = document.querySelectorAll('.card[data-tool]');
+  const groups = document.querySelectorAll('.profession-group[data-profession]');
+
+  buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('active'));
+      buttons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+
+      const selected = btn.getAttribute('data-tool');
+
+      cards.forEach(card => {
+        if (selected === 'all' || card.getAttribute('data-tool') === selected) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Hide groups where all cards are hidden
+      groups.forEach(group => {
+        const visible = group.querySelectorAll('.card[data-tool]:not([style*="display: none"])');
+        group.style.display = visible.length === 0 ? 'none' : '';
+      });
     });
   });
 </script>
