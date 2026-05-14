@@ -1,4 +1,4 @@
-```markdown
+
 ---
 title: "n8n Content Calendar Publishing Automation for Marketing Managers"
 description: "Automate your content calendar publishing workflow with n8n to streamline social media posts, blog publications, and campaign scheduling across multiple platforms."
