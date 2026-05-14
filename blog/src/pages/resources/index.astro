@@ -1,0 +1,516 @@
+---
+import { getCollection } from 'astro:content';
+
+const allPrompts   = await getCollection('prompts');
+const allWorkflows = await getCollection('workflows');
+const allTemplates = await getCollection('templates');
+
+function normaliseProfession(p: string): string {
+  const map: Record<string, string> = {
+    'Marketing Manager': 'Marketing Managers',
+    'Project Management': 'Project Managers',
+  };
+  return map[p] ?? p;
+}
+
+// Build profession → counts map
+const professionOrder = [
+  'HR Managers', 'Marketing Managers', 'Operations',
+  'Sales', 'Customer Service', 'Project Managers', 'Finance',
+];
+
+interface ProfData {
+  icon: string;
+  hub: string;
+  prompts: number;
+  workflows: number;
+  templates: number;
+}
+
+const profMap: Record<string, ProfData> = {};
+
+const metaBase: Record<string, { icon: string; hub: string }> = {
+  'HR Managers':        { icon: '👥', hub: '/hr-managers' },
+  'Marketing Managers': { icon: '📣', hub: '/marketing-managers' },
+  'Operations':         { icon: '⚙️', hub: '/operations-managers' },
+  'Sales':              { icon: '💼', hub: '/sales-reps' },
+  'Customer Service':   { icon: '🎧', hub: '/customer-service' },
+  'Project Managers':   { icon: '📋', hub: '/project-managers' },
+  'Finance':            { icon: '💰', hub: '/finance' },
+};
+
+function ensureProf(prof: string) {
+  if (!profMap[prof]) {
+    const m = metaBase[prof] ?? { icon: '⚡', hub: '/' };
+    profMap[prof] = { ...m, prompts: 0, workflows: 0, templates: 0 };
+  }
+}
+
+for (const p of allPrompts) {
+  const prof = normaliseProfession(p.data.profession);
+  ensureProf(prof);
+  profMap[prof].prompts++;
+}
+for (const w of allWorkflows) {
+  const prof = normaliseProfession(w.data.profession);
+  ensureProf(prof);
+  profMap[prof].workflows++;
+}
+for (const t of allTemplates) {
+  const prof = normaliseProfession(t.data.profession);
+  ensureProf(prof);
+  profMap[prof].templates++;
+}
+
+const orderedProfs = [
+  ...professionOrder.filter(p => profMap[p]),
+  ...Object.keys(profMap).filter(p => !professionOrder.includes(p)),
+];
+
+const totalCount = allPrompts.length + allWorkflows.length + allTemplates.length;
+
+// Recent items across all types (latest 6)
+interface AnyItem {
+  type: string;
+  title: string;
+  description: string;
+  profession: string;
+  slug: string;
+  tags: string[];
+  pubDate: Date;
+}
+const recentItems: AnyItem[] = [
+  ...allPrompts.map(p => ({
+    type: 'Prompt',
+    title: p.data.title,
+    description: p.data.description,
+    profession: normaliseProfession(p.data.profession),
+    slug: `/prompts/${p.id}`,
+    tags: p.data.tags?.slice(0, 2) ?? [],
+    pubDate: new Date(p.data.pubDate),
+  })),
+  ...allWorkflows.map(w => ({
+    type: 'Workflow',
+    title: w.data.title,
+    description: w.data.description,
+    profession: normaliseProfession(w.data.profession),
+    slug: `/workflows/${w.id}`,
+    tags: w.data.tags?.slice(0, 2) ?? [],
+    pubDate: new Date(w.data.pubDate),
+  })),
+  ...allTemplates.map(t => ({
+    type: 'Template',
+    title: t.data.title,
+    description: t.data.description,
+    profession: normaliseProfession(t.data.profession),
+    slug: `/templates/${t.id}`,
+    tags: t.data.tags?.slice(0, 2) ?? [],
+    pubDate: new Date(t.data.pubDate),
+  })),
+].sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf()).slice(0, 6);
+
+const typeColor: Record<string, string> = {
+  'Prompt':   'blue',
+  'Workflow': 'orange',
+  'Template': 'teal',
+};
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>All Resources — GPT Prompt Engine</title>
+<meta name="description" content="Browse all free AI prompts, n8n automation workflows, and Notion templates organised by profession." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="sitemap" href="/sitemap-index.xml" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root {
+  --bg: #FFFFFF; --bg-soft: #F2F2F2; --bg-dark: #0C1D5B; --bg-deeper: #0A1645;
+  --text: #0C1D5B; --text-soft: #6B7699; --text-muted: #8B93AB;
+  --rule: #E5E8F0; --rule-strong: #C8CEDD;
+  --blue: #0C1D5B; --blue-tint: #EAEDF5;
+  --green: #CDE954; --green-deep: #B5D344;
+  --display: 'Fraunces', Georgia, serif;
+  --body: 'Instrument Sans', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+body { font-family:var(--body); background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; line-height:1.6; }
+a { color:inherit; text-decoration:none; }
+
+/* NAV */
+.nav { position:sticky; top:0; z-index:100; background:var(--bg); border-bottom:1px solid var(--rule); padding:0 48px; display:flex; align-items:center; justify-content:space-between; height:64px; }
+.nav-logo { font-family:var(--display); font-size:21px; font-weight:500; font-variation-settings:"opsz" 144; letter-spacing:-0.02em; color:var(--blue); display:flex; align-items:center; gap:7px; }
+.nav-dot { width:8px; height:8px; border-radius:50%; background:var(--green); display:inline-block; animation:blink 2.5s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
+.nav-center { display:flex; gap:4px; background:var(--bg-soft); padding:4px; border-radius:8px; }
+.nav-link { padding:8px 16px; font-size:13px; font-weight:500; color:var(--text-soft); border-radius:5px; transition:all 0.15s; }
+.nav-link:hover { color:var(--blue); background:rgba(12,29,91,0.04); }
+.nav-link.active { background:var(--bg); color:var(--blue); font-weight:700; box-shadow:0 1px 3px rgba(12,29,91,0.08); }
+.nav-cta { background:var(--green); color:var(--blue); padding:9px 20px; font-size:13px; font-weight:700; border-radius:6px; letter-spacing:0.01em; transition:all 0.15s; }
+.nav-cta:hover { background:var(--green-deep); transform:translateY(-1px); }
+
+/* HEADER */
+.page-header { background:var(--bg-dark); padding:56px 48px 48px; border-bottom:3px solid var(--green); }
+.page-header-inner { max-width:1100px; margin:0 auto; }
+.page-header-crumb { font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:20px; display:flex; align-items:center; gap:8px; }
+.page-header-crumb a { color:rgba(255,255,255,0.4); transition:color 0.15s; }
+.page-header-crumb a:hover { color:var(--green); }
+.page-header-crumb span { color:rgba(255,255,255,0.2); }
+.page-header h1 { font-family:var(--display); font-weight:500; font-variation-settings:"opsz" 144; font-size:clamp(32px,4vw,52px); line-height:1.08; letter-spacing:-0.025em; color:white; margin-bottom:14px; }
+.page-header h1 em { font-style:italic; color:var(--green); }
+.page-header .lede { font-size:15px; color:rgba(255,255,255,0.55); line-height:1.65; max-width:580px; }
+.header-stats { display:flex; align-items:center; gap:24px; margin-top:28px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.1); }
+.stat { }
+.stat-num { font-family:var(--mono); font-size:22px; font-weight:600; color:white; line-height:1; margin-bottom:3px; }
+.stat-label { font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); }
+.stat-divider { width:1px; height:32px; background:rgba(255,255,255,0.1); }
+
+/* TYPE FILTER */
+.filter-bar { background:var(--bg-soft); border-bottom:1px solid var(--rule); padding:0 48px; }
+.filter-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; gap:10px; height:52px; }
+.filter-label { font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); margin-right:4px; }
+.filter-btn { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; letter-spacing:0.04em; padding:6px 14px; border-radius:6px; cursor:pointer; transition:all 0.15s; border:1.5px solid var(--rule); color:var(--text-soft); background:var(--bg); font-family:var(--body); }
+.filter-btn:hover { border-color:var(--blue); color:var(--blue); }
+.filter-btn.active { background:var(--blue); color:white; border-color:var(--blue); }
+.filter-count { font-family:var(--mono); font-size:10px; opacity:0.7; }
+
+/* MAIN LAYOUT */
+.main { max-width:1100px; margin:0 auto; padding:48px 48px 80px; }
+
+/* SECTION HEADERS */
+.section-block { margin-bottom:64px; }
+.section-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; padding-bottom:14px; border-bottom:2px solid var(--rule); }
+.section-title { display:flex; align-items:center; gap:12px; }
+.section-icon { width:32px; height:32px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:15px; }
+.section-icon.blue    { background:var(--blue-tint); }
+.section-icon.orange  { background:#FFF3EB; }
+.section-icon.teal    { background:#E8F8F4; }
+.section-name { font-size:20px; font-weight:700; color:var(--blue); }
+.section-count { font-family:var(--mono); font-size:11px; font-weight:600; background:var(--bg-soft); color:var(--text-muted); padding:3px 10px; border-radius:999px; border:1px solid var(--rule); }
+.section-link { font-size:12px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); display:flex; align-items:center; gap:5px; transition:color 0.15s; }
+.section-link:hover { color:var(--blue); }
+
+/* CARDS */
+.cards-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:14px; }
+.card { background:var(--bg); border:1px solid var(--rule); border-radius:10px; overflow:hidden; display:block; transition:all 0.2s; }
+.card:hover { border-color:var(--rule-strong); box-shadow:0 6px 20px rgba(12,29,91,0.07); transform:translateY(-2px); }
+.card-head { display:flex; align-items:center; gap:10px; padding:10px 14px; background:var(--bg-soft); border-bottom:1px solid var(--rule); }
+.chip { display:inline-flex; align-items:center; gap:5px; font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:3px 9px; border-radius:999px; }
+.chip.blue    { background:var(--blue-tint); color:var(--blue); }
+.chip.orange  { background:#FFF3EB; color:#B84A00; }
+.chip.teal    { background:#E8F8F4; color:#0A6B50; }
+.chip-dot { width:4px; height:4px; border-radius:50%; background:currentColor; flex-shrink:0; }
+.card-prof { margin-left:auto; font-size:10px; font-weight:600; color:var(--text-muted); }
+.card-body { padding:14px; }
+.card-title { font-size:13px; font-weight:700; color:var(--blue); line-height:1.35; margin-bottom:5px; }
+.card-desc { font-size:11px; color:var(--text-soft); line-height:1.6; }
+.card-footer { display:flex; align-items:center; justify-content:space-between; padding:8px 14px; border-top:1px solid var(--rule); background:var(--bg-soft); }
+.card-tags { display:flex; gap:5px; flex-wrap:wrap; }
+.card-tag { font-size:10px; font-weight:600; color:var(--text-muted); background:var(--bg); border:1px solid var(--rule); padding:2px 7px; border-radius:4px; }
+.card-arrow { font-size:13px; color:var(--text-muted); transition:color 0.15s; }
+.card:hover .card-arrow { color:var(--blue); }
+
+/* PROFESSION HUB GRID */
+.prof-section { margin-bottom:64px; }
+.prof-section-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; padding-bottom:14px; border-bottom:2px solid var(--rule); }
+.prof-section-title { font-size:20px; font-weight:700; color:var(--blue); }
+.prof-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:12px; }
+.prof-card { background:var(--bg); border:1px solid var(--rule); border-radius:10px; padding:18px; display:flex; flex-direction:column; gap:10px; transition:all 0.2s; }
+.prof-card:hover { border-color:var(--blue); box-shadow:0 4px 16px rgba(12,29,91,0.08); transform:translateY(-2px); }
+.prof-card-top { display:flex; align-items:center; gap:10px; }
+.prof-icon { width:36px; height:36px; background:var(--bg-dark); color:var(--green); border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; }
+.prof-name { font-size:14px; font-weight:700; color:var(--blue); line-height:1.3; }
+.prof-pills { display:flex; gap:6px; flex-wrap:wrap; }
+.prof-pill { font-family:var(--mono); font-size:10px; font-weight:600; padding:2px 8px; border-radius:4px; border:1px solid var(--rule); color:var(--text-muted); background:var(--bg-soft); }
+.prof-pill.has { color:var(--blue); background:var(--blue-tint); border-color:transparent; }
+.prof-card-footer { font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-muted); display:flex; align-items:center; justify-content:space-between; }
+.prof-card-footer span { transition:color 0.15s; }
+.prof-card:hover .prof-card-footer span { color:var(--blue); }
+
+/* RECENT SECTION */
+.recent-section { margin-bottom:64px; }
+.recent-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; padding-bottom:14px; border-bottom:2px solid var(--rule); }
+.recent-title { font-size:20px; font-weight:700; color:var(--blue); }
+
+/* FOOTER */
+footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06); padding:28px 48px; }
+.footer-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+.footer-logo { font-family:var(--display); font-size:16px; font-weight:500; font-variation-settings:"opsz" 144; color:rgba(255,255,255,0.45); display:flex; align-items:center; gap:6px; }
+.footer-logo-dot { width:6px; height:6px; border-radius:50%; background:var(--green); }
+.footer-links { display:flex; gap:24px; list-style:none; }
+.footer-links a { font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.25); transition:color 0.15s; }
+.footer-links a:hover { color:rgba(255,255,255,0.7); }
+.footer-copy { font-family:var(--mono); font-size:11px; color:rgba(255,255,255,0.2); }
+
+@media (max-width:960px) {
+  .nav, .page-header, .filter-bar, .main, footer { padding-left:20px; padding-right:20px; }
+  .nav-center { display:none; }
+  .cards-grid, .prof-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo"><span class="nav-dot"></span>GPT Prompt Engine</a>
+  <div class="nav-center">
+    <a href="/prompts" class="nav-link">Prompts</a>
+    <a href="/workflows" class="nav-link">Workflows</a>
+    <a href="/templates" class="nav-link">Templates</a>
+  </div>
+  <a href="/resources" class="nav-cta active">Browse Free</a>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-header-crumb"><a href="/">Home</a><span>/</span>Resources</div>
+    <h1>Everything. Free.<br/><em>Organised by your role.</em></h1>
+    <p class="lede">Prompts, automation workflows, and workspace templates — all in one place. Filter by type or jump straight to your profession.</p>
+    <div class="header-stats">
+      <div class="stat">
+        <div class="stat-num">{allPrompts.length}</div>
+        <div class="stat-label">Prompts</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-num">{allWorkflows.length}</div>
+        <div class="stat-label">Workflows</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-num">{allTemplates.length}</div>
+        <div class="stat-label">Templates</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-num">{totalCount}</div>
+        <div class="stat-label">Total free</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">Show</span>
+    <button class="filter-btn active" data-filter="all">✦ All <span class="filter-count">({totalCount})</span></button>
+    <button class="filter-btn" data-filter="prompts">💬 Prompts <span class="filter-count">({allPrompts.length})</span></button>
+    <button class="filter-btn" data-filter="workflows">⚡ Workflows <span class="filter-count">({allWorkflows.length})</span></button>
+    <button class="filter-btn" data-filter="templates">📝 Templates <span class="filter-count">({allTemplates.length})</span></button>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- RECENTLY ADDED -->
+  <div class="recent-section" id="block-recent">
+    <div class="recent-header">
+      <div class="recent-title">Recently added</div>
+      <a href="/prompts" class="section-link">See all →</a>
+    </div>
+    <div class="cards-grid">
+      {recentItems.map(item => {
+        const color = typeColor[item.type] ?? 'blue';
+        return (
+          <a href={item.slug} class="card" data-type={item.type.toLowerCase() + 's'}>
+            <div class="card-head">
+              <span class={`chip ${color}`}><span class="chip-dot"></span>{item.type}</span>
+              <span class="card-prof">{item.profession}</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title">{item.title}</div>
+              <div class="card-desc">{item.description}</div>
+            </div>
+            <div class="card-footer">
+              <div class="card-tags">
+                {item.tags.map((tag: string) => <span class="card-tag">{tag}</span>)}
+              </div>
+              <span class="card-arrow">→</span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+  <!-- PROMPTS SECTION -->
+  <div class="section-block" id="block-prompts" data-section="prompts">
+    <div class="section-header">
+      <div class="section-title">
+        <div class="section-icon blue">💬</div>
+        <span class="section-name">Prompts</span>
+        <span class="section-count">{allPrompts.length} free</span>
+      </div>
+      <a href="/prompts" class="section-link">Browse all prompts →</a>
+    </div>
+    <div class="cards-grid">
+      {allPrompts.slice(0, 6).map(p => (
+        <a href={`/prompts/${p.id}`} class="card" data-type="prompts">
+          <div class="card-head">
+            <span class="chip blue"><span class="chip-dot"></span>Prompt</span>
+            <span class="card-prof">{normaliseProfession(p.data.profession)}</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">{p.data.title}</div>
+            <div class="card-desc">{p.data.description}</div>
+          </div>
+          <div class="card-footer">
+            <div class="card-tags">
+              {p.data.tags?.slice(0, 2).map((tag: string) => <span class="card-tag">{tag}</span>)}
+            </div>
+            <span class="card-arrow">→</span>
+          </div>
+        </a>
+      ))}
+    </div>
+    {allPrompts.length > 6 && (
+      <div style="margin-top:16px; text-align:center;">
+        <a href="/prompts" style="font-size:13px; font-weight:700; color:var(--blue); border-bottom:1px solid var(--rule); padding-bottom:2px;">
+          View all {allPrompts.length} prompts →
+        </a>
+      </div>
+    )}
+  </div>
+
+  <!-- WORKFLOWS SECTION -->
+  <div class="section-block" id="block-workflows" data-section="workflows">
+    <div class="section-header">
+      <div class="section-title">
+        <div class="section-icon orange">⚡</div>
+        <span class="section-name">Automation Workflows</span>
+        <span class="section-count">{allWorkflows.length} free</span>
+      </div>
+      <a href="/workflows" class="section-link">Browse all workflows →</a>
+    </div>
+    <div class="cards-grid">
+      {allWorkflows.map(w => (
+        <a href={`/workflows/${w.id}`} class="card" data-type="workflows">
+          <div class="card-head">
+            <span class="chip orange"><span class="chip-dot"></span>Workflow</span>
+            <span class="card-prof">{normaliseProfession(w.data.profession)}</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">{w.data.title}</div>
+            <div class="card-desc">{w.data.description}</div>
+          </div>
+          <div class="card-footer">
+            <div class="card-tags">
+              {w.data.tags?.slice(0, 2).map((tag: string) => <span class="card-tag">{tag}</span>)}
+            </div>
+            <span class="card-arrow">→</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- TEMPLATES SECTION -->
+  <div class="section-block" id="block-templates" data-section="templates">
+    <div class="section-header">
+      <div class="section-title">
+        <div class="section-icon teal">📝</div>
+        <span class="section-name">Templates</span>
+        <span class="section-count">{allTemplates.length} free</span>
+      </div>
+      <a href="/templates" class="section-link">Browse all templates →</a>
+    </div>
+    <div class="cards-grid">
+      {allTemplates.map(t => (
+        <a href={`/templates/${t.id}`} class="card" data-type="templates">
+          <div class="card-head">
+            <span class="chip teal"><span class="chip-dot"></span>Template</span>
+            <span class="card-prof">{normaliseProfession(t.data.profession)}</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">{t.data.title}</div>
+            <div class="card-desc">{t.data.description}</div>
+          </div>
+          <div class="card-footer">
+            <div class="card-tags">
+              {t.data.tags?.slice(0, 2).map((tag: string) => <span class="card-tag">{tag}</span>)}
+            </div>
+            <span class="card-arrow">→</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- BROWSE BY PROFESSION -->
+  <div class="prof-section" id="block-profession">
+    <div class="prof-section-header">
+      <div class="prof-section-title">Browse by profession</div>
+    </div>
+    <div class="prof-grid">
+      {orderedProfs.map(prof => {
+        const d = profMap[prof];
+        const total = d.prompts + d.workflows + d.templates;
+        return (
+          <a href={d.hub} class="prof-card">
+            <div class="prof-card-top">
+              <div class="prof-icon">{d.icon}</div>
+              <div class="prof-name">{prof}</div>
+            </div>
+            <div class="prof-pills">
+              <span class={`prof-pill ${d.prompts > 0 ? 'has' : ''}`}>{d.prompts} prompts</span>
+              <span class={`prof-pill ${d.workflows > 0 ? 'has' : ''}`}>{d.workflows} workflows</span>
+              <span class={`prof-pill ${d.templates > 0 ? 'has' : ''}`}>{d.templates} templates</span>
+            </div>
+            <div class="prof-card-footer">
+              <span>{total} resources</span>
+              <span>→</span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><span class="footer-logo-dot"></span>GPT Prompt Engine</div>
+    <ul class="footer-links">
+      <li><a href="/prompts">Prompts</a></li>
+      <li><a href="/workflows">Workflows</a></li>
+      <li><a href="/templates">Templates</a></li>
+    </ul>
+    <div class="footer-copy">gptpromptengine.com &middot; A WDC property &middot; 2026</div>
+  </div>
+</footer>
+
+<script is:inline>
+  const btns = document.querySelectorAll('.filter-btn');
+  const sections = document.querySelectorAll('[data-section]');
+  const recentBlock = document.getElementById('block-recent');
+  const profBlock = document.getElementById('block-profession');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.getAttribute('data-filter');
+
+      if (f === 'all') {
+        sections.forEach(s => s.style.display = '');
+        recentBlock.style.display = '';
+        profBlock.style.display = '';
+      } else {
+        recentBlock.style.display = 'none';
+        profBlock.style.display = 'none';
+        sections.forEach(s => {
+          s.style.display = s.getAttribute('data-section') === f ? '' : 'none';
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
