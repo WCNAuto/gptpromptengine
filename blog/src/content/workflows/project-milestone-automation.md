@@ -1,4 +1,4 @@
-```markdown
+
 ---
 title: "n8n Workflow for Project Milestone Slack Notifications"
 description: "Automate project milestone tracking and team notifications in Slack to keep stakeholders informed of project progress and achievements in real-time."
