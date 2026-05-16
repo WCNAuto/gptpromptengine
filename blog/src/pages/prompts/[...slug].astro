@@ -1,20 +1,8 @@
 ---
-// =============================================================================
-// src/pages/prompts/[...slug].astro
-//
-// The single, canonical page template for all auto-generated prompt pages.
-// Every markdown file in src/content/prompts/ renders through this template.
-//
-// Design: Option B · Workspace · WDC Palette
-// Brand: Deep Authority Blue (#0C1D5B), Signal Green (#CDE954)
-//
-// Author: White Digital CANVAS
-// Project: gptpromptengine.com
-// =============================================================================
 
-import { getCollection } from 'astro:content';
+
+import { getCollection, render } from 'astro:content';
 import Analytics from '../../components/Analytics.astro';
-import { render } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('prompts');
