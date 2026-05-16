@@ -6,10 +6,9 @@ const templates = await getCollection('templates');
 const allContent = [...prompts, ...workflows, ...templates]
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const professions = [...new Set(allContent.map(p => p.data.profession))];
+
 ---
-// src/pages/index.astro
-// Homepage — GPT Prompt Engine
----
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
