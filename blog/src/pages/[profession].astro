@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const prompts = await getCollection('prompts');
@@ -7,14 +7,13 @@ export async function getStaticPaths() {
   const templates = await getCollection('templates');
   const allContent = [...prompts, ...workflows, ...templates];
 
-  // Get all unique professions
   const professions = [...new Set(allContent.map(p => p.data.profession))];
 
   return professions.map(profession => ({
-    params: { 
-      profession: profession.toLowerCase().replace(/\s+/g, '-') 
+    params: {
+      profession: profession.toLowerCase().replace(/\s+/g, '-')
     },
-    props: { 
+    props: {
       profession,
       items: allContent.filter(p => p.data.profession === profession)
     }
@@ -22,95 +21,275 @@ export async function getStaticPaths() {
 }
 
 const { profession, items } = Astro.props;
+const profSlug = profession.toLowerCase().replace(/\s+/g, '-');
+const promptItems = items.filter(i => i.data.contentType === 'prompt');
+const workflowItems = items.filter(i => i.data.contentType === 'workflow');
+const templateItems = items.filter(i => i.data.contentType === 'template');
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{profession} AI Resources | GPT Prompt Engine</title>
-  <meta name="description" content={`Free AI prompts, workflows and templates for ${profession}`} />
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:-apple-system,system-ui,sans-serif; color:#1a1a2e; background:#f8fafc; }
-    header { background:white; border-bottom:1px solid #e5e7eb; padding:1rem 2rem; }
-    nav { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
-    .logo { font-weight:800; font-size:1.3rem; text-decoration:none; color:#1a1a2e; }
-    .nav-links a { margin-left:1.5rem; text-decoration:none; color:#6b7280; font-size:0.9rem; }
-    .hero { max-width:1100px; margin:0 auto; padding:3rem 2rem 2rem; }
-    .hero h1 { font-size:2rem; font-weight:800; }
-    .hero p { margin-top:0.5rem; color:#6b7280; }
-    .back { display:inline-block; margin-top:1rem; font-size:0.9rem; color:#2563eb; text-decoration:none; }
-    .filters { max-width:1100px; margin:0 auto; padding:0 2rem 1.5rem; display:flex; gap:0.5rem; }
-    .filter-btn { padding:6px 16px; border-radius:20px; border:1px solid #e5e7eb;
-      background:white; font-size:0.85rem; cursor:pointer; color:#6b7280; text-decoration:none; }
-    .filter-btn.active { background:#2563eb; color:white; border-color:#2563eb; }
-    section { max-width:1100px; margin:0 auto; padding:0 2rem 3rem; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem; }
-    .card { display:block; background:white; border:1px solid #e5e7eb;
-      border-radius:8px; padding:1rem; text-decoration:none; color:inherit; }
-    .card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.08); }
-    .card h3 { font-size:0.95rem; margin:0.5rem 0; line-height:1.4; }
-    .card .meta { font-size:0.8rem; color:#9ca3af; }
-    .type-badge { font-size:0.7rem; font-weight:600; text-transform:uppercase;
-      letter-spacing:0.05em; padding:2px 8px; border-radius:4px; }
-    .badge-prompt { background:#f0f7ff; color:#2563eb; }
-    .badge-workflow { background:#f0fdf4; color:#16a34a; }
-    .badge-template { background:#fdf4ff; color:#9333ea; }
-    .empty { color:#9ca3af; padding:2rem 0; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{profession} AI Prompts, Workflows & Templates 2026 — GPT Prompt Engine</title>
+<meta name="description" content={`Free ${items.length}+ AI prompts, n8n workflows, and Notion templates for ${profession}. Built for how ${profession} actually work. No fluff — just resources that save time.`} />
+<link rel="canonical" href={canonicalUrl} />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="sitemap" href="/sitemap-index.xml" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root {
+  --bg: #FFFFFF; --bg-soft: #F2F2F2; --bg-dark: #0C1D5B; --bg-deeper: #0A1645;
+  --text: #0C1D5B; --text-soft: #6B7699; --text-muted: #8B93AB;
+  --rule: #E5E8F0; --rule-strong: #C8CEDD;
+  --blue: #0C1D5B; --blue-tint: #EAEDF5;
+  --green: #CDE954; --green-deep: #B5D344;
+  --display: 'Fraunces', Georgia, serif;
+  --body: 'Instrument Sans', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+body { font-family:var(--body); background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; line-height:1.6; }
+a { color:inherit; text-decoration:none; }
+/* NAV */
+.nav { position:sticky; top:0; z-index:100; background:var(--bg); border-bottom:1px solid var(--rule); padding:0 48px; display:flex; align-items:center; justify-content:space-between; height:64px; }
+.nav-logo { font-family:var(--display); font-size:21px; font-weight:500; font-variation-settings:"opsz" 144; letter-spacing:-0.02em; color:var(--blue); display:flex; align-items:center; gap:7px; }
+.nav-dot { width:8px; height:8px; border-radius:50%; background:var(--green); display:inline-block; animation:blink 2.5s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
+.nav-center { display:flex; gap:4px; background:var(--bg-soft); padding:4px; border-radius:8px; }
+.nav-link { padding:8px 16px; font-size:13px; font-weight:500; color:var(--text-soft); border-radius:5px; transition:all 0.15s; }
+.nav-link:hover { color:var(--blue); background:rgba(12,29,91,0.04); }
+.nav-cta { background:var(--green); color:var(--blue); padding:9px 20px; font-size:13px; font-weight:700; border-radius:6px; transition:all 0.15s; }
+.nav-cta:hover { background:var(--green-deep); transform:translateY(-1px); }
+/* HERO */
+.hero { background:var(--bg-dark); border-bottom:3px solid var(--green); padding:56px 48px 44px; }
+.hero-inner { max-width:1100px; margin:0 auto; }
+.crumbs { font-size:12px; font-weight:600; letter-spacing:0.06em; color:rgba(255,255,255,0.4); margin-bottom:20px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.crumbs a { color:rgba(255,255,255,0.4); transition:color 0.15s; }
+.crumbs a:hover { color:var(--green); }
+.crumbs span { color:rgba(255,255,255,0.2); }
+.hero h1 { font-family:var(--display); font-weight:500; font-variation-settings:"opsz" 144; font-size:clamp(30px, 4vw, 48px); line-height:1.08; letter-spacing:-0.025em; color:white; margin-bottom:12px; }
+.hero h1 em { font-style:italic; color:var(--green); }
+.hero-lede { font-size:15px; color:rgba(255,255,255,0.55); line-height:1.65; max-width:580px; margin-bottom:28px; }
+.hero-stats { display:flex; align-items:center; gap:24px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.1); flex-wrap:wrap; }
+.stat-num { font-family:var(--mono); font-size:20px; font-weight:600; color:white; line-height:1; margin-bottom:3px; }
+.stat-label { font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.35); }
+.stat-divider { width:1px; height:32px; background:rgba(255,255,255,0.1); }
+/* FILTERS */
+.filters-wrap { background:var(--bg-soft); border-bottom:1px solid var(--rule); padding:0 48px; }
+.filters-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; gap:8px; height:52px; }
+.filter-label { font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); margin-right:4px; }
+.filter-btn { display:inline-flex; align-items:center; gap:6px; padding:6px 14px; font-size:12px; font-weight:700; letter-spacing:0.04em; border-radius:6px; border:1.5px solid var(--rule); color:var(--text-soft); background:var(--bg); cursor:pointer; transition:all 0.15s; font-family:var(--body); }
+.filter-btn:hover { border-color:var(--blue); color:var(--blue); }
+.filter-btn.active { background:var(--blue); color:white; border-color:var(--blue); }
+.filter-count { font-family:var(--mono); font-size:10px; opacity:0.7; }
+/* MAIN */
+.main { max-width:1100px; margin:0 auto; padding:40px 48px 80px; }
+.section-group { margin-bottom:52px; }
+.section-head { display:flex; align-items:center; gap:12px; margin-bottom:20px; padding-bottom:14px; border-bottom:1px solid var(--rule); }
+.section-icon { width:32px; height:32px; background:var(--bg-dark); color:var(--green); border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:14px; }
+.section-title { font-size:17px; font-weight:700; color:var(--blue); }
+.section-count { margin-left:auto; font-family:var(--mono); font-size:11px; font-weight:600; color:var(--blue); background:var(--blue-tint); padding:4px 12px; border-radius:999px; }
+/* CARDS */
+.cards-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:14px; }
+.card { background:var(--bg); border:1px solid var(--rule); border-radius:10px; overflow:hidden; display:block; transition:all 0.2s; }
+.card:hover { border-color:var(--rule-strong); box-shadow:0 6px 20px rgba(12,29,91,0.07); transform:translateY(-1px); }
+.card-head { display:flex; align-items:center; gap:10px; padding:11px 15px; background:var(--bg-soft); border-bottom:1px solid var(--rule); }
+.badge { display:inline-flex; align-items:center; gap:5px; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:3px 10px; border-radius:999px; }
+.badge-prompt { background:var(--green); color:var(--blue); }
+.badge-workflow { background:#FFF3EB; color:#B84A00; }
+.badge-template { background:#E8F8F4; color:#0A6B50; }
+.badge-dot { width:5px; height:5px; border-radius:50%; background:currentColor; }
+.card-meta { margin-left:auto; font-family:var(--mono); font-size:10px; color:var(--text-muted); }
+.card-body { padding:14px 16px; }
+.card-title { font-size:13px; font-weight:700; color:var(--blue); line-height:1.4; margin-bottom:5px; }
+.card-cat { font-size:11px; color:var(--text-muted); }
+.card-footer { padding:10px 16px; border-top:1px solid var(--rule); background:var(--bg-soft); display:flex; justify-content:flex-end; }
+.card-arrow { font-size:13px; color:var(--text-muted); transition:color 0.15s; }
+.card:hover .card-arrow { color:var(--blue); }
+/* FOOTER */
+footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06); padding:28px 48px; }
+.footer-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+.footer-logo { font-family:var(--display); font-size:16px; font-weight:500; font-variation-settings:"opsz" 144; color:rgba(255,255,255,0.45); display:flex; align-items:center; gap:6px; }
+.footer-logo-dot { width:6px; height:6px; border-radius:50%; background:var(--green); }
+.footer-links { display:flex; gap:24px; list-style:none; }
+.footer-links a { font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.25); transition:color 0.15s; }
+.footer-links a:hover { color:rgba(255,255,255,0.7); }
+.footer-copy { font-family:var(--mono); font-size:11px; color:rgba(255,255,255,0.2); }
+@media (max-width:768px) {
+  .nav { padding:12px 20px; flex-wrap:wrap; gap:10px; }
+  .nav-center { order:3; width:100%; justify-content:center; }
+  .hero, .filters-wrap, .main, footer { padding-left:20px; padding-right:20px; }
+  .hero { padding-top:36px; padding-bottom:32px; }
+  .cards-grid { grid-template-columns:1fr; }
+}
+</style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/" class="logo">GPT Prompt Engine</a>
-      <div class="nav-links">
-        <a href="/prompts">Prompts</a>
-        <a href="/workflows">Workflows</a>
-        <a href="/templates">Templates</a>
+
+<nav class="nav">
+  <a href="/" class="nav-logo"><span class="nav-dot"></span>GPT Prompt Engine</a>
+  <div class="nav-center">
+    <a href="/prompts" class="nav-link">Prompts</a>
+    <a href="/workflows" class="nav-link">Workflows</a>
+    <a href="/templates" class="nav-link">Templates</a>
+  </div>
+  <a href={`/${profSlug}`} class="nav-cta">Browse {profession}</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="crumbs">
+      <a href="/">Home</a><span>/</span>
+      <strong style="color:rgba(255,255,255,0.8)">{profession}</strong>
+    </div>
+    <h1>AI Resources for<br/><em>{profession}</em></h1>
+    <p class="hero-lede">Free prompts, automation workflows, and Notion templates — built specifically for how {profession} work. Ready to use, no setup required.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">{promptItems.length}</div>
+        <div class="stat-label">Prompt pages</div>
       </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="hero">
-      <a href="/" class="back">← All Professions</a>
-      <h1>AI Resources for {profession}</h1>
-      <p>{items.length} resource{items.length !== 1 ? 's' : ''} available</p>
-    </div>
-
-    <!-- Filter tabs by content type -->
-    <div class="filters">
-      <a href={`/${profession.toLowerCase().replace(/\s+/g, '-')}`} class="filter-btn active">
-        All ({items.length})
-      </a>
-      {['prompt','workflow','template'].map(type => {
-        const count = items.filter(i => i.data.contentType === type).length;
-        return count > 0 ? (
-          <a href={`/${profession.toLowerCase().replace(/\s+/g, '-')}?type=${type}`} class="filter-btn">
-            {type.charAt(0).toUpperCase() + type.slice(1)}s ({count})
-          </a>
-        ) : null;
-      })}
-    </div>
-
-    <section>
-      {items.length === 0 ? (
-        <p class="empty">No resources yet for this profession. Check back soon!</p>
-      ) : (
-        <div class="grid">
-          {items.map(post => (
-            <a href={`/${post.collection}/${post.id}`} class="card">
-              <span class={`type-badge badge-${post.data.contentType}`}>
-                {post.data.contentType}
-              </span>
-              <h3>{post.data.title}</h3>
-              <p class="meta">{post.data.category}</p>
-            </a>
-          ))}
+      {workflowItems.length > 0 && <div class="stat-divider"></div>}
+      {workflowItems.length > 0 && (
+        <div class="stat">
+          <div class="stat-num">{workflowItems.length}</div>
+          <div class="stat-label">Workflows</div>
         </div>
       )}
-    </section>
-  </main>
+      {templateItems.length > 0 && <div class="stat-divider"></div>}
+      {templateItems.length > 0 && (
+        <div class="stat">
+          <div class="stat-num">{templateItems.length}</div>
+          <div class="stat-label">Templates</div>
+        </div>
+      )}
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Free</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="filters-wrap">
+  <div class="filters-inner">
+    <span class="filter-label">Browse by</span>
+    <button class="filter-btn active" data-filter="all">All <span class="filter-count">{items.length}</span></button>
+    {promptItems.length > 0 && <button class="filter-btn" data-filter="prompt">Prompts <span class="filter-count">{promptItems.length}</span></button>}
+    {workflowItems.length > 0 && <button class="filter-btn" data-filter="workflow">Workflows <span class="filter-count">{workflowItems.length}</span></button>}
+    {templateItems.length > 0 && <button class="filter-btn" data-filter="template">Templates <span class="filter-count">{templateItems.length}</span></button>}
+  </div>
+</div>
+
+<main class="main">
+  {promptItems.length > 0 && (
+    <div class="section-group" data-section="prompt">
+      <div class="section-head">
+        <div class="section-icon">💬</div>
+        <div class="section-title">Prompt Libraries</div>
+        <span class="section-count">{promptItems.length} pages · 25 prompts each</span>
+      </div>
+      <div class="cards-grid">
+        {promptItems.map(post => (
+          <a href={`/prompts/${post.id}`} class="card">
+            <div class="card-head">
+              <span class="badge badge-prompt"><span class="badge-dot"></span>Prompt</span>
+              <span class="card-meta">{post.data.promptCount || 25} prompts</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title">{post.data.title}</div>
+              <div class="card-cat">{post.data.category}</div>
+            </div>
+            <div class="card-footer"><span class="card-arrow">→</span></div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {workflowItems.length > 0 && (
+    <div class="section-group" data-section="workflow">
+      <div class="section-head">
+        <div class="section-icon">⚡</div>
+        <div class="section-title">Automation Workflows</div>
+        <span class="section-count">{workflowItems.length} workflows</span>
+      </div>
+      <div class="cards-grid">
+        {workflowItems.map(post => (
+          <a href={`/workflows/${post.id}`} class="card">
+            <div class="card-head">
+              <span class="badge badge-workflow"><span class="badge-dot"></span>Workflow</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title">{post.data.title}</div>
+              <div class="card-cat">{post.data.category}</div>
+            </div>
+            <div class="card-footer"><span class="card-arrow">→</span></div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {templateItems.length > 0 && (
+    <div class="section-group" data-section="template">
+      <div class="section-head">
+        <div class="section-icon">📋</div>
+        <div class="section-title">Notion & Airtable Templates</div>
+        <span class="section-count">{templateItems.length} templates</span>
+      </div>
+      <div class="cards-grid">
+        {templateItems.map(post => (
+          <a href={`/templates/${post.id}`} class="card">
+            <div class="card-head">
+              <span class="badge badge-template"><span class="badge-dot"></span>Template</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title">{post.data.title}</div>
+              <div class="card-cat">{post.data.category}</div>
+            </div>
+            <div class="card-footer"><span class="card-arrow">→</span></div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {items.length === 0 && (
+    <p style="color:var(--text-muted); padding:40px 0;">No resources yet for {profession}. Check back soon.</p>
+  )}
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><span class="footer-logo-dot"></span>GPT Prompt Engine</div>
+    <ul class="footer-links">
+      <li><a href="/prompts">Prompts</a></li>
+      <li><a href="/workflows">Workflows</a></li>
+      <li><a href="/templates">Templates</a></li>
+    </ul>
+    <div class="footer-copy">gptpromptengine.com &middot; A WDC property &middot; 2026</div>
+  </div>
+</footer>
+
+<script is:inline>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.section-group').forEach(sec => {
+        sec.style.display = (filter === 'all' || sec.dataset.section === filter) ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
