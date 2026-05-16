@@ -12,7 +12,7 @@ promptCount: 25
 
 These AI prompts generate complete sales proposals you can send within minutes. Built for working sales professionals who need polished drafts fast, not consultants building systems from scratch.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Sales-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Sales-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Initial Proposal Creation
 

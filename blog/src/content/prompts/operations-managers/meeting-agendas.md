@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts generate ready-to-send meeting agendas for Operations professionals dealing with process reviews, vendor calls, team check-ins, and crisis management. Each prompt produces a finished agenda you can copy into Outlook or Teams within 30 seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Operations-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Operations-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Weekly Operations Reviews
 

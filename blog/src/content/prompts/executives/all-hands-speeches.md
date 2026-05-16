@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts generate polished all-hands speech content in seconds. Each prompt produces finished talking points you can deliver with light editing. Perfect for executives who need compelling company-wide communication fast.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Executives-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Executives-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Quarterly Results and Performance Updates
 

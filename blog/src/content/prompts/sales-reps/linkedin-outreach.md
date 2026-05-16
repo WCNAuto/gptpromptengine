@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help sales professionals write personalized LinkedIn connection requests that get accepted. Each prompt generates a complete message you can send immediately after filling in the prospect details.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Sales-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Sales-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Cold Outreach to New Prospects
 

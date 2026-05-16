@@ -12,7 +12,7 @@ promptCount: 25
 
 Healthcare professionals writing team briefings under time pressure need prompts that work immediately. These 25 AI prompts generate complete briefing documents you can edit lightly and distribute within minutes.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Healthcare-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Healthcare-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Shift Handoff Briefings
 

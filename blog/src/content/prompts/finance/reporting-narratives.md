@@ -12,7 +12,7 @@ promptCount: 25
 
 Finance professionals need reporting narratives drafted fast. These 25 prompts generate quarterly summaries, variance explanations, board updates, and executive briefings you can paste straight into your reports.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Finance-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Finance-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Quarterly Performance Narratives
 

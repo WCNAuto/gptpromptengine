@@ -12,7 +12,7 @@ promptCount: 25
 
 Resource allocation planning hits your desk with impossible deadlines and competing priorities. These 25 prompts give you finished stakeholder updates, capacity analyses, and conflict resolution scripts you can send immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Project Management-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Project Management-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Stakeholder Communication on Resource Constraints
 

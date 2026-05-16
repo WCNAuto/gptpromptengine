@@ -12,7 +12,7 @@ promptCount: 25
 
 Operations managers drowning in documentation backlogs need SOPs written fast, not perfect. These 25 prompts generate complete standard operating procedures you can edit once and deploy immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Operations-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Operations-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Equipment and Safety Procedures
 

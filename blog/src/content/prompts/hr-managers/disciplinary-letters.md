@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts generate complete disciplinary letters you can send immediately. Each takes 30 seconds to customize and produces documentation that protects your company while maintaining professionalism.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for HR Managers-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## First Written Warnings
 

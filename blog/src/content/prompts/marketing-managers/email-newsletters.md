@@ -12,7 +12,7 @@ promptCount: 25
 
 Marketing Managers who need newsletter drafts out the door this week. These 25 prompts turn your product updates, company news, and customer wins into finished newsletter copy you can edit lightly and send.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Marketing Managers-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Product Launch Newsletters
 

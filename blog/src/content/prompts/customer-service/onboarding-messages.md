@@ -12,7 +12,7 @@ promptCount: 25
 
 Customer service teams handling onboarding need polished messages fast. These 25 prompts generate ready-to-send welcome emails, setup instructions, and follow-up communications that you can customize and deploy immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Customer Service-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Customer Service-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Welcome and First Contact Messages
 

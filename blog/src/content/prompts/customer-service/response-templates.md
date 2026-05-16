@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts generate finished customer service responses you can send immediately or edit lightly. Perfect for busy support agents who need professional responses fast without starting from scratch.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Customer Service-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Customer Service-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Complaint Resolution Responses
 

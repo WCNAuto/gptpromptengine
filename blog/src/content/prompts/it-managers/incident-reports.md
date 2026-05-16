@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use ChatGPT prompts for IT incident reports that actually get results. Copy any prompt, fill in the variables, and get professional incident documentation in under a minute. These prompts produce finished reports, not templates you still need to complete.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for IT Managers-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for IT Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Critical System Outages
 

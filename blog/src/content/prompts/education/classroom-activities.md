@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help busy educators create engaging classroom activities without starting from scratch. Copy, paste, fill in your details, and get activity instructions ready for tomorrow's lesson.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Education-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Education-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Interactive Group Activities
 

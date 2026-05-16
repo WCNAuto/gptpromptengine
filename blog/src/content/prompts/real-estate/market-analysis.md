@@ -12,7 +12,7 @@ promptCount: 25
 
 For real estate professionals who need market analysis reports written fast. Copy these prompts into ChatGPT or Claude, fill in your data, and get professional analysis ready to send to clients within minutes.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Real Estate-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Real Estate-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Residential Market Overview Reports
 

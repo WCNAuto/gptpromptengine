@@ -12,7 +12,7 @@ promptCount: 25
 
 Working PMs who need scope documents written fast. Copy these prompts into your AI tool, fill in the blanks, and get polished scope statements, change requests, and stakeholder communications in seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Project Management-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Project Management-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Initial Scope Definition
 

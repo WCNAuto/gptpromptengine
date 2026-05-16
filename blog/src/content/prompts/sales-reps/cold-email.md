@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help sales reps write cold emails that get responses. Each prompt takes 30 seconds to customize and produces a ready-to-send email. Copy the prompt, fill in your details, and hit send.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Sales-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Sales-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Initial Outreach Emails
 

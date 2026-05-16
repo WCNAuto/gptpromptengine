@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts create finished onboarding emails for every stage of the new hire journey. Copy the prompt, fill in the variables, paste into ChatGPT, and get a polished email ready to send. No templates to customize later—just working emails.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for HR Managers-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Welcome and First Day Preparation
 

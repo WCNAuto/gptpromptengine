@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use ChatGPT prompts for IT change request communication that IT Managers can use immediately. Copy any prompt, fill in the variables, and get professional communication drafts in seconds. Every prompt produces finished emails, notifications, or updates you can send directly to stakeholders.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for IT Managers-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for IT Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Emergency Change Communications
 

@@ -12,7 +12,7 @@ promptCount: 25
 
 Copy-paste prompts for healthcare professionals who need discharge summaries written fast. Fill in the patient details, hit enter, get documentation ready for the medical record.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Healthcare-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Healthcare-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Medical Discharge Summaries
 

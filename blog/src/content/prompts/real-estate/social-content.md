@@ -12,7 +12,7 @@ promptCount: 25
 
 Copy-paste prompts for real estate agents who need social media content published today. Each prompt produces finished posts you can customize in 30 seconds and schedule immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Real Estate-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Real Estate-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Property Showcase Posts
 

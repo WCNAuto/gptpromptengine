@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use AI prompts for legal professionals who need research summaries written fast. Copy these prompts into ChatGPT or Claude, fill in your case details, and get polished legal documents in under a minute.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Legal-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Legal-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Case Law Analysis Summaries
 

@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use prompts for healthcare professionals who need medical documentation written fast. Copy any prompt, fill in the variables, paste into ChatGPT, and get professional documentation ready to review and submit.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Healthcare-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Healthcare-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Patient Discharge Documentation
 

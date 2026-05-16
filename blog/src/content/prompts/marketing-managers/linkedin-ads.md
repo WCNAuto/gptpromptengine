@@ -12,7 +12,7 @@ promptCount: 25
 
 You're a Marketing Manager with LinkedIn campaigns to launch this week. These 25 prompts generate complete ad copy you can paste straight into Campaign Manager after light edits.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Marketing Managers-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Lead Generation Ads
 

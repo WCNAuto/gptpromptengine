@@ -12,7 +12,7 @@ promptCount: 25
 
 Operations managers need project briefs that get stakeholders aligned and resources approved fast. These 25 AI prompts generate finished briefs you can send immediately—no templates to fill out later.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Operations-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Operations-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Stakeholder Alignment Briefs
 

@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help Product Managers write user stories for sprint planning when the backlog refinement meeting is tomorrow and you need stories ready now. Copy any prompt, fill in the variables, paste into ChatGPT, and get production-ready user stories your dev team can estimate and build.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Product Management-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Product Management-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Epic Breakdown Stories
 

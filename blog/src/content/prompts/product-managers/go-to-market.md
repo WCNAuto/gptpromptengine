@@ -12,7 +12,7 @@ promptCount: 25
 
 Product managers who need launch documents fast. Copy these prompts into ChatGPT, fill the variables, and get working drafts in seconds instead of staring at blank pages for hours.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Product Management-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Product Management-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Pre-Launch Strategy Documents
 

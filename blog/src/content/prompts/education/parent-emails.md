@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts are for teachers who need parent communication emails written fast. Copy the prompt, fill in your details, paste into ChatGPT, and get a professional draft ready to send.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Education-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Education-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Academic Concerns and Progress Updates
 

@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help CEOs generate board presentation content in seconds. You get complete slide drafts for quarterly reviews, strategy updates, crisis communications, and board decisions that you can edit and present immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Executives-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Executives-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Quarterly Business Reviews
 

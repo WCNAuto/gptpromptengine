@@ -12,7 +12,7 @@ promptCount: 25
 
 Working HR managers need policy drafts yesterday, not templates to fill out next week. These 25 prompts generate complete, usable HR policies you can paste into ChatGPT, customize with your details, and have a draft ready for legal review in under a minute.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for HR Managers-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Employee Conduct and Workplace Behavior Policies
 

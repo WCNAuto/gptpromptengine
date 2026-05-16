@@ -12,7 +12,7 @@ promptCount: 25
 
 For operations managers who need working drafts this week, not another framework to build later. Copy these prompts into ChatGPT, fill in your specific details, and get usable outputs in 30 seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Operations-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Operations-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Performance Reviews and Team Management
 

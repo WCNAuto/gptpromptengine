@@ -12,7 +12,7 @@ promptCount: 25
 
 Turn your client wins into compelling case studies without starting from a blank page. These 25 prompts help Marketing Managers transform raw project data into polished case studies that actually convert prospects.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Marketing Managers-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## SaaS Customer Success Stories
 

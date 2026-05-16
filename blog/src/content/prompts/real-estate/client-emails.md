@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use ChatGPT prompts for real estate agents who need client emails written fast. Copy the prompt, fill in your details, and get professional emails in seconds. No more staring at blank screens when deals are moving.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Real Estate-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Real Estate-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## First-Time Buyer Communication
 

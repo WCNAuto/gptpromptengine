@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use ChatGPT prompts for finance professionals who need budget justifications written fast. Copy any prompt, fill in your details, and get a polished budget request ready to submit to leadership within minutes.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Finance-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Finance-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## New Headcount Justifications
 

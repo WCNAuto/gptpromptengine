@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use AI prompts that generate personalized LinkedIn sourcing messages for busy recruiters. Copy the prompt, fill in your variables, and get messages that actually get replies from passive candidates.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Recruiters-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Recruiters-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Initial Outreach Messages
 

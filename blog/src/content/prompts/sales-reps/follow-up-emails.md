@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help working sales reps get follow-up emails, scripts, and sequences written in seconds. Each prompt produces ready-to-send content you can edit lightly and use immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Sales-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Sales-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Cold Prospect Follow-Ups
 

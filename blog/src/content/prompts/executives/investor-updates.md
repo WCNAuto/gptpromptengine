@@ -12,7 +12,7 @@ promptCount: 25
 
 For founders who need investor update emails written fast. Copy these prompts into ChatGPT, fill in your metrics and updates, get a polished email ready to send in under two minutes.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Executives-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Executives-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Monthly Performance Updates
 

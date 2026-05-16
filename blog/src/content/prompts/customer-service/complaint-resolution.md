@@ -12,7 +12,7 @@ promptCount: 25
 
 Copy-paste prompts for customer service reps who need professional complaint resolution emails written in 30 seconds. Fill in the variables, hit enter, get a polished response you can send immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/?via=PLACEHOLDER) for Customer Service-specific tone control, or [Copy.ai](https://copy.ai/?via=PLACEHOLDER) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Customer Service-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ## Product Defect and Quality Issues
 
