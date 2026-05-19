@@ -1,0 +1,318 @@
+---
+// GlobalFooter.astro
+// Drop into: src/components/GlobalFooter.astro
+// Usage: import GlobalFooter from '../components/GlobalFooter.astro';
+// Then place <GlobalFooter /> just before </body> in every layout file
+// Primary layout file: src/layouts/BaseLayout.astro
+---
+
+<div class="cta-banner-wrap">
+  <div class="cta-banner">
+    <div class="banner-left">
+      <div class="banner-tag">White Digital CANVAS</div>
+      <h2>Want a system like this built for your business?</h2>
+      <p>White builds automated content pipelines, AI video production systems, and business process automation — tailored to your stack, handed to you fully operational.</p>
+    </div>
+    <div class="banner-right">
+      <a href="/work-with-white" class="banner-cta">Build with White &rarr;</a>
+      <span class="banner-note">No pitch deck. A real conversation.</span>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand-col">
+      <div class="brand-name">GPT Prompt Engine</div>
+      <p class="brand-tagline">Free AI prompts, automation workflows, and Notion templates — organised by profession, not by tool.</p>
+      <div class="footer-badge">Built and operated by White Digital CANVAS</div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Professions</h4>
+      <ul>
+        <li><a href="/hr-managers">HR Managers</a></li>
+        <li><a href="/marketing-managers">Marketing Managers</a></li>
+        <li><a href="/operations-managers">Operations Managers</a></li>
+        <li><a href="/sales-reps">Sales Reps</a></li>
+        <li><a href="/finance">Finance Advisors</a></li>
+        <li><a href="/project-managers">Project Managers</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="/prompts">All prompts</a></li>
+        <li><a href="/workflows">Automation workflows</a></li>
+        <li><a href="/templates">Notion templates</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>White Digital CANVAS</h4>
+      <ul>
+        <li><a href="/work-with-white">Build with White</a></li>
+        <li><a href="https://whitedigitalcanvas.com" target="_blank" rel="noopener">whitedigitalcanvas.com</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <span>&copy; 2026 GPT Prompt Engine</span>
+      <span class="sep">&middot;</span>
+      <span>All resources free to use</span>
+    </div>
+    <div class="footer-bottom-right">
+      <div class="wdc-credit">
+        Automation by <a href="https://whitedigitalcanvas.com" target="_blank" rel="noopener">White Digital CANVAS</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .cta-banner-wrap {
+    background: var(--color-page-bg, #f5f5f0);
+    padding: 2.5rem 2rem 0;
+  }
+
+  .cta-banner {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #0A1645;
+    border-radius: 14px;
+    border-top: 3px solid #CDE954;
+    padding: 2.4rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .banner-left { flex: 1; min-width: 0; }
+
+  .banner-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #CDE954;
+    margin-bottom: 0.85rem;
+  }
+
+  .banner-tag::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #CDE954;
+    flex-shrink: 0;
+  }
+
+  .banner-left h2 {
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 0.65rem;
+    letter-spacing: -0.01em;
+  }
+
+  .banner-left p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    max-width: 520px;
+  }
+
+  .banner-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .banner-cta {
+    display: inline-block;
+    background: #CDE954;
+    color: #0A1645;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+  }
+
+  .banner-cta:hover { opacity: 0.88; }
+
+  .banner-note {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: right;
+    letter-spacing: 0.04em;
+  }
+
+  /* FOOTER */
+  .site-footer {
+    background: #0A1645;
+    border-top: 1px solid rgba(107, 118, 153, 0.15);
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3.5rem 2rem 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .footer-brand-col .brand-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-brand-col .brand-tagline {
+    font-size: 0.82rem;
+    color: #6B7699;
+    line-height: 1.65;
+    max-width: 280px;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(205, 233, 84, 0.08);
+    border: 1px solid rgba(205, 233, 84, 0.2);
+    padding: 0.4rem 0.85rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(205, 233, 84, 0.7);
+  }
+
+  .footer-badge::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #CDE954;
+    opacity: 0.7;
+  }
+
+  .footer-col h4 {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #6B7699;
+    margin-bottom: 1.1rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .footer-col ul li a {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+    line-height: 1.4;
+  }
+
+  .footer-col ul li a:hover { color: #ffffff; }
+
+  .footer-bottom {
+    max-width: 1100px;
+    margin: 3rem auto 0;
+    padding: 1.8rem 2rem;
+    border-top: 1px solid rgba(107, 118, 153, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-bottom-left span {
+    font-size: 0.75rem;
+    color: rgba(107, 118, 153, 0.6);
+  }
+
+  .footer-bottom-left .sep { color: rgba(107, 118, 153, 0.3); }
+
+  .wdc-credit {
+    font-size: 0.72rem;
+    color: rgba(107, 118, 153, 0.5);
+  }
+
+  .wdc-credit a {
+    color: rgba(205, 233, 84, 0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .wdc-credit a:hover { color: #CDE954; }
+
+  /* RESPONSIVE */
+  @media (max-width: 860px) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-brand-col {
+      grid-column: 1 / -1;
+    }
+    .cta-banner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 2rem 1.8rem;
+    }
+    .banner-right {
+      align-items: flex-start;
+      width: 100%;
+    }
+    .banner-cta {
+      width: 100%;
+      text-align: center;
+    }
+    .banner-note { text-align: left; }
+  }
+
+  @media (max-width: 560px) {
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .cta-banner-wrap { padding: 1.5rem 1rem 0; }
+  }
+</style>
