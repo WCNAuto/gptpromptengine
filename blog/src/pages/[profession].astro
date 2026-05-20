@@ -1,4 +1,5 @@
 ---
+import GlobalFooter from '../components/GlobalFooter.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -265,17 +266,7 @@ footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06
   )}
 </main>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo"><span class="footer-logo-dot"></span>GPT Prompt Engine</div>
-    <ul class="footer-links">
-      <li><a href="/prompts">Prompts</a></li>
-      <li><a href="/workflows">Workflows</a></li>
-      <li><a href="/templates">Templates</a></li>
-    </ul>
-    <div class="footer-copy">gptpromptengine.com &middot; A WDC property &middot; 2026</div>
-  </div>
-</footer>
+
 
 <script is:inline>
   document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -289,6 +280,7 @@ footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06
     });
   });
 </script>
-
+<GlobalFooter />
 </body>
+
 </html>

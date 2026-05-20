@@ -1,4 +1,5 @@
 ---
+import GlobalFooter from '../../components/GlobalFooter.astro';  
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -53,5 +54,6 @@ const { Content } = await render(post);
       <a href='https://gumroad.com' class='btn'>Download the Full Pack — $19</a>
     </div>
   </article>
+  <GlobalFooter />   
 </body>
 </html>
