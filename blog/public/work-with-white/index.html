@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>White Digital CANVAS — Automation Built for Your Business</title>
+<meta name="description" content="You're looking at automation in action. White Digital CANVAS built this site. We build the same for brands, agencies, and businesses ready to stop doing things manually." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --blue: #0C1D5B;
+    --navy: #0A1645;
+    --green: #CDE954;
+    --white: #FFFFFF;
+    --mid-blue: #6B7699;
+    --off-white: #F2F2F2;
+    --green-dim: rgba(205, 233, 84, 0.12);
+    --green-border: rgba(205, 233, 84, 0.3);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', 'Calibri', sans-serif;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  a { text-decoration: none; color: inherit; }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 3rem;
+    background: rgba(10, 22, 69, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(107, 118, 153, 0.2);
+  }
+
+  .nav-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .nav-logo .wordmark {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    color: var(--white);
+  }
+
+  .nav-logo .sub {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mid-blue);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid-blue);
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--white); }
+
+  .nav-cta {
+    background: var(--green);
+    color: var(--blue) !important;
+    padding: 0.55rem 1.4rem;
+    font-size: 0.8rem !important;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: opacity 0.2s !important;
+  }
+
+  .nav-cta:hover { opacity: 0.88 !important; color: var(--blue) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 3rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -120px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(205,233,84,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 40px; left: -60px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(12,29,91,0.4) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 2rem;
+  }
+
+  .hero-label::before {
+    content: '';
+    display: block;
+    width: 28px; height: 1px;
+    background: var(--green);
+  }
+
+  .hero h1 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 1.1;
+    max-width: 820px;
+    margin-bottom: 1.8rem;
+    color: var(--white);
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--green);
+  }
+
+  .hero-sub {
+    max-width: 560px;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .btn-primary {
+    background: var(--green);
+    color: var(--blue);
+    padding: 0.9rem 2.2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { opacity: 0.88; }
+
+  .btn-ghost {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid-blue);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s;
+  }
+
+  .btn-ghost:hover { color: var(--white); }
+
+  .hero-stat-row {
+    display: flex;
+    gap: 3.5rem;
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(107,118,153,0.2);
+  }
+
+  .hero-stat .num {
+    font-family: Georgia, serif;
+    font-size: 2.2rem;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-stat .label {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid-blue);
+  }
+
+  /* SECTION UTILITY */
+  section { padding: 6rem 3rem; }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1rem;
+  }
+
+  .section-h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    line-height: 1.2;
+    max-width: 700px;
+    margin-bottom: 1.2rem;
+  }
+
+  .section-sub {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 3.5rem;
+  }
+
+  .divider {
+    height: 1px;
+    background: rgba(107,118,153,0.2);
+    margin: 0 3rem;
+  }
+
+  /* IDENTITY BAR */
+  .identity-bar {
+    background: var(--navy);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem;
+    border-top: 3px solid var(--green);
+  }
+
+  .identity-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .identity-num {
+    font-family: Georgia, serif;
+    font-size: 0.85rem;
+    color: var(--green);
+    opacity: 0.7;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+
+  .identity-text strong {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+  }
+
+  .identity-text span {
+    font-size: 0.82rem;
+    color: var(--mid-blue);
+    line-height: 1.5;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: rgba(107,118,153,0.15);
+    border: 1px solid rgba(107,118,153,0.15);
+  }
+
+  .service-card {
+    background: var(--blue);
+    padding: 2.5rem;
+    transition: background 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: var(--green);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .service-card:hover { background: rgba(10, 22, 69, 0.95); }
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1.2rem;
+    opacity: 0.8;
+  }
+
+  .service-card h3 {
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .service-card p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .service-bullets li {
+    font-size: 0.8rem;
+    color: var(--mid-blue);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .service-bullets li::before {
+    content: '—';
+    color: var(--green);
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    margin-top: 1px;
+  }
+
+  /* PROOF / CASE STUDY */
+  .proof-section {
+    background: var(--navy);
+  }
+
+  .proof-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 900px) {
+    .proof-inner { grid-template-columns: 1fr; gap: 3rem; }
+  }
+
+  .proof-badge {
+    display: inline-block;
+    background: var(--green-dim);
+    border: 1px solid var(--green-border);
+    padding: 0.35rem 0.85rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1.5rem;
+  }
+
+  .proof-visual {
+    border: 1px solid rgba(107,118,153,0.25);
+    background: rgba(12,29,91,0.4);
+    padding: 2rem;
+    position: relative;
+  }
+
+  .proof-visual-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid-blue);
+    margin-bottom: 1.5rem;
+  }
+
+  .pipeline-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .pipeline-node {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.85rem 0;
+  }
+
+  .pipeline-node:not(:last-child) {
+    border-bottom: 1px solid rgba(107,118,153,0.15);
+  }
+
+  .node-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--green-dim);
+    border: 1px solid var(--green-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--green);
+    flex-shrink: 0;
+    letter-spacing: 0.05em;
+  }
+
+  .node-info strong {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--white);
+    margin-bottom: 0.15rem;
+  }
+
+  .node-info span {
+    font-size: 0.75rem;
+    color: var(--mid-blue);
+  }
+
+  .proof-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(107,118,153,0.15);
+    margin-top: 1.5rem;
+  }
+
+  .proof-metric {
+    background: rgba(12,29,91,0.4);
+    padding: 1rem;
+  }
+
+  .proof-metric .val {
+    font-family: Georgia, serif;
+    font-size: 1.6rem;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+
+  .proof-metric .desc {
+    font-size: 0.72rem;
+    color: var(--mid-blue);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .proof-link {
+    margin-top: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--green);
+    letter-spacing: 0.06em;
+    transition: gap 0.2s;
+  }
+
+  .proof-link:hover { gap: 0.7rem; }
+
+  /* PHILOSOPHY */
+  .philosophy-section {
+    padding: 5rem 3rem;
+    background: var(--blue);
+  }
+
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0;
+    border: 1px solid rgba(107,118,153,0.2);
+    margin-top: 3rem;
+  }
+
+  .philosophy-item {
+    padding: 2.5rem 2rem;
+    border-right: 1px solid rgba(107,118,153,0.15);
+    border-bottom: 1px solid rgba(107,118,153,0.15);
+  }
+
+  .philosophy-item:nth-child(4n) { border-right: none; }
+
+  .philo-num {
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    color: rgba(205,233,84,0.15);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .philosophy-item h4 {
+    font-family: Georgia, serif;
+    font-size: 1.05rem;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+
+  .philosophy-item p {
+    font-size: 0.82rem;
+    color: var(--mid-blue);
+    line-height: 1.6;
+  }
+
+  /* LEAD FORM */
+  .form-section {
+    background: var(--navy);
+    padding: 6rem 3rem;
+    border-top: 3px solid var(--green);
+  }
+
+  .form-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .form-wrapper { grid-template-columns: 1fr; gap: 3rem; }
+  }
+
+  .form-left .section-h2 { max-width: 100%; }
+
+  .form-left p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .form-reassurance {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .reassurance-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    font-size: 0.82rem;
+    color: var(--mid-blue);
+  }
+
+  .reassurance-item::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .form-group label {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mid-blue);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: rgba(12,29,91,0.6);
+    border: 1px solid rgba(107,118,153,0.3);
+    color: var(--white);
+    padding: 0.8rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+    width: 100%;
+  }
+
+  .form-group select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B7699' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .form-group select option { background: #0C1D5B; color: var(--white); }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+    line-height: 1.6;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--green);
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(107,118,153,0.5);
+  }
+
+  .form-submit {
+    background: var(--green);
+    color: var(--blue);
+    border: none;
+    padding: 1rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    align-self: flex-start;
+  }
+
+  .form-submit:hover { opacity: 0.88; }
+
+  .form-note {
+    font-size: 0.75rem;
+    color: rgba(107,118,153,0.7);
+    margin-top: 0.5rem;
+  }
+
+  .success-msg {
+    display: none;
+    background: var(--green-dim);
+    border: 1px solid var(--green-border);
+    padding: 1.5rem;
+    font-size: 0.88rem;
+    color: var(--green);
+    line-height: 1.6;
+  }
+
+  /* BRANDS / PROOF STRIP */
+  .brands-strip {
+    background: rgba(10,22,69,0.6);
+    padding: 2.5rem 3rem;
+    border-bottom: 1px solid rgba(107,118,153,0.15);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: auto;
+  }
+
+  .brands-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mid-blue);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .brands-divider {
+    width: 1px;
+    height: 24px;
+    background: rgba(107,118,153,0.3);
+    flex-shrink: 0;
+  }
+
+  .brand-names {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .brand-name {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.35);
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    border-top: 3px solid var(--green);
+    padding: 3.5rem 3rem 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: end;
+  }
+
+  .footer-brand .wordmark {
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.8rem;
+    color: var(--mid-blue);
+    max-width: 340px;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid-blue);
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--green); }
+
+  .footer-right {
+    text-align: right;
+  }
+
+  .footer-right p {
+    font-size: 0.75rem;
+    color: var(--mid-blue);
+    line-height: 1.8;
+  }
+
+  .footer-right strong { color: var(--green); font-weight: 500; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links a:not(.nav-cta) { display: none; }
+    section, .form-section, .philosophy-section { padding: 4rem 1.5rem; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    .hero-stat-row { gap: 2rem; flex-wrap: wrap; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; }
+    .footer-right { text-align: left; }
+    .identity-bar { padding: 2.5rem 1.5rem; }
+    .brands-strip { padding: 2rem 1.5rem; }
+    .divider { margin: 0 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <span class="wordmark">White Digital CANVAS</span>
+    <span class="sub">Content Systems Studio</span>
+  </div>
+  <div class="nav-links">
+    <a href="#what-we-build">What we build</a>
+    <a href="#proof">Proof</a>
+    <a href="#contact" class="nav-cta">Start a conversation</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">White Digital CANVAS</div>
+  <h1>
+    You're looking at <em>automation</em><br>in action. We built this.
+  </h1>
+  <p class="hero-sub">
+    The site you just came from — the content, the videos, the publishing pipeline — none of it is done manually. White Digital CANVAS built the entire system. We build the same for businesses, agencies, and individuals ready to move from effort to infrastructure.
+  </p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Build something with us</a>
+    <a href="#what-we-build" class="btn-ghost">What we build &rarr;</a>
+  </div>
+  <div class="hero-stat-row">
+    <div class="hero-stat">
+      <div class="num">3 min</div>
+      <div class="label">From idea to live output</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">18</div>
+      <div class="label">Automated nodes in this pipeline</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">Zero</div>
+      <div class="label">Manual steps per publish</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">Always on</div>
+      <div class="label">Runs while you focus elsewhere</div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND STRIP -->
+<div class="brands-strip">
+  <span class="brands-label">Brands we've built for</span>
+  <div class="brands-divider"></div>
+  <div class="brand-names">
+    <span class="brand-name">Raj Petro</span>
+    <span class="brand-name">HFS</span>
+    <span class="brand-name">Enzo</span>
+    <span class="brand-name">PSA</span>
+    <span class="brand-name">Ritvaa SmartGold</span>
+    <span class="brand-name">Mechanic Doctor</span>
+    <span class="brand-name">White Ever After</span>
+  </div>
+</div>
+
+<!-- IDENTITY BAR -->
+<div class="identity-bar">
+  <div class="identity-item">
+    <span class="identity-num">01</span>
+    <div class="identity-text">
+      <strong>We build, then hand over</strong>
+      <span>Every engagement ends with something you own — running, documented, and not dependent on us to keep going.</span>
+    </div>
+  </div>
+  <div class="identity-item">
+    <span class="identity-num">02</span>
+    <div class="identity-text">
+      <strong>Systems, not services</strong>
+      <span>We don't sell monthly retainers for things a machine should be doing. We build the machine and teach you to drive it.</span>
+    </div>
+  </div>
+  <div class="identity-item">
+    <span class="identity-num">03</span>
+    <div class="identity-text">
+      <strong>Proof before proposal</strong>
+      <span>GPT Prompt Engine is live. It runs daily. You can inspect every part of it. That's our proposal.</span>
+    </div>
+  </div>
+  <div class="identity-item">
+    <span class="identity-num">04</span>
+    <div class="identity-text">
+      <strong>Automation with a human gate</strong>
+      <span>Nothing in any system we build goes live without you approving it. Speed and control are not opposites.</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="what-we-build">
+  <div class="section-label">What we build for you</div>
+  <h2 class="section-h2">Four things. One connected system.</h2>
+  <p class="section-sub">You can start with one. Most businesses end up needing the full stack. Each layer is more powerful because the others exist.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-tag">01 — Automation</div>
+      <h3>Content Publishing Pipeline</h3>
+      <p>An automated system that takes a keyword, generates a full content page, turns it into a video, and publishes it to your site and social — daily, without anyone doing it manually. This site is a working example.</p>
+      <ul class="service-bullets">
+        <li>AI content generation tuned to your tone and topic</li>
+        <li>Auto-deploy via GitHub + Vercel or your existing CMS</li>
+        <li>Video creation via ElevenLabs + Creatomate</li>
+        <li>Buffer scheduling to Instagram and YouTube</li>
+        <li>Approval gate — you confirm before anything goes live</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-tag">02 — Automation</div>
+      <h3>Business Process Automation</h3>
+      <p>n8n workflows that eliminate the manual steps your team repeats every week. Lead routing, reporting, CRM updates, invoice processing, internal notifications — built once, runs forever.</p>
+      <ul class="service-bullets">
+        <li>n8n Cloud workflow architecture and build</li>
+        <li>CRM, email, and reporting automation</li>
+        <li>Lead capture to follow-up sequences</li>
+        <li>Invoice and operations workflow automation</li>
+        <li>Webhook and API integrations across your stack</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-tag">03 — Brand and Narrative</div>
+      <h3>Brand Narrative and Positioning</h3>
+      <p>The story that makes everything else work harder. Positioning, messaging, tone of voice, and category design — built before any campaign or content system runs, so everything that goes out says the same true thing.</p>
+      <ul class="service-bullets">
+        <li>Category positioning and naming</li>
+        <li>Brand story architecture</li>
+        <li>Messaging framework and tone of voice</li>
+        <li>Pitch decks and sales narrative</li>
+        <li>Content strategy by audience and profession</li>
+      </ul>
+    </div>
+    <div class="service-card">
+      <div class="service-tag">04 — Content</div>
+      <h3>AI Video at Scale</h3>
+      <p>Every piece of content your business publishes automatically becomes a short-form video — scripted, voiced, rendered, and scheduled without a production team. Built for businesses that need presence without headcount.</p>
+      <ul class="service-bullets">
+        <li>Automated 45-second video scripts via AI</li>
+        <li>ElevenLabs voice — consistent across all output</li>
+        <li>Creatomate 9:16 video rendering pipeline</li>
+        <li>Instagram Reels and YouTube Shorts ready</li>
+        <li>Before-and-after format — proof, not lists</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROOF SECTION -->
+<section id="proof" class="proof-section">
+  <div class="proof-inner">
+    <div class="proof-left">
+      <div class="proof-badge">Live proof of concept</div>
+      <h2 class="section-h2" style="max-width:100%">This site is the case study. You don't have to imagine what we build.</h2>
+      <p style="font-size:0.95rem; color:rgba(255,255,255,0.65); line-height:1.75; margin-bottom:1.5rem;">
+        GPT Prompt Engine is a fully automated content and video publishing system — live, running daily, zero manual input. One keyword enters. A profession-specific content page is written, formatted, and deployed. A 45-second video is scripted, voiced, rendered, and scheduled. A Telegram message asks for approval. Nothing goes live until the owner confirms.
+      </p>
+      <p style="font-size:0.95rem; color:rgba(255,255,255,0.65); line-height:1.75; margin-bottom:1.5rem;">
+        The entire stack — Claude API, n8n, GitHub, Vercel, ElevenLabs, Creatomate, Buffer — is connected, tested, and running in production. White Digital CANVAS built and operates it.
+      </p>
+      <p style="font-size:0.95rem; color:rgba(255,255,255,0.65); line-height:1.75; margin-bottom:2rem;">
+        We can build the equivalent for your business. Not a demo. Not a prototype. The actual working system, handed to you.
+      </p>
+      <a href="#contact" class="proof-link">
+        Tell us what you need built &rarr;
+      </a>
+    </div>
+
+    <div class="proof-right">
+      <div class="proof-visual">
+        <div class="proof-visual-label">How this site runs — the 18-node pipeline</div>
+        <div class="pipeline-flow">
+          <div class="pipeline-node">
+            <div class="node-icon">01</div>
+            <div class="node-info">
+              <strong>Keyword queue</strong>
+              <span>Google Sheets — keywords pulled automatically every morning</span>
+            </div>
+          </div>
+          <div class="pipeline-node">
+            <div class="node-icon">02</div>
+            <div class="node-info">
+              <strong>Claude API writes the content</strong>
+              <span>Branched by content type — prompt page, workflow guide, or template</span>
+            </div>
+          </div>
+          <div class="pipeline-node">
+            <div class="node-icon">03</div>
+            <div class="node-info">
+              <strong>GitHub push — Vercel deploys</strong>
+              <span>Page is live within 3 minutes. No CMS. No manual upload.</span>
+            </div>
+          </div>
+          <div class="pipeline-node">
+            <div class="node-icon">04</div>
+            <div class="node-info">
+              <strong>Video script generated + voiced</strong>
+              <span>ElevenLabs converts script to MP3 — same voice every time</span>
+            </div>
+          </div>
+          <div class="pipeline-node">
+            <div class="node-icon">05</div>
+            <div class="node-info">
+              <strong>Creatomate renders the video</strong>
+              <span>9:16 format, 5 text panels, brand frame — fully automated</span>
+            </div>
+          </div>
+          <div class="pipeline-node">
+            <div class="node-icon">06</div>
+            <div class="node-info">
+              <strong>Telegram approval ping</strong>
+              <span>Owner confirms before anything goes live — human control stays</span>
+            </div>
+          </div>
+          <div class="pipeline-node" style="border-bottom:none;">
+            <div class="node-icon">07</div>
+            <div class="node-info">
+              <strong>Buffer posts to Instagram + YouTube</strong>
+              <span>Scheduled, published, logged — pipeline resets for next day</span>
+            </div>
+          </div>
+        </div>
+        <div class="proof-metrics">
+          <div class="proof-metric">
+            <div class="val">3 min</div>
+            <div class="desc">Keyword to live page</div>
+          </div>
+          <div class="proof-metric">
+            <div class="val">18</div>
+            <div class="desc">Automated nodes</div>
+          </div>
+          <div class="proof-metric">
+            <div class="val">Zero</div>
+            <div class="desc">Manual production steps</div>
+          </div>
+          <div class="proof-metric">
+            <div class="val">Daily</div>
+            <div class="desc">Runs without prompting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PHILOSOPHY -->
+<section class="philosophy-section">
+  <div class="section-label">How we work</div>
+  <h2 class="section-h2">What to expect when you work with White.</h2>
+  <div class="philosophy-grid">
+    <div class="philosophy-item">
+      <div class="philo-num">01</div>
+      <h4>Clarity before a single thing is built</h4>
+      <p>We spend more time understanding the actual problem than solving it. The right problem has an obvious answer. The wrong one wastes everyone's time.</p>
+    </div>
+    <div class="philosophy-item">
+      <div class="philo-num">02</div>
+      <h4>You own everything we build</h4>
+      <p>All code, all workflows, all credentials. Nothing is locked in our systems. If you walk away tomorrow, the system walks with you.</p>
+    </div>
+    <div class="philosophy-item">
+      <div class="philo-num">03</div>
+      <h4>We hand over with documentation</h4>
+      <p>Every engagement closes with a handover guide. You know how every node works, what triggers what, and what to do when something needs changing.</p>
+    </div>
+    <div class="philosophy-item">
+      <div class="philo-num">04</div>
+      <h4>Human control stays with you</h4>
+      <p>Speed is not an excuse to bypass judgment. Every system we build has a confirmation step — usually Telegram — before anything touches your brand in public.</p>
+    </div>
+    <div class="philosophy-item">
+      <div class="philo-num">05</div>
+      <h4>We build for your stack, not ours</h4>
+      <p>If you're already on certain tools, we work with them. We don't push platforms we prefer. The system needs to live inside your operations, not ours.</p>
+    </div>
+    <div class="philosophy-item">
+      <div class="philo-num">06</div>
+      <h4>Structure before scale</h4>
+      <p>Build it right before you build it big. An automated system built on a weak foundation breaks louder and faster than a manual one. We get the foundation right first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD FORM -->
+<section id="contact" class="form-section">
+  <div class="form-wrapper">
+    <div class="form-left">
+      <div class="section-label">Start a conversation</div>
+      <h2 class="section-h2">Tell us what you want automated.</h2>
+      <p>
+        You've seen the pipeline running. You know what's possible. The only question is what version of it fits your business.
+      </p>
+      <p>
+        Whether you're a brand that needs a content system, an agency that wants to stop doing things manually, or an individual who wants to build something that runs without them — this is the right place to start.
+      </p>
+      <p>
+        We take on a limited number of new builds each quarter. Not because of capacity — because the work needs to be right, and that requires genuine attention.
+      </p>
+      <div class="form-reassurance">
+        <div class="reassurance-item">First response within 24 hours</div>
+        <div class="reassurance-item">No pitch deck. A real conversation about what you need built</div>
+        <div class="reassurance-item">If we're not the right fit, we'll say so honestly</div>
+        <div class="reassurance-item">White Digital CANVAS — Mumbai, India</div>
+      </div>
+    </div>
+
+    <div class="form-right">
+      <form class="lead-form" id="leadForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="firstName" placeholder="Rahul" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lastName" placeholder="Sharma" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Work email</label>
+          <input type="email" id="email" name="email" placeholder="rahul@yourcompany.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company or project name</label>
+          <input type="text" id="company" name="company" placeholder="Your company, agency, or what you're building" />
+        </div>
+
+        <div class="form-group">
+          <label for="interest">What do you need built?</label>
+          <select id="interest" name="interest" required>
+            <option value="" disabled selected>Pick the closest starting point</option>
+            <option value="content-pipeline">Automated content publishing pipeline</option>
+            <option value="video-pipeline">AI video production pipeline</option>
+            <option value="business-automation">Business process automation (n8n)</option>
+            <option value="brand-narrative">Brand positioning and narrative</option>
+            <option value="full-system">Full system — content + video + automation</option>
+            <option value="unsure">Not sure yet — I need a conversation first</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">What's currently happening manually that shouldn't be?</label>
+          <textarea id="message" name="message" placeholder="Describe what your team does repeatedly, what takes too long, or what you want to publish but can't keep up with..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">
+          Send it &rarr;
+        </button>
+        <p class="form-note">No spam. No cold follow-ups. A real response from the team.</p>
+      </form>
+
+      <div class="success-msg" id="successMsg">
+        Got it. The team will be in touch within 24 hours.<br><br>
+        While you wait — explore the rest of gptpromptengine.com. Every page you're seeing is automated. That's what we build for you.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="wordmark">White Digital CANVAS</div>
+    <p>We build automation systems, content pipelines, and brand narrative for businesses ready to move from manual effort to infrastructure that runs itself.</p>
+    <div class="footer-links">
+      <a href="#what-we-build">What we build</a>
+      <a href="#proof">The proof</a>
+      <a href="#contact">Start a conversation</a>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p>Mumbai, India<br><strong>whitedigitalcanvas.com</strong><br><br>
+    &copy; 2026 White Digital CANVAS<br>
+    <span style="color:rgba(107,118,153,0.5); font-size:0.7rem;">Automation built on GPT Prompt Engine</span></p>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('leadForm');
+    const success = document.getElementById('successMsg');
+    form.style.display = 'none';
+    success.style.display = 'block';
+    const data = new FormData(e.target);
+    const payload = Object.fromEntries(data.entries());
+    console.log('Lead captured:', payload);
+  }
+
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  const cards = document.querySelectorAll('.service-card, .philosophy-item');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(16px)';
+    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(card);
+  });
+</script>
+
+</body>
+</html>
