@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts are built for social media managers who need Instagram captions written and scheduled today, not tomorrow. Each prompt produces a finished caption you can edit once and post immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Social Media Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Social Media Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Product Launch Announcements
 

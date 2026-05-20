@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use AI prompts that generate complete executive strategy memos in 30 seconds. Copy any prompt, fill in your variables, and get a polished memo you can send immediately. No templates, no frameworks—just finished documents.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Executives-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Executives-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Market Entry and Expansion Memos
 

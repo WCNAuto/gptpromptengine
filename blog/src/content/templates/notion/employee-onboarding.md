@@ -151,4 +151,4 @@ While this template works standalone in Notion, it can be enhanced with Zapier i
 
 Get our complete **HR Management Bundle** on Gumroad featuring 15+ premium templates including performance review systems, recruitment trackers, employee development planners, and advanced onboarding workflows. Save 60% when you purchase the bundle instead of individual templates.
 
-[Get the Complete HR Bundle →](https://gumroad.com/hr-notion-templates)
+[Get the Complete HR Bundle →](mailto:we@white.agency?subject=Waitlist/hr-notion-templates)

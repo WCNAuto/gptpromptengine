@@ -12,7 +12,7 @@ promptCount: 25
 
 Sales reps who nail discovery calls close 30% more deals. These 25 prompts generate targeted discovery questions for any prospect, industry, or deal size. Copy the prompt, fill in your variables, and walk into your next call with questions that uncover real buying intent.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Sales-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Sales-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Initial Prospect Discovery
 

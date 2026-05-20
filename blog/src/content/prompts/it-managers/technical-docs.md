@@ -12,7 +12,7 @@ promptCount: 25
 
 IT Managers drowning in documentation backlogs can use these 25 AI prompts to generate polished technical documents in under 5 minutes. Each prompt produces a finished document you can edit lightly and publish immediately, from user guides to API documentation to incident reports.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for IT Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for IT Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## User Manual Creation
 

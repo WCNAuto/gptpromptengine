@@ -12,7 +12,7 @@ promptCount: 25
 
 Working lawyers need correspondence out the door fast. These 25 prompts turn ChatGPT into your drafting assistant for demand letters, settlement negotiations, discovery responses, client communications, and opposing counsel correspondence. Copy, fill in the variables, and get usable drafts in 30 seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Legal-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Legal-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Demand Letters and Formal Notices
 

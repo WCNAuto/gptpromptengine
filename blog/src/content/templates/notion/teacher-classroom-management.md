@@ -181,4 +181,4 @@ Notion's sharing features allow you to create specific views and pages that can 
 
 Ready for even more powerful classroom management tools? Check out our **Premium Teacher Template Bundle** on Gumroad, featuring advanced automation, additional tracking systems, professional report generators, and exclusive bonus templates designed by education experts.
 
-**[Get the Premium Bundle](https://gumroad.com)** - Includes 10+ specialized templates, video tutorials, and priority support to transform your classroom management experience.
+**[Get the Premium Bundle](mailto:we@white.agency?subject=Waitlist)** - Includes 10+ specialized templates, video tutorials, and priority support to transform your classroom management experience.

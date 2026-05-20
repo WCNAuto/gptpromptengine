@@ -12,7 +12,7 @@ promptCount: 25
 
 Working accountants who need audit documentation written fast. These 25 prompts generate complete drafts for audit reports, management letters, findings summaries, and client communications you can edit and send within minutes.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Accountants-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Accountants-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Independent Audit Reports
 

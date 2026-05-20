@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts are for healthcare professionals who need clinical reports written fast. Copy any prompt, fill in the variables, paste into ChatGPT, and get a draft report ready for review and signature.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Healthcare-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Healthcare-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Patient Discharge Summaries
 

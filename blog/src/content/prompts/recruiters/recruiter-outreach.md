@@ -12,7 +12,7 @@ promptCount: 25
 
 Working recruiters who need candidate outreach emails written fast. Copy these prompts, fill in your details, and get professional email sequences that book calls and move candidates through your pipeline.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Recruiters-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Recruiters-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Cold Outreach to Passive Candidates
 

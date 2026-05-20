@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help financial advisors write client emails that sound professional, build trust, and drive action. Copy any prompt, fill in the variables, and have a polished email ready to send in under a minute.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Finance-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Finance-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Portfolio Review Communications
 

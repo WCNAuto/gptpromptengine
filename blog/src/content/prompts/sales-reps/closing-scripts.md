@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use AI prompts that generate actual closing scripts you can use in live sales conversations. Copy any prompt, fill in your deal details, and get a polished closing script in 30 seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Sales-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Sales-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Price Objection Closers
 

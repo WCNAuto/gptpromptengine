@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help working salespeople craft objection responses on the spot. Copy any prompt, fill in your variables, and get a polished response you can use immediately in your next conversation or follow-up email.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Sales-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Sales-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Price and Budget Objections
 

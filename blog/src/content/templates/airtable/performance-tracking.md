@@ -151,4 +151,4 @@ Airtable's collaboration features allow you to share specific views with differe
 
 ---
 
-**Ready to supercharge your HR systems?** Get our complete bundle of 50+ HR templates for Notion and Airtable, including advanced performance tracking, recruitment pipelines, onboarding workflows, and more. [Get the HR Master Bundle on Gumroad →](https://gumroad.com/l/hr-master-templates)
+**Ready to supercharge your HR systems?** Get our complete bundle of 50+ HR templates for Notion and Airtable, including advanced performance tracking, recruitment pipelines, onboarding workflows, and more. [Get the HR Master Bundle on Gumroad →](mailto:we@white.agency?subject=Waitlist/l/hr-master-templates)

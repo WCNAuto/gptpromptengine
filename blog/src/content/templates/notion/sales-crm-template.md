@@ -187,4 +187,4 @@ This free template is just the beginning! Get our **Premium Sales Management Bun
 - ✅ **Competitive Intelligence Tracker** - Stay ahead of competition
 - ✅ **Bonus: 50+ Email Templates** - Proven sales sequences
 
-**Premium Bundle: $97** | [Get Instant Access on Gumroad →](https://gumroad.com/sales-bundle)
+**Premium Bundle: $97** | [Get Instant Access on Gumroad →](mailto:we@white.agency?subject=Waitlist/sales-bundle)

@@ -12,7 +12,7 @@ promptCount: 25
 
 Project managers running agile teams need retrospectives written fast. These 25 AI prompts generate finished retrospective documents, stakeholder updates, and team communications you can send immediately after filling in the variables.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Project Management-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Project Management-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Sprint Retrospective Documents
 

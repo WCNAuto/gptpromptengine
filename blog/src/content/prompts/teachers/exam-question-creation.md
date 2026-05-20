@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help teachers generate exam questions in seconds, not hours. Each prompt produces ready-to-use questions you can copy directly into your test or quiz.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Multiple Choice Questions
 

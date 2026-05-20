@@ -163,6 +163,6 @@ The template includes multiple progress tracking mechanisms: status updates in t
 
 Ready to transform your entire product management workflow? Get this roadmap template plus 12 additional premium templates including user story mapping, competitive analysis, go-to-market planning, and stakeholder management systems.
 
-**[Get the Complete Bundle on Gumroad →](https://gumroad.com/l/product-management-bundle-2026)**
+**[Get the Complete Bundle on Gumroad →](mailto:we@white.agency?subject=Waitlist/l/product-management-bundle-2026)**
 
 *Includes lifetime updates, video tutorials, and bonus automation scripts*

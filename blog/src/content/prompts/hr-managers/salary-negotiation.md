@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-paste ChatGPT prompts that generate salary negotiation scripts, counteroffer responses, and talking points for compensation discussions. Copy the prompt, fill in your variables, and get usable scripts in 30 seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Initial Salary Negotiation Scripts
 

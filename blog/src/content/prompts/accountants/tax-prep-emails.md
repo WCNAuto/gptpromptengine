@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use ChatGPT prompts for accountants who need professional tax preparation client emails written in seconds. Each prompt includes specific variables you fill in, then paste into ChatGPT for instant, customizable client communications that maintain your professional standards.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Accountants-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Accountants-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Document Request and Follow-ups
 

@@ -237,6 +237,6 @@ This campaign planning template is just the beginning! Get access to our **Compl
 - **Customer Journey Mapper** with touchpoint optimization
 - **Marketing Report Generator** with automated insights
 
-**[Get the Complete Bundle on Gumroad →](https://gumroad.com/marketing-notion-templates)**
+**[Get the Complete Bundle on Gumroad →](mailto:we@white.agency?subject=Waitlist/marketing-notion-templates)**
 
 *Save 60% when you buy the bundle vs individual templates!*

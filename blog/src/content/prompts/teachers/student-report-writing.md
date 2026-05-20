@@ -12,7 +12,7 @@ promptCount: 25
 
 Copy-paste these prompts into ChatGPT or Claude to generate student reports, progress summaries, and parent communications instantly. Each prompt produces a finished draft you can edit lightly and send home.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Mid-Year Progress Reports
 

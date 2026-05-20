@@ -12,7 +12,7 @@ promptCount: 25
 
 Marketing Managers running social media campaigns need reports that stakeholders actually read and act on. These 25 AI prompts generate finished reports, briefing documents, and stakeholder communications you can send within minutes of getting your data.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Campaign Performance Summaries
 

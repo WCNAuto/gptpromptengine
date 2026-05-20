@@ -12,7 +12,7 @@ promptCount: 25
 
 Copy-paste AI prompts that generate training materials for working HR Managers. Each prompt takes 30 seconds to customize and produces finished content you can use immediately. No more starting from blank documents or hunting for training frameworks.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## New Manager Training Content
 

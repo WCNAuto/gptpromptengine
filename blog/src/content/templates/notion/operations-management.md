@@ -272,6 +272,6 @@ This free template is just the beginning! Get access to our complete **Professio
 - ✅ Risk Management Framework
 - ✅ Compliance Tracking System
 
-**[Get the Complete Bundle on Gumroad →](https://gumroad.com/operations-bundle)**
+**[Get the Complete Bundle on Gumroad →](mailto:we@white.agency?subject=Waitlist/operations-bundle)**
 
 *Save 60% when you buy the bundle vs individual

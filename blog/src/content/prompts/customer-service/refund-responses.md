@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help customer service reps write professional refund responses in seconds. Copy any prompt, fill in the variables, and get a polished response ready to send.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Customer Service-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Customer Service-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Standard Refund Approvals
 

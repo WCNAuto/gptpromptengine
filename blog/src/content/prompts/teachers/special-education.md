@@ -12,7 +12,7 @@ promptCount: 25
 
 Working special education teachers need finished documents, not templates. These 25 prompts generate ready-to-use IEP goals, parent communications, behavior interventions, and lesson adaptations you can implement immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## IEP Development and Goal Writing
 

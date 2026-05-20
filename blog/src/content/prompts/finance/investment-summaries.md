@@ -12,7 +12,7 @@ promptCount: 25
 
 Finance professionals writing investment summaries under tight deadlines need prompts that produce polished drafts in seconds. These 25 prompts generate ready-to-send investment summaries, client updates, and due diligence reports you can customize and deliver immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Finance-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Finance-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Client-Facing Investment Summaries
 

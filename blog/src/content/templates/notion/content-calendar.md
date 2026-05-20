@@ -132,6 +132,6 @@ While this template includes fields for performance goals and notes, you'll need
 
 Ready to take your marketing productivity to the next level? Check out our **Premium Marketing Manager Toolkit** on Gumroad - a comprehensive bundle of 15+ advanced Notion templates including project management systems, campaign trackers, budget planners, and team collaboration tools.
 
-**[Get the Complete Marketing Bundle →](https://gumroad.com/marketing-toolkit)**
+**[Get the Complete Marketing Bundle →](mailto:we@white.agency?subject=Waitlist/marketing-toolkit)**
 
 *Save 60% when you buy the bundle instead of individual templates*

@@ -12,7 +12,7 @@ promptCount: 25
 
 Working project managers need stakeholder update emails written fast, not communication frameworks to study later. These prompts generate finished emails you can edit lightly and send within minutes.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Project Management-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Project Management-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Project Milestone Updates
 

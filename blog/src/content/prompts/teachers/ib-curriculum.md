@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help IB teachers create curriculum materials in minutes, not hours. Copy any prompt, fill in your subject details, and get a polished unit plan, assessment rubric, or learning sequence ready for your next class.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Unit Planning and Learning Sequences
 

@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts generate complete escalation responses you can send immediately. Each produces a professional, empathetic response tailored to your specific situation and customer.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Customer Service-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Customer Service-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## De-escalation Phone Call Scripts
 

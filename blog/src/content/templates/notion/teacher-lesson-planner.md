@@ -160,6 +160,6 @@ Ready to take your classroom organization to the next level? Get our **Ultimate 
 ✅ Professional Learning Community Organizer  
 ✅ And much more!
 
-**[Get the Complete Bundle on Gumroad →](https://gumroad.com)**
+**[Get the Complete Bundle on Gumroad →](mailto:we@white.agency?subject=Waitlist)**
 
 *Save hours of planning time and become the organized teacher you've always wanted to be!*

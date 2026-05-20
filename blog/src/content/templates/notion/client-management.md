@@ -167,4 +167,4 @@ Perfect for marketing managers, agency owners, account managers, and marketing t
 
 **Ready to supercharge your agency management?** Get our **Premium Agency Templates Bundle** with advanced financial tracking, automated reporting, client portal templates, and 50+ additional views and automations. Perfect for scaling agencies ready to optimize their operations.
 
-[Get the Premium Bundle on Gumroad →](https://gumroad.com/agency-templates-premium)
+[Get the Premium Bundle on Gumroad →](mailto:we@white.agency?subject=Waitlist/agency-templates-premium)

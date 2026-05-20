@@ -12,7 +12,7 @@ promptCount: 25
 
 You need meeting notes written fast, not another template to fill out later. These 25 prompts generate complete parent-teacher conference documentation you can edit quickly and file immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Academic Progress Conferences
 

@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-paste AI prompts for HR managers who need exit interview questions, departure summaries, and offboarding documents fast. Copy the prompt, fill in your variables, and get usable output in 30 seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Voluntary Departure Exit Interviews
 

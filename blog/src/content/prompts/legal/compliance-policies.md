@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help legal professionals draft compliant policies fast. Copy, fill in your variables, and get usable policy language that meets regulatory requirements.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Legal-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Legal-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Data Privacy and Protection Policies
 

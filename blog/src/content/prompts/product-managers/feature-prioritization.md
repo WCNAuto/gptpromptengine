@@ -12,7 +12,7 @@ promptCount: 25
 
 Working product managers building feature prioritization frameworks that actually get used by their teams and approved by stakeholders. These prompts generate finished prioritization documents, stakeholder communications, and framework implementations you can use immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Product Management-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Product Management-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## RICE Framework Implementation
 

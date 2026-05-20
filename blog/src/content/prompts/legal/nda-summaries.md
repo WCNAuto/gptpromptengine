@@ -12,7 +12,7 @@ promptCount: 25
 
 For legal professionals who need NDA summaries and related documentation fast. These 25 prompts generate client-ready drafts for common NDA scenarios, breach analyses, and compliance reviews.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Legal-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Legal-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Standard NDA Summary Documentation
 

@@ -142,6 +142,6 @@ A: Use the Status field to mark communications that need follow-up, and regularl
 
 Get access to our complete bundle of 50+ professional Notion templates designed specifically for educators, including lesson planning templates, student assessment trackers, and classroom management systems.
 
-[🎯 Download the Complete Teacher Template Bundle on Gumroad](https://gumroad.com)
+[🎯 Download the Complete Teacher Template Bundle on Gumroad](mailto:we@white.agency?subject=Waitlist)
 
 *Save 60% when you buy the bundle vs. individual templates!*

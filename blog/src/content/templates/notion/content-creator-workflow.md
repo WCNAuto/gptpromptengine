@@ -144,4 +144,4 @@ Create a master content piece in the Content Calendar, then create related entri
 
 **Ready to scale your content operations?** Get our complete Marketing Manager Productivity Bundle with 12+ premium Notion templates, including advanced campaign tracking, budget management, and team collaboration systems. Perfect for marketing managers ready to transform their workflow efficiency.
 
-[Get the Complete Marketing Bundle →](https://gumroad.com/l/marketing-manager-bundle)
+[Get the Complete Marketing Bundle →](mailto:we@white.agency?subject=Waitlist/l/marketing-manager-bundle)

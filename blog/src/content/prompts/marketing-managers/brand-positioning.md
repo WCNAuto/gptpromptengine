@@ -12,7 +12,7 @@ promptCount: 25
 
 These 25 prompts help Marketing Managers create professional brand positioning statements without starting from scratch. Copy the prompt, fill in your company details, and get a polished positioning statement ready for stakeholder review.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Product Launch Positioning
 

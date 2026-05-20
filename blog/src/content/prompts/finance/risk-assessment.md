@@ -12,7 +12,7 @@ promptCount: 25
 
 Finance professionals need risk assessment reports fast. These 25 AI prompts generate complete financial risk reports you can customize in seconds and send to stakeholders immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Finance-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Finance-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Credit Risk Analysis Reports
 

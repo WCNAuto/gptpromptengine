@@ -146,7 +146,7 @@ The template uses Notion's formula properties to automatically calculate totals,
 
 Take your productivity to the next level with our **Premium Notion Template Bundle** - featuring 50+ professionally designed templates for project management, CRM, content planning, and business operations.
 
-**[Get the Complete Bundle on Gumroad →](https://gumroad.com/premium-notion-templates)**
+**[Get the Complete Bundle on Gumroad →](mailto:we@white.agency?subject=Waitlist/premium-notion-templates)**
 
 ✅ Lifetime updates  
 ✅ Video tutorials included  

@@ -12,7 +12,7 @@ promptCount: 25
 
 Customer success managers need check-in content that converts, not templates that sit in folders. These 25 prompts generate ready-to-send emails, meeting agendas, and follow-up scripts you can use immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Customer Service-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Customer Service-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Post-Implementation Check-ins
 

@@ -140,6 +140,6 @@ This free template is just the beginning. Get access to our **Premium HR Managem
 - ✅ Succession Planning Templates
 - ✅ And much more!
 
-**[Get the Complete HR Bundle on Gumroad →](https://gumroad.com/hr-notion-templates)**
+**[Get the Complete HR Bundle on Gumroad →](mailto:we@white.agency?subject=Waitlist/hr-notion-templates)**
 
 *Trusted by 2,000+ HR professionals worldwide*

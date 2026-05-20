@@ -12,7 +12,7 @@ promptCount: 25
 
 You're an Operations professional who needs vendor emails written fast. These 25 prompts generate complete, professional vendor communication drafts you can customize and send immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Operations-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Operations-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Performance Issues and Escalation
 

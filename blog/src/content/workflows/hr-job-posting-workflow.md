@@ -61,7 +61,7 @@ Content: Job title, LinkedIn post URL, date posted.
 5. Test with a sample job posting
 6. Activate the workflow
 
-**Download the JSON:** [hr-job-posting-linkedin.json](#download)
+**Download the JSON:** Coming soon — [join the waitlist](mailto:we@white.agency?subject=HR%20Workflow%20JSON%20Download) to be notified when the file is available.
 
 ---
 
@@ -90,4 +90,4 @@ LinkedIn caps posts at 3,000 characters. The prompt instructs Claude to keep out
 
 3 automation workflows for HR Managers — job posting, onboarding, and performance review scheduling. Ready to import.
 
-[Get the HR Automation Pack for $19](https://gumroad.com)
+[Get the HR Automation Pack for $19](mailto:we@white.agency?subject=Waitlist)

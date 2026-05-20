@@ -177,6 +177,6 @@ The Analytics Dashboard provides key metrics through filtered views and formulas
 
 Get access to our complete collection of 50+ professional Notion templates designed specifically for HR managers, including advanced recruitment systems, employee management databases, performance tracking templates, and more.
 
-[🚀 Get the Complete HR Template Bundle - $47](https://gumroad.com/l/notion-hr-bundle)
+[🚀 Get the Complete HR Template Bundle - $47](mailto:we@white.agency?subject=Waitlist/l/notion-hr-bundle)
 
 *Includes bonus email templates, automation guides, and lifetime updates*

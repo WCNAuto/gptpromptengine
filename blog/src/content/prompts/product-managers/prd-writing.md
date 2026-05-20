@@ -12,7 +12,7 @@ promptCount: 25
 
 You're a Product Manager with a PRD deadline this week. These 25 prompts generate complete product requirements documents, feature specs, and technical briefs you can edit and ship immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Product Management-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Product Management-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Core Feature PRDs
 

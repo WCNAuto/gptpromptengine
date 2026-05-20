@@ -190,6 +190,6 @@ Change the Deal Status to "On Hold" for temporarily paused deals or "Dead" for d
 
 Ready to take your real estate operations to the next level? Get our **Complete Real Estate Professional Bundle** featuring 12 premium Notion templates including advanced CRM systems, property analysis tools, client management dashboards, and marketing trackers.
 
-**[Get the Complete Bundle on Gumroad →](https://gumroad.com/real-estate-notion-bundle)**
+**[Get the Complete Bundle on Gumroad →](mailto:we@white.agency?subject=Waitlist/real-estate-notion-bundle)**
 
 *Save 60% compared to individual template purchases and transform your entire real estate workflow today.*

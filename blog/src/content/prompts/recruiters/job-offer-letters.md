@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use AI prompts for recruiters who need job offer letters written fast. Copy the prompt, fill in your details, paste into ChatGPT or Claude, and get a polished offer letter in seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Recruiters-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Recruiters-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Executive Level Offers
 

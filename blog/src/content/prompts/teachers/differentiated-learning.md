@@ -12,7 +12,7 @@ promptCount: 25
 
 You're a teacher with 30 different learning needs in one classroom and lesson plans due tomorrow. These 25 AI prompts create finished differentiated materials you can use immediately—no more starting from scratch or adapting generic templates.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Lesson Planning for Mixed Abilities
 

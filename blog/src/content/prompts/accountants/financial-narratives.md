@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help working accountants draft financial statement narratives fast. Copy a prompt, fill in your numbers, and get publication-ready commentary you can refine in minutes.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Accountants-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Accountants-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Management Discussion & Analysis Sections
 

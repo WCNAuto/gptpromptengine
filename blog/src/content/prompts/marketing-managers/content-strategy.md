@@ -12,7 +12,7 @@ promptCount: 25
 
 These 25 prompts help Marketing Managers create content strategy documents, campaign briefs, and competitive analyses without starting from scratch. Copy, paste, fill in your variables, and get usable outputs in under 60 seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Campaign Planning & Brief Creation
 

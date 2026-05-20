@@ -235,6 +235,6 @@ This free template is just the beginning! Get access to our **Premium Project Ma
 ✅ **Integration Scripts & Automation Workflows**
 ✅ **Video Tutorials & Setup Guide**
 
-[**Get the Premium Bundle for $47** →](https://gumroad.com/l/project-management-bundle)
+[**Get the Premium Bundle for $47** →](mailto:we@white.agency?subject=Waitlist/l/project-management-bundle)
 
 *30-day money-back guarantee • Instant download • Lifetime updates*

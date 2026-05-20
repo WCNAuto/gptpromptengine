@@ -12,7 +12,7 @@ promptCount: 25
 
 For Marketing Managers launching products this week who need announcement copy fast. These 25 prompts generate finished launch emails, press releases, social campaigns, and internal communications you can edit lightly and send.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Launch Email Campaigns
 

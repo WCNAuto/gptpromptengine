@@ -12,7 +12,7 @@ promptCount: 25
 
 Real estate agents who need winning offer letters fast. Copy these prompts into ChatGPT, fill in the variables, and get polished offers that help your clients compete in tough markets.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Real Estate-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Real Estate-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Competitive Market Offers
 

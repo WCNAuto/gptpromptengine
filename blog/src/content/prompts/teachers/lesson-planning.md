@@ -12,7 +12,7 @@ promptCount: 25
 
 You're a working teacher with lesson plans due this week. These 25 prompts turn ChatGPT into your lesson planning assistant, producing complete drafts you can tweak and teach tomorrow.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Teachers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Subject-Specific Lesson Plans
 
@@ -421,4 +421,4 @@ These prompts work across AI platforms with minor adjustments. For Claude, add "
 Absolutely. Add variables like {delivery_method: in_person / virtual / hybrid} and {technology_platform} to any prompt. For virtual lessons, include "{engagement_strategy}" and "{tech_backup_plan}" variables. The AI will automatically adjust activities for digital delivery, suggest breakout room uses, and recommend online assessment methods.
 
 ### What's the difference between using free ChatGPT versus paid versions for lesson planning?
-Free ChatGPT works perfectly with these prompts but has usage limits during peak times. Paid versions (ChatGPT Plus, [Jasper AI](https://jasper.ai/affiliates), [Copy.ai](https://www.copy.ai/affiliates))
+Free ChatGPT works perfectly with these prompts but has usage limits during peak times. Paid versions (ChatGPT Plus, [Jasper AI](https://jasper.ai), [Copy.ai](https://www.copy.ai))

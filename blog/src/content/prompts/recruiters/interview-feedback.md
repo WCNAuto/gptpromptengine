@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts turn your rough interview notes into polished feedback summaries that hiring managers actually read. Each prompt takes 30 seconds to fill out and produces a finished assessment you can send immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Recruiters-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Recruiters-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## First Round Technical Interviews
 

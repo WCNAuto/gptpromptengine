@@ -12,7 +12,7 @@ promptCount: 25
 
 Marketing Managers need campaign briefs written fast, not frameworks to fill out later. These 25 prompts generate complete, professional briefs you can edit lightly and send to creative teams, agencies, or stakeholders.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Product Launch Campaign Briefs
 

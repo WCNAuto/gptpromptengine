@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help working project managers create risk register entries, stakeholder communications, and risk assessments without starting from blank documents. Each prompt produces finished content you can edit lightly and use immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Project Management-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Project Management-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Risk Identification and Documentation
 

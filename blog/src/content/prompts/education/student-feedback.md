@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts generate complete student feedback reports you can edit and submit immediately. Each prompt takes real student data and produces professional assessment commentary in under 30 seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Education-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Education-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Mid-Term Progress Reports
 

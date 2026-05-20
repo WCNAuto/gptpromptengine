@@ -186,6 +186,6 @@ This free template is just the beginning! Get access to our **Complete Legal Pro
 - ✅ Client Communication hub with secure messaging
 - ✅ Legal Task and Project Management boards
 
-**[Get the Complete Legal Bundle on Gumroad →](https://gumroad.com/legal-notion-templates)**
+**[Get the Complete Legal Bundle on Gumroad →](mailto:we@white.agency?subject=Waitlist/legal-notion-templates)**
 
 *Professional templates trusted by 500+ legal professionals worldwide*

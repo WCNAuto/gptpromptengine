@@ -12,7 +12,7 @@ promptCount: 25
 
 Project managers who need status reports written fast. These 25 prompts generate finished reports you can copy, edit lightly, and send to stakeholders within minutes.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Project Management-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Project Management-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Weekly Status Updates
 

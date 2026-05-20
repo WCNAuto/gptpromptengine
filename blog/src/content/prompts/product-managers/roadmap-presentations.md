@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-use prompts for Product Managers who need roadmap presentations drafted fast. Fill in the variables, paste into ChatGPT, and get slides you can present to leadership this week.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Product Management-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Product Management-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Executive Summary Slides
 

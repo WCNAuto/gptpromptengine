@@ -12,7 +12,7 @@ promptCount: 25
 
 For teachers who need curriculum outlines finished this week, not next month. These prompts generate complete drafts you can edit and submit to administrators or use for planning.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Education-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Education-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Unit Planning and Sequencing
 

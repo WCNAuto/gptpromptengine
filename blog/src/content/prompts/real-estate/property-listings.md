@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help working realtors write compelling property listing descriptions fast. Copy any prompt, fill in the variables, paste into ChatGPT or Claude, and get a polished listing description ready to publish.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Real Estate-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Real Estate-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Luxury Property Listings
 

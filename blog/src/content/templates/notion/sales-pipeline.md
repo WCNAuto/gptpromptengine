@@ -168,4 +168,4 @@ Revenue forecasting uses the Weighted Value field, which automatically calculate
 
 Get the **Complete Sales Professional Bundle** on Gumroad - includes this pipeline tracker plus 12 additional premium templates for proposal management, customer onboarding, sales reporting, territory planning, and more. Everything you need to build a world-class sales system in Notion.
 
-[Get the Complete Bundle →](https://gumroad.com/sales-notion-templates)
+[Get the Complete Bundle →](mailto:we@white.agency?subject=Waitlist/sales-notion-templates)

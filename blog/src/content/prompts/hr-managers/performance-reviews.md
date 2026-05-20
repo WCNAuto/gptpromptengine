@@ -12,7 +12,7 @@ promptCount: 25
 
 Ready-to-paste ChatGPT prompts for HR Managers who need performance review drafts finished today. Each prompt takes 30 seconds to customise and produces a polished document you can edit lightly and send.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Annual Review Drafts
 
@@ -417,4 +417,4 @@ Add your framework to the constraints section. For example: "Use our company's f
 
 200+ prompts for HR Managers organised by use case. Ready to paste. The full collection.
 
-[Get the full pack for $19](https://gumroad.com)
+[Get the full pack for $19](mailto:we@white.agency?subject=Waitlist)

@@ -12,7 +12,7 @@ promptCount: 25
 
 For teachers who need lesson plans written fast. Copy any prompt below, fill in the variables, paste into ChatGPT, and get a complete lesson plan you can use immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Education-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Education-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Single Subject Deep Dives
 

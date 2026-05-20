@@ -12,7 +12,7 @@ promptCount: 25
 
 Operations professionals who need process improvement documentation finished today, not next week. Copy these prompts, fill in your variables, and get usable drafts in 30 seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Operations-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Operations-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Standard Operating Procedure Creation
 

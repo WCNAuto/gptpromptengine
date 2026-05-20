@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help busy recruiters write thoughtful, professional candidate rejection emails without starting from scratch. Copy any prompt, fill in the variables, and get a polished rejection email in 30 seconds.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Recruiters-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Recruiters-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Post-Interview Rejections
 

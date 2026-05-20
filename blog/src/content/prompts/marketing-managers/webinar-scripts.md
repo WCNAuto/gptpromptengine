@@ -12,7 +12,7 @@ promptCount: 25
 
 Marketing managers need webinar scripts that convert registrations into customers, not generic event templates. These 25 prompts generate complete webinar scripts, intro sequences, Q&A responses, and follow-up sequences you can use immediately.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Marketing Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Complete Webinar Scripts
 

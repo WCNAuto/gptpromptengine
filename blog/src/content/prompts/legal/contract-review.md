@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts generate finished contract review documents you can use immediately. Each prompt produces a specific deliverable—not another template to fill out later.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Legal-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Legal-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Pre-Signature Risk Assessment
 

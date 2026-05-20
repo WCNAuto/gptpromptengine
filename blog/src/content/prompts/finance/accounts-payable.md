@@ -12,7 +12,7 @@ promptCount: 25
 
 These prompts help busy AP professionals draft vendor emails, payment notices, and dispute communications instantly. Copy any prompt, fill in your details, and get professional emails ready to send.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for Finance-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai) for Finance-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
 
 ## Payment Delay and Issue Communications
 
