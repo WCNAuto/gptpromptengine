@@ -35,6 +35,59 @@ const { Content } = await render(post);
       text-align:center; margin-top:3rem; }
     .btn { display:inline-block; background:#f59e0b; color:#1e293b; padding:12px 28px;
       border-radius:8px; font-weight:700; text-decoration:none; margin-top:1rem; }
+      /* MOBILE NAV */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--blue);
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background: white;
+  border-bottom: 1px solid var(--rule);
+  padding: 16px 20px;
+  z-index: 99;
+  flex-direction: column;
+  gap: 4px;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--blue);
+  border-radius: 8px;
+}
+.nav-mobile-menu a:hover { background: var(--bg-soft); }
+.nav-mobile-menu .mob-cta {
+  margin-top: 8px;
+  background: var(--green);
+  color: var(--blue);
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .nav-center { display: none; }
+  .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+}
   </style>
 </head>
 <body>
@@ -50,6 +103,11 @@ const { Content } = await render(post);
     <div class='content'><Content /></div>
     
   </article>
+  <script is:inline>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+</script>
   <GlobalFooter />   
 </body>
 </html>

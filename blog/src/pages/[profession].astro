@@ -127,11 +127,70 @@ footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06
   .hero { padding-top:36px; padding-bottom:32px; }
   .cards-grid { grid-template-columns:1fr; }
 }
+/* MOBILE NAV */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--blue);
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background: white;
+  border-bottom: 1px solid var(--rule);
+  padding: 16px 20px;
+  z-index: 99;
+  flex-direction: column;
+  gap: 4px;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--blue);
+  border-radius: 8px;
+}
+.nav-mobile-menu a:hover { background: var(--bg-soft); }
+.nav-mobile-menu .mob-cta {
+  margin-top: 8px;
+  background: var(--green);
+  color: var(--blue);
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .nav-center { display: none; }
+  .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+}
 </style>
 </head>
 <body>
 
 <nav class="nav">
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="/prompts">Prompts</a>
+  <a href="/workflows">Workflows</a>
+  <a href="/templates">Templates</a>
+  <a href="/hr-managers" class="mob-cta">Browse Free</a>
+</div>
   <a href="/" class="nav-logo"><span class="nav-dot"></span>GPT Prompt Engine</a>
   <div class="nav-center">
     <a href="/prompts" class="nav-link">Prompts</a>
@@ -139,6 +198,9 @@ footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06
     <a href="/templates" class="nav-link">Templates</a>
   </div>
   <a href={`/${profSlug}`} class="nav-cta">Browse {profession}</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+  <span></span><span></span><span></span>
+</button>
 </nav>
 
 <header class="hero">
@@ -278,6 +340,11 @@ footer { background:var(--bg-deeper); border-top:1px solid rgba(255,255,255,0.06
         sec.style.display = (filter === 'all' || sec.dataset.section === filter) ? 'block' : 'none';
       });
     });
+  });
+</script>
+<script is:inline>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
   });
 </script>
 <GlobalFooter />
