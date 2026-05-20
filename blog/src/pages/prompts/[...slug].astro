@@ -741,16 +741,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
   </div>
 </div>
 
-<!-- ========== FOOTER ========== -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-mark">
-      <div class="footer-dot"></div>
-      GPT Prompt Engine · A WDC property
-    </div>
-    <div>Made for working professionals.</div>
-  </div>
-</footer>
 
 <!-- ========== COPY BUTTON SCRIPT ========== -->
 <script is:inline>
@@ -804,6 +794,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
     });
   });
 </script>
-
+<GlobalFooter />
 </body>
 </html>
