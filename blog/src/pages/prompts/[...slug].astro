@@ -3,6 +3,7 @@
 
 import { getCollection, render } from 'astro:content';
 import Analytics from '../../components/Analytics.astro';
+import GlobalFooter from '../../components/GlobalFooter.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('prompts');
