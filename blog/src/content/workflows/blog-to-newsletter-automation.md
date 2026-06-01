@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Automate Blog Post to Email Newsletter Conversion with n8n"
 description: "Streamline your content marketing by automatically converting blog posts into formatted email newsletters, saving hours of manual work for copywriters."
@@ -6,7 +5,7 @@ profession: "Copywriters"
 category: "Content Marketing"
 contentType: "workflow"
 tags: ["email marketing", "blog automation", "newsletter", "content repurposing", "copywriting"]
-pubDate: "2026-05-31"
+pubDate: 2026-05-31
 featured: false
 ---
 
@@ -296,4 +295,8 @@ return [{
       "main": [[{"node": "Build Email Template", "type": "main", "index": 0}]]
     },
     "Build Email Template": {
-      "main": [[{"node": "Send to Mailchimp", "type": "
+      "main": [[{"node": "Send to Mailchimp", "type": "main", "index": 0}]]
+    }
+  }
+}
+```
