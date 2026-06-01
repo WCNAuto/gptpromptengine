@@ -1,4 +1,4 @@
-```markdown
+
 ---
 title: "Bug Ticket to Slack Notification Automation"
 description: "Automate instant Slack notifications when new bug tickets are created or updated in your bug tracking system, keeping your development team informed and responsive."
