@@ -1,12 +1,17 @@
-
 ---
 title: "Bug Ticket to Slack Notification Automation"
 description: "Automate instant Slack notifications when new bug tickets are created or updated in your bug tracking system, keeping your development team informed and responsive."
 profession: "Developers"
 category: "Team Communication"
 contentType: "workflow"
-tags: ["bug-tracking", "slack", "notifications", "development", "team-communication", "incident-management"]
-pubDate: "2026-06-01"
+tags:
+  - bug-tracking
+  - slack
+  - notifications
+  - development
+  - team-communication
+  - incident-management
+pubDate: 2026-06-01
 featured: false
 ---
 
