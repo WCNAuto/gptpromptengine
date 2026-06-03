@@ -1,4 +1,3 @@
-
 ---
 title: "Automated Sales Follow-Up Email Sequences with n8n"
 description: "Build automated email sequences to nurture leads and close more deals with personalized follow-up messages triggered by customer actions."
@@ -6,7 +5,7 @@ profession: "Sales"
 category: "Lead Nurturing"
 contentType: "workflow"
 tags: ["sales", "email automation", "lead nurturing", "follow-up", "crm integration"]
-pubDate: "2026-06-03"
+pubDate: 2026-06-03
 featured: false
 ---
 
