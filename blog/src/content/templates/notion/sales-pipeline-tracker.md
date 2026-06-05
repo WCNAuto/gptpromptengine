@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "Free Notion Sales Pipeline Tracking Template"
 description: "Complete sales pipeline template to track deals, manage prospects, and monitor sales performance with automated progress tracking and revenue forecasting."
