@@ -1,411 +1,333 @@
 ---
-title: "Free ChatGPT Prompts for IT Incident Report Writing (2026 Complete Guide)"
-description: "25 ready-to-use ChatGPT prompts for IT incident reports. Copy, paste, fill variables, get professional documentation in 30 seconds."
+title: "Free ChatGPT Prompts for IT Incident Report Writing - 25 Ready Templates for 2026"
+description: "Get 25 free ChatGPT prompts for IT incident report writing. Copy, paste, fill variables, and generate professional incident reports in 30 seconds."
 profession: "IT Managers"
 category: "Incidents"
 contentType: prompt
-tags: ["free chatgpt prompts for it incident report writing", "IT incident documentation templates", "ChatGPT prompts for system outages", "incident response reporting", "IT crisis communication prompts"]
-pubDate: 2026-05-13
+tags: ["free chatgpt prompts for it incident report writing", "incident report templates", "IT incident documentation", "chatgpt for IT managers", "incident response prompts"]
+pubDate: 2026-06-15
 featured: true
 promptCount: 25
 ---
 
-Ready-to-use ChatGPT prompts for IT incident reports that actually get results. Copy any prompt, fill in the variables, and get professional incident documentation in under a minute. These prompts produce finished reports, not templates you still need to complete.
+These prompts generate complete incident reports you can review, edit lightly, and submit. Each prompt takes 30 seconds to fill and produces a professional report that meets documentation standards.
 
-These prompts pair well with [Jasper AI](https://jasper.ai) for IT Managers-specific tone control, or [Copy.ai](https://www.copy.ai) for fast iteration.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for IT Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
-## Critical System Outages
+## Major System Outages
 
-> You are an IT Manager writing an incident report for a critical system outage that affected business operations.
->
+> You are an IT manager documenting a critical system outage for executive review.
+> 
 > Incident: {incident_title}
 > System affected: {system_name}
-> Start time: {outage_start_time_date}
-> End time: {outage_end_time_date}
-> Business impact: {revenue_loss_or_user_count_affected}
+> Outage duration: {start_time} to {end_time} ({total_hours} hours)
+> Users impacted: {number_of_users}
+> Business impact: {revenue_loss_or_operational_impact}
 > Root cause: {technical_root_cause}
-> Discovery method: {how_outage_was_detected}
-> Stakeholders notified: {list_of_people_departments_notified}
-> Recovery actions: {steps_taken_to_restore_service}
->
-> Write a 400-500 word incident report using the ITIL framework. Start with executive summary in 2 sentences. Include timeline section with specific timestamps. End with 3 concrete action items to prevent recurrence, each with owner and due date.
+> Resolution steps: {key_actions_taken}
+> Responsible team: {team_name}
+> Escalation level: {P1/P2/P3}
+> 
+> Write a 400-500 word executive incident report. Start with a one-sentence impact summary. Follow with timeline, root cause analysis, immediate actions taken, and prevention measures. Use bullet points for technical details. End with next steps and accountability.
 
-**When to use it:** Tuesday morning after a weekend system failure when executives need the full story before the 9am leadership meeting.
+**When to use it:** When your CEO asks for a written explanation of why the main system was down for hours.
 
-**Pro tip:** Always convert technical jargon in the root cause to business language in the executive summary. CTO reads the summary, engineers read the timeline.
+**Pro tip:** Lead with business impact, not technical details. Executives care about customer and revenue impact first.
 
 ---
 
-> You are documenting a database corruption incident that caused data integrity issues across multiple applications.
->
-> Database: {database_name_version}
+> You are documenting a database corruption incident that caused data loss for compliance reporting.
+> 
+> Database: {database_name}
 > Corruption discovered: {discovery_date_time}
-> Data affected: {table_names_or_record_count}
-> Applications impacted: {affected_application_list}
-> Detection method: {monitoring_alert_user_report}
-> Recovery time: {total_hours_minutes_to_fix}
-> Data recovery status: {fully_recovered_partial_loss_percentage}
-> Team members involved: {names_and_roles}
->
-> Create a 300-350 word technical incident report. Open with impact statement quantifying affected records. Include recovery procedure section with step-by-step actions taken. Close with lessons learned focusing on monitoring gaps.
+> Data affected: {data_type_and_volume}
+> Recovery method: {backup_restore_or_other}
+> Data loss period: {from_date} to {to_date}
+> Compliance implications: {regulatory_impact}
+> Discovery method: {monitoring_alert_or_user_report}
+> Recovery time: {hours_to_full_restoration}
+> Preventive measures: {new_controls_implemented}
+> 
+> Write a 350-400 word incident report for compliance and audit teams. Include data integrity assessment, recovery procedures, and regulatory notification requirements. Use technical precision but accessible language.
 
-**When to use it:** When your backup worked but you need to document the scary 4-hour window where customer data was at risk.
+**When to use it:** When you need to document data corruption for auditors or compliance officers who aren't technical.
 
-**Pro tip:** Include the exact SQL commands or backup procedures used in recovery. Future incidents move faster when the playbook is already written.
-
----
-
-> You are writing an incident report for a security breach that triggered your incident response plan.
->
-> Breach type: {malware_phishing_unauthorized_access}
-> Discovery time: {when_breach_was_detected}
-> Affected systems: {list_of_compromised_systems}
-> Data at risk: {customer_data_financial_internal_none}
-> Response team: {security_team_members_external_vendors}
-> Containment time: {hours_to_isolate_threat}
-> Investigation status: {ongoing_complete_external_review}
-> Compliance requirements: {GDPR_HIPAA_SOX_none}
->
-> Write a 500-600 word security incident report suitable for compliance audit. Start with breach classification and severity level. Include detailed containment actions. End with regulatory notification requirements and timeline.
-
-**When to use it:** When legal needs documentation for insurance claims or regulatory bodies want proof of proper incident response.
-
-**Pro tip:** Keep technical attack vectors separate from business impact sections. Auditors care about process compliance, not exploitation techniques.
+**Pro tip:** Quantify data loss precisely. Auditors need exact timeframes and affected record counts for their reports.
 
 ---
 
-> You are documenting a network infrastructure failure that affected multiple office locations.
->
-> Network component: {router_switch_firewall_ISP_connection}
-> Failure time: {exact_timestamp_of_failure}
-> Locations affected: {office_names_or_regions}
-> Users impacted: {employee_count_and_departments}
-> Redundancy status: {failover_worked_failed_not_configured}
-> Vendor involvement: {ISP_name_support_ticket_number}
-> Workaround implemented: {mobile_hotspots_alternate_connection}
-> Business continuity: {remote_work_office_closure_reduced_capacity}
->
-> Create a 350-400 word network incident report. Begin with service availability impact percentage. Detail failover performance and gaps. Conclude with infrastructure resilience recommendations.
+> You are reporting a network security breach that triggered incident response protocols.
+> 
+> Breach type: {malware/phishing/unauthorized_access}
+> Detection time: {timestamp}
+> Affected systems: {system_list}
+> Attack vector: {entry_point_description}
+> Data accessed: {yes/no/unknown} - {data_types_if_applicable}
+> Containment actions: {immediate_response_steps}
+> External notifications: {customers/partners/authorities}
+> Investigation status: {ongoing/complete}
+> Threat eliminated: {yes/no/monitoring}
+> 
+> Write a 450-500 word security incident report for legal and executive review. Follow the SANS incident response framework. Include containment, eradication, and recovery phases. End with lessons learned and security improvements.
 
-**When to use it:** Friday afternoon when the internet dies and everyone's asking why the backup connection didn't kick in automatically.
+**When to use it:** When legal counsel needs a formal record of a security incident for potential regulatory filing.
 
-**Pro tip:** Calculate actual downtime vs. theoretical RTO from your disaster recovery plan. The gap becomes your budget justification for infrastructure upgrades.
+**Pro tip:** Be precise about data access. "Unknown" is acceptable early on, but update the report as investigation progresses.
 
 ---
 
-> You are writing an incident report for a cloud service provider outage that affected your SaaS applications.
->
-> Cloud provider: {AWS_Azure_GCP_other}
-> Service affected: {specific_service_name_region}
-> Provider incident ID: {cloud_providers_reference_number}
-> Our applications impacted: {list_of_your_affected_apps}
-> Customer notification: {when_how_customers_were_informed}
-> SLA credits: {estimated_credit_amount_or_none}
-> Mitigation attempts: {what_your_team_tried_during_outage}
-> Recovery verification: {how_you_confirmed_services_restored}
->
-> Write a 250-300 word third-party incident report. Open with provider acknowledgment and reference number. Focus on your response actions, not provider's technical details. End with SLA impact assessment.
+> You are documenting a cloud service provider outage that affected multiple business units.
+> 
+> Cloud provider: {AWS/Azure/GCP/other}
+> Service affected: {specific_service_name}
+> Provider incident ID: {vendor_ticket_number}
+> Internal applications impacted: {app_list}
+> Business units affected: {department_list}
+> Workaround implemented: {temporary_solution}
+> Customer communication: {yes/no} - {communication_method}
+> SLA breach: {yes/no} - {penalty_amount}
+> Provider ETA: {estimated_resolution_time}
+> 
+> Write a 300-350 word incident report for business unit leaders. Focus on operational impact and recovery timeline. Include provider communication and any SLA implications. Use clear, non-technical language.
 
-**When to use it:** When AWS has a bad day and your CEO wants to know why your "cloud-first" strategy didn't prevent the outage.
+**When to use it:** When business leaders need to understand how a vendor outage affects their operations and timelines.
 
-**Pro tip:** Reference the provider's public status page timeline, but emphasize your proactive customer communication. Shows you own the relationship even when you don't own the infrastructure.
+**Pro tip:** Reference the vendor's public status page URL in your report. Business leaders often want to monitor directly.
+
+---
+
+> You are reporting a critical patch deployment that failed and caused system instability.
+> 
+> Patch details: {patch_name_and_version}
+> Target systems: {system_count_and_types}
+> Deployment window: {scheduled_start} to {scheduled_end}
+> Failure symptoms: {specific_issues_observed}
+> Rollback decision: {time_of_rollback_decision}
+> Rollback completion: {time_systems_restored}
+> Testing gaps: {what_testing_missed_this_issue}
+> Change approval: {CAB_reference_number}
+> Vendor communication: {patch_vendor_response}
+> 
+> Write a 400-450 word post-incident report for the Change Advisory Board. Include timeline, decision points, and process improvements. Address testing procedures and change management lessons learned.
+
+**When to use it:** When the Change Advisory Board needs to review why a routine patch deployment went wrong.
+
+**Pro tip:** Include specific testing scenarios that would have caught this issue. The CAB will want to update procedures.
 
 ## Security Incidents
 
-> You are documenting a phishing attack that compromised employee email accounts and potentially exposed sensitive information.
->
-> Attack vector: {email_link_attachment_description}
-> Compromised accounts: {number_and_departments_affected}
-> Data potentially accessed: {customer_files_financial_data_passwords}
-> Detection source: {user_report_security_tool_IT_monitoring}
-> Response time: {hours_from_detection_to_containment}
-> Remediation steps: {password_resets_account_lockouts_training}
-> External notifications: {customers_partners_regulatory_none}
-> Attack sophistication: {basic_targeted_advanced_persistent}
->
-> Create a 450-500 word security incident report for executive briefing. Start with attack timeline and scope. Include detailed response actions taken by your team. Finish with user training recommendations and budget implications.
+> You are documenting a successful phishing attack that compromised employee credentials.
+> 
+> Attack date: {incident_date}
+> Employees targeted: {number_targeted}
+> Employees compromised: {number_compromised}
+> Email source: {external_domain_or_spoofed}
+> Credentials harvested: {system_access_gained}
+> Data accessed: {files_or_systems_viewed}
+> Detection method: {user_report/monitoring_alert}
+> Account securing: {password_reset/MFA_forced}
+> User retraining: {mandatory/recommended}
+> Email filtering: {new_rules_implemented}
+> 
+> Write a 350-400 word security incident report for HR and executive leadership. Include employee impact, immediate response, and awareness training recommendations. Balance security concerns with HR considerations.
 
-**When to use it:** Monday morning when HR forwards you the "I think I clicked something bad" email from Friday evening.
+**When to use it:** When HR needs to understand the human element of a security incident for employee communications.
 
-**Pro tip:** Quantify the potential exposure even if no actual data theft occurred. "Could have accessed 10,000 customer records" gets security budget approved faster than "no confirmed breach."
-
----
-
-> You are writing an incident report for ransomware that encrypted production servers but was stopped by your backup and recovery procedures.
->
-> Malware variant: {ransomware_name_or_type}
-> Initial infection: {email_USB_network_vulnerability}
-> Encrypted systems: {server_names_and_functions}
-> Ransom demand: {amount_and_cryptocurrency_type}
-> Backup integrity: {clean_backups_available_or_compromised}
-> Recovery time: {total_hours_to_restore_operations}
-> Business disruption: {departments_affected_revenue_impact}
-> Law enforcement: {FBI_local_police_reported_or_not}
->
-> Write a 400-450 word ransomware incident report emphasizing successful recovery. Open with attack containment success. Detail backup restoration process. Close with insurance claim requirements and preventive improvements.
-
-**When to use it:** When your disaster recovery plan actually worked and you need to document why paying the ransom wasn't necessary.
-
-**Pro tip:** Include the exact backup age and recovery point objective achieved. Insurance companies reduce premiums when you prove your backup strategy works under pressure.
+**Pro tip:** Avoid naming specific employees in executive reports. Focus on patterns and systematic improvements.
 
 ---
 
-> You are documenting unauthorized access to your network through a compromised VPN account with elevated privileges.
->
-> Compromised account: {username_and_privilege_level}
-> Access duration: {estimated_time_attacker_was_in_network}
-> Systems accessed: {servers_databases_applications_viewed}
-> Geographic indicators: {login_location_IP_addresses}
-> Privilege escalation: {additional_accounts_or_systems_compromised}
-> Detection method: {SIEM_alert_unusual_activity_user_report}
-> Forensic findings: {files_accessed_data_exfiltrated_malware_installed}
-> Account security: {2FA_enabled_password_complexity_last_change}
->
-> Create a 500-550 word privileged access incident report suitable for cyber insurance claim. Begin with breach scope and data classification. Include forensic investigation timeline. End with identity management improvements.
+> You are reporting unauthorized access to sensitive financial data by a terminated employee.
+> 
+> Former employee: {job_title_not_name}
+> Termination date: {last_work_day}
+> Access discovered: {discovery_date_time}
+> Systems accessed: {specific_applications}
+> Data viewed: {file_types_and_quantities}
+> Access method: {VPN/shared_account/other}
+> Account status: {should_have_been_disabled}
+> Legal notification: {yes/no} - {legal_team_contact}
+> HR process gap: {offboarding_step_missed}
+> Immediate remediation: {accounts_disabled_systems_secured}
+> 
+> Write a 400-450 word incident report for legal and HR leadership. Include timeline, data exposure assessment, and process failures. Recommend offboarding procedure improvements without assigning blame.
 
-**When to use it:** When your SIEM dashboard lights up like Christmas and the suspicious login came from a country where none of your employees are vacationing.
+**When to use it:** When legal counsel needs documentation of unauthorized access by former employees for potential legal action.
 
-**Pro tip:** Document the exact privileged access the compromised account had, not just what the attacker used. Insurance adjusters want to know worst-case exposure, not actual damage.
-
----
-
-> You are writing an incident report for a SQL injection attack that was blocked by your web application firewall before reaching the database.
->
-> Target application: {application_name_and_version}
-> Attack pattern: {SQL_injection_technique_used}
-> WAF protection: {security_tool_name_and_rule_triggered}
-> Attack frequency: {number_of_attempts_over_time_period}
-> Source analysis: {IP_addresses_geographic_origin}
-> Vulnerability scan: {confirmed_patch_status_of_application}
-> Log retention: {attack_data_preserved_for_analysis}
-> Performance impact: {application_slowdown_or_normal_operation}
->
-> Write a 300-350 word attempted breach report focusing on defense effectiveness. Start with attack prevention success. Include threat intelligence analysis. Conclude with application security validation results.
-
-**When to use it:** Wednesday afternoon when your security tools actually did their job and you want to prove to the board that the cybersecurity budget was worth it.
-
-**Pro tip:** Include attack geolocation and timing patterns. Repeated attacks from the same region suggest targeted reconnaissance, not random scanning.
+**Pro tip:** Document the intended offboarding process versus what actually happened. Legal teams need this gap analysis.
 
 ---
 
-> You are documenting a data leak incident where employee personal information was accidentally exposed through a misconfigured cloud storage bucket.
->
-> Data exposed: {employee_records_payroll_medical_background_checks}
-> Exposure duration: {days_weeks_data_was_publicly_accessible}
-> Discovery method: {security_scan_external_notification_employee_report}
-> Affected employees: {number_and_departments}
-> Configuration error: {specific_cloud_setting_misconfigured}
-> Access logs: {evidence_of_external_access_or_no_downloads}
-> Regulatory requirements: {GDPR_CCPA_state_privacy_laws}
-> Employee notification: {timeline_and_communication_method}
->
-> Create a 450-500 word data privacy incident report for legal review. Open with exposure scope and affected data types. Detail remediation actions and timeline. Close with regulatory notification obligations and employee communication plan.
+> You are documenting a malware infection that spread through the network before containment.
+> 
+> Malware type: {ransomware/trojan/worm}
+> Initial infection: {patient_zero_system}
+> Infection method: {email_attachment/USB/download}
+> Spread timeline: {time_from_infection_to_detection}
+> Systems affected: {total_count_by_department}
+> Data encrypted: {yes/no} - {recovery_method}
+> Network segmentation: {effective/bypassed}
+> Antivirus detection: {blocked/failed/delayed}
+> Recovery time: {hours_to_full_operations}
+> Ransom demand: {amount_or_none}
+> 
+> Write a 450-500 word incident report for insurance claims and executive review. Include financial impact, recovery costs, and security control effectiveness. Provide specific recommendations for prevention.
 
-**When to use it:** When someone checks the "public" box instead of "private" on cloud storage and your employee database becomes temporarily available to the entire internet.
+**When to use it:** When insurance companies request detailed documentation of malware incidents for claims processing.
 
-**Pro tip:** Distinguish between "publicly accessible" and "actually accessed" in your impact assessment. Most privacy regulations focus on potential exposure, but business impact depends on actual access.
-
-## Performance Issues
-
-> You are writing an incident report for a critical application that experienced severe performance degradation during peak business hours.
->
-> Application: {application_name_and_business_function}
-> Performance issue: {slow_response_timeouts_crashes}
-> Peak impact time: {specific_hours_when_worst_performance_occurred}
-> User complaints: {number_of_help_desk_tickets_or_calls}
-> Resource utilization: {CPU_memory_disk_network_percentages}
-> Root cause analysis: {database_queries_server_capacity_network_bottleneck}
-> Temporary fixes: {server_restarts_query_optimization_traffic_routing}
-> Business impact: {transactions_lost_revenue_affected_SLA_breach}
->
-> Write a 400-450 word performance incident report with quantified impact. Start with business metrics affected. Include detailed root cause analysis with monitoring data. End with capacity planning recommendations and timeline.
-
-**When to use it:** Thursday morning after your e-commerce site crawled to a halt during the busiest shopping hour and customer service is drowning in complaints.
-
-**Pro tip:** Convert technical metrics to business language. "Database response time increased 400%" becomes "checkout process took 2 minutes instead of 30 seconds."
+**Pro tip:** Document all costs including overtime, consultant fees, and business interruption. Insurance needs comprehensive financial impact.
 
 ---
 
-> You are documenting a database performance crisis where query response times degraded to the point of application timeouts.
->
-> Database system: {database_type_version_and_size}
-> Query performance: {specific_response_time_degradation}
-> Affected queries: {report_generation_user_searches_transactions}
-> Resource bottleneck: {CPU_memory_disk_IO_locks}
-> Monitoring alerts: {when_performance_thresholds_were_exceeded}
-> Optimization actions: {index_rebuilding_query_tuning_hardware_scaling}
-> Recovery timeline: {time_to_restore_acceptable_performance}
-> Preventive measures: {query_analysis_capacity_monitoring_scheduled_maintenance}
->
-> Create a 350-400 word database performance incident report. Begin with query performance baselines vs. incident levels. Detail optimization steps taken. Conclude with database maintenance schedule adjustments.
+> You are reporting a social engineering attack that bypassed technical controls through help desk manipulation.
+> 
+> Attack vector: {phone_call/email/in_person}
+> Target: {help_desk/specific_employee}
+> Information sought: {passwords/access/data}
+> Social engineering tactics: {authority/urgency/familiarity}
+> Information disclosed: {what_attacker_learned}
+> Verification process: {followed/bypassed}
+> Escalation occurred: {yes/no}
+> Training compliance: {target_training_status}
+> Policy violation: {specific_procedure_not_followed}
+> Immediate response: {accounts_secured_notifications_sent}
+> 
+> Write a 350-400 word incident report for security awareness training and policy review. Focus on human factors and process improvements rather than individual blame. Include training recommendations.
 
-**When to use it:** When your monthly reports that usually take 5 minutes are still running after 2 hours and users think the system is broken.
+**When to use it:** When the security team needs to document social engineering for awareness training and policy updates.
 
-**Pro tip:** Include the specific queries or reports that triggered the performance cascade. Often one poorly optimized query can bring down an entire database.
-
----
-
-> You are writing an incident report for network bandwidth saturation that caused VoIP quality issues and video conference failures.
->
-> Network segment: {WAN_link_internal_backbone_internet_connection}
-> Bandwidth utilization: {peak_percentage_and_capacity_limit}
-> Traffic analysis: {backup_jobs_file_transfers_streaming_video}
-> Service degradation: {call_quality_issues_meeting_failures}
-> Users affected: {departments_and_employee_count}
-> Traffic shaping: {QoS_policies_applied_or_missing}
-> Resolution method: {traffic_prioritization_bandwidth_upgrade_usage_restriction}
-> Monitoring gaps: {bandwidth_alerts_not_configured_or_ignored}
->
-> Write a 300-350 word network performance incident report focusing on business communication impact. Start with service quality measurements. Include traffic pattern analysis. End with network capacity planning recommendations.
-
-**When to use it:** Tuesday during the all-hands meeting when the CEO's video keeps freezing because someone decided to backup 500GB during business hours.
-
-**Pro tip:** Identify the specific traffic that consumed bandwidth beyond normal patterns. Random saturation suggests infrastructure problems, but identifiable traffic means policy problems.
+**Pro tip:** Include exact phrases the attacker used. This helps train staff to recognize similar future attempts.
 
 ---
 
-> You are documenting a server hardware failure that caused gradual performance degradation before complete system failure.
->
-> Server hardware: {server_model_age_and_primary_function}
-> Failure component: {hard_drive_memory_CPU_power_supply}
-> Warning signs: {error_logs_performance_alerts_user_complaints}
-> Degradation timeline: {days_or_weeks_of_declining_performance}
-> Monitoring response: {hardware_alerts_ignored_or_missed}
-> Failover status: {high_availability_worked_failed_not_configured}
-> Recovery method: {hardware_replacement_VM_migration_restore_from_backup}
-> Business continuity: {service_interruption_duration_and_workarounds}
->
-> Create a 400-450 word hardware failure incident report emphasizing early warning signs. Open with failure progression timeline. Detail monitoring and alerting gaps. Close with predictive maintenance recommendations.
+> You are documenting a vendor security breach that exposed customer data processed by your organization.
+> 
+> Vendor: {vendor_name}
+> Service provided: {vendor_function}
+> Breach notification received: {date_time}
+> Customer data involved: {data_types_and_volume}
+> Your customers affected: {number_impacted}
+> Vendor incident reference: {vendor_case_number}
+> Regulatory notification required: {yes/no} - {which_regulations}
+> Customer communication: {timeline_and_method}
+> Contract review: {SLA_penalties_applicable}
+> Alternative vendors: {backup_options_activated}
+> 
+> Write a 400-450 word incident report for legal and customer success teams. Include regulatory obligations, customer communication strategy, and vendor management lessons. Focus on customer impact and trust preservation.
 
-**When to use it:** Friday evening when that server you've been meaning to replace finally dies, taking the accounting system with it right before month-end closing.
+**When to use it:** When customer-facing teams need to understand and respond to vendor-caused data exposure.
 
-**Pro tip:** Document all the warning signs that were ignored or missed. Hardware failures rarely happen without advance notice, and this evidence supports preventive maintenance budgets.
+**Pro tip:** Reference specific contract clauses about security breaches and notification requirements. Legal needs this for vendor discussions.
 
----
+## Performance and Capacity Issues
 
-> You are writing an incident report for cloud service performance issues that affected your hybrid infrastructure during a traffic spike.
->
-> Cloud service: {specific_service_and_region}
-> Performance metrics: {response_time_throughput_error_rates}
-> Traffic pattern: {normal_vs_spike_usage_levels}
-> Auto-scaling: {scaling_worked_failed_insufficient_limits}
-> Hybrid impact: {on_premise_systems_affected_or_isolated}
-> Cost implications: {unexpected_charges_from_scaling_or_overages}
-> Service degradation: {user_experience_impact_and_duration}
-> Cloud provider: {support_ticket_status_and_response}
->
-> Write a 350-400 word cloud performance incident report for budget review. Start with traffic spike quantification. Include auto-scaling effectiveness analysis. End with cloud architecture optimization and cost control recommendations.
+> You are documenting a gradual performance degradation that culminated in user complaints and system slowdown.
+> 
+> System: {application_or_service_name}
+> Performance issue detected: {first_noticed_date}
+> User complaints started: {complaint_timeline}
+> Performance metrics: {response_time_degradation}
+> Peak usage period: {time_of_worst_performance}
+> Root cause identified: {database/network/application_issue}
+> Monitoring gaps: {metrics_not_captured}
+> Temporary mitigation: {immediate_fix_applied}
+> Capacity planning: {resource_scaling_needed}
+> User impact: {number_affected_and_business_functions}
+> 
+> Write a 350-400 word performance incident report for capacity planning and user experience teams. Include trending data, user impact assessment, and infrastructure scaling recommendations.
 
-**When to use it:** When your "infinitely scalable" cloud application hits scaling limits during a marketing campaign that actually worked too well.
+**When to use it:** When you need to justify infrastructure spending after performance issues affected user productivity.
 
-**Pro tip:** Separate cloud provider performance issues from your application architecture problems. Scaling limits you configured aren't the same as cloud service degradation.
-
-## Communication Failures
-
-> You are documenting an email system outage that prevented critical business communication during a product launch event.
->
-> Email system: {Exchange_Gmail_other_email_platform}
-> Outage duration: {total_hours_minutes_email_was_unavailable}
-> Business timing: {product_launch_quarter_end_conference_other_critical_event}
-> Communication impact: {customer_inquiries_sales_leads_internal_coordination}
-> Alternative methods: {phone_calls_instant_messaging_mobile_apps}
-> Root cause: {server_failure_network_issue_software_update}
-> Recovery actions: {system_restart_failover_vendor_support}
-> Business cost: {lost_sales_missed_deadlines_customer_complaints}
->
-> Write a 450-500 word communication system incident report emphasizing business timing impact. Start with outage scope during critical business event. Detail alternative communication methods deployed. Close with business continuity communication plan improvements.
-
-**When to use it:** Monday morning when email dies during your biggest product launch and the sales team is manually calling every prospect.
-
-**Pro tip:** Calculate the specific business cost of communication delays, not just technical restoration time. Lost sales and missed opportunities justify redundant communication systems.
+**Pro tip:** Include specific user workflow impacts, not just technical metrics. Business leaders understand lost productivity better than response times.
 
 ---
 
-> You are writing an incident report for a conference call system failure that disrupted a board meeting with external investors.
->
-> Conference platform: {Zoom_Teams_WebEx_other}
-> Meeting importance: {board_meeting_investor_presentation_customer_demo}
-> Technical failure: {audio_issues_video_problems_complete_disconnect}
-> Attendee count: {internal_participants_external_stakeholders}
-> Backup plan: {dial_in_numbers_alternative_platform_in_person_option}
-> Recovery time: {minutes_to_restore_or_switch_platforms}
-> Meeting outcome: {rescheduled_continued_successfully_compromised}
-> Reputation impact: {client_perception_investor_confidence_internal_credibility}
->
-> Create a 300-350 word conference system incident report for executive review. Begin with meeting criticality and stakeholder impact. Include backup plan execution. Conclude with vendor reliability assessment and alternative platform evaluation.
+> You are reporting a storage capacity crisis that nearly caused data writes to fail.
+> 
+> Storage system: {SAN/NAS/cloud_storage}
+> Capacity reached: {percentage_full}
+> Growth rate: {GB_per_day_recent_trend}
+> Critical threshold: {percentage_triggering_alerts}
+> Business risk: {applications_at_risk}
+> Emergency expansion: {temporary_solution_implemented}
+> Data archival: {old_data_moved_or_deleted}
+> Monitoring effectiveness: {alert_timing}
+> Procurement timeline: {permanent_solution_ETA}
+> Cost impact: {emergency_procurement_costs}
+> 
+> Write a 300-350 word capacity incident report for finance and operations leadership. Focus on business continuity risk and cost implications of emergency procurement versus planned expansion.
 
-**When to use it:** When your video conference crashes during the most important investor pitch of the quarter and everyone's staring at frozen screens.
+**When to use it:** When finance needs to understand why you're requesting emergency budget approval for storage expansion.
 
-**Pro tip:** Document external stakeholder reactions and any follow-up required to rebuild confidence. Technical problems during high-stakes meetings have relationship costs beyond the incident.
-
----
-
-> You are documenting a VoIP system failure that affected customer service operations and resulted in dropped calls and missed sales opportunities.
->
-> VoIP system: {phone_system_name_and_configuration}
-> Service impact: {dropped_calls_no_dial_tone_poor_call_quality}
-> Customer service: {call_center_size_and_daily_call_volume}
-> Business hours: {peak_call_times_affected}
-> Failover options: {mobile_phones_traditional_landlines_call_forwarding}
-> Call volume lost: {estimated_missed_calls_and_revenue}
-> Resolution method: {system_restart_ISP_fix_hardware_replacement}
-> Customer satisfaction: {complaints_received_service_level_impact}
->
-> Write a 400-450 word VoIP incident report quantifying customer service impact. Start with call volume and revenue calculations. Detail emergency communication procedures. End with telecommunications redundancy recommendations.
-
-**When to use it:** Wednesday afternoon when your phone system goes silent and customers are getting busy signals instead of reaching your award-winning support team.
-
-**Pro tip:** Track the customer service ticket backlog created by phone system downtime. Missed calls don't disappear, they become email tickets and chat requests that strain other channels.
+**Pro tip:** Compare emergency procurement costs to planned expansion costs. Finance teams need this ROI analysis for future planning.
 
 ---
 
-> You are writing an incident report for instant messaging platform failure that disrupted real-time collaboration during a critical project deadline.
->
-> Messaging platform: {Slack_Teams_Discord_internal_system}
-> Project deadline: {specific_project_and_urgency_level}
-> Team coordination: {departments_involved_and_dependencies}
-> Communication volume: {typical_daily_messages_during_crunch_time}
-> Workaround methods: {email_phone_calls_in_person_meetings}
-> Productivity impact: {project_delays_missed_deadlines_coordination_errors}
-> Platform recovery: {time_to_restore_service_and_message_history}
-> Collaboration continuity: {alternative_tools_used_effectiveness}
->
-> Create a 350-400 word collaboration platform incident report focusing on project delivery impact. Begin with project criticality and timing. Include team adaptation to alternative communication methods. Conclude with collaboration tool redundancy planning.
+> You are documenting a memory leak that caused application crashes during peak business hours.
+> 
+> Application: {application_name}
+> Crash pattern: {frequency_and_timing}
+> Memory consumption: {baseline_vs_peak_usage}
+> User sessions affected: {concurrent_users_impacted}
+> Business transactions lost: {failed_processes_or_orders}
+> Detection method: {monitoring_alert_or_user_report}
+> Temporary fix: {application_restart_frequency}
+> Development team: {vendor_or_internal}
+> Code review initiated: {yes/no}
+> Permanent fix ETA: {development_timeline}
+> 
+> Write a 400-450 word application incident report for development and business operations teams. Include user experience impact, business process disruption, and development priority recommendations.
 
-**When to use it:** Thursday morning when Slack dies and your development team realizes they've forgotten how to talk to each other without emoji reactions.
+**When to use it:** When business operations needs to understand how application instability affects their daily workflows.
 
-**Pro tip:** Measure the productivity impact in terms of project velocity, not just communication volume. Teams lose momentum when real-time collaboration disappears during critical phases.
+**Pro tip:** Quantify lost transactions or incomplete processes. Operations teams need this to assess downstream business impact.
 
 ---
 
-> You are documenting a mobile device management system failure that prevented remote workers from accessing corporate email and applications.
->
-> MDM platform: {mobile_device_management_system_name}
-> Remote workforce: {number_of_mobile_users_affected}
-> Access restrictions: {email_apps_VPN_documents_blocked}
-> Device types: {iPhones_Android_tablets_laptops}
-> Security implications: {devices_locked_unlocked_data_at_risk}
-> Workaround solutions: {personal_devices_web_access_temporary_policies}
-> Business functions: {sales_support_field_service_executives_affected}
-> Recovery priority: {critical_users_restored_first}
->
-> Write a 400-450 word mobile access incident report emphasizing remote work impact. Start with remote workforce dependency on mobile access. Detail security vs. productivity balance during outage. End with mobile workforce continuity improvements.
+> You are reporting a network bandwidth saturation that slowed critical business applications.
+> 
+> Network segment: {WAN_link_or_LAN_segment}
+> Bandwidth utilization: {percentage_at_peak}
+> Traffic source: {video_calls/file_transfers/backup}
+> Applications affected: {business_critical_systems}
+> Time period: {duration_of_saturation}
+> QoS effectiveness: {traffic_prioritization_results}
+> Temporary mitigation: {traffic_limiting_or_scheduling}
+> Bandwidth upgrade: {additional_capacity_needed}
+> Cost analysis: {upgrade_cost_vs_productivity_loss}
+> Traffic trending: {growth_projections}
+> 
+> Write a 350-400 word network capacity report for infrastructure and finance teams. Include productivity impact analysis and bandwidth expansion business case.
 
-**When to use it:** Friday when your MDM system locks out the entire sales team's phones right before the biggest trade show of the year.
+**When to use it:** When you need executive approval for network bandwidth upgrades based on performance impact.
 
-**Pro tip:** Prioritize mobile access recovery by business function, not seniority. Field service and sales teams lose revenue immediately, while office workers have desktop alternatives.
+**Pro tip:** Document which business applications were prioritized during saturation. This shows your QoS strategy effectiveness.
 
-## Vendor and Integration Issues
+---
 
-> You are writing an incident report for a critical third-party API failure that disrupted your e-commerce payment processing during peak shopping hours.
->
-> API provider: {payment_processor_name}
-> Integration: {checkout_process_subscription_billing_refund_system}
-> Failure type: {API_timeouts_authentication_errors_service_unavailable}
-> Business impact: {failed_transactions_abandoned_carts_revenue_loss}
-> Peak timing: {Black_Friday_lunch_hour_end_of_month}
-> Fallback options: {alternative_payment_processor_offline_processing_manual_orders}
-> Customer communication: {error_messages_email_notifications_social_media}
-> Recovery verification: {transaction_testing_payment_reconciliation}
->
-> Create a 450-500 word API integration incident report with revenue impact focus. Begin with transaction failure rates and timing. Include customer experience during outage. Conclude with
+> You are documenting a database performance issue that caused application timeouts and user frustration.
+> 
+> Database: {database_name_and_type}
+> Performance symptoms: {slow_queries/timeouts/locks}
+> Query response time: {baseline_vs_degraded_performance}
+> Peak usage correlation: {timing_with_business_activity}
+> Index optimization: {missing_or_fragmented_indexes}
+> Hardware utilization: {CPU/memory/disk_bottlenecks}
+> Application impact: {user_facing_symptoms}
+> DBA analysis: {technical_root_cause}
+> Immediate tuning: {quick_fixes_applied}
+> Long-term solution: {hardware_or_architecture_changes}
+> 
+> Write a 400-450 word database performance report for application and infrastructure teams. Include business impact, technical analysis, and resource planning recommendations.
+
+**When to use it:** When application teams need to understand why their software suddenly became unresponsive.
+
+**Pro tip:** Correlate database slowdowns with specific business processes. This helps prioritize which optimization efforts matter most.
+
+## Data and Backup Failures
+
+> You are documenting a backup failure that was discovered during a recovery test.
+> 
+> Backup system: {backup_solution_name}
+> Failed backup dates: {date_range_of_failures}
+> Data affected: {systems
