@@ -1,223 +1,234 @@
 ---
 title: "25 Free ChatGPT Prompts for HR Managers Daily Tasks (2026)"
-description: "Free ChatGPT prompts for HR managers daily tasks — 25 ready-to-paste prompts for reviews, hiring, conflict, onboarding, and more. Use today."
+description: "25 free ChatGPT prompts for HR managers daily tasks—reviews, emails, scripts, job ads, and more. Copy, fill in, send."
 profession: "HR Managers"
 category: "Productivity"
 contentType: prompt
 tags: ["free chatgpt prompts for hr managers daily tasks", "chatgpt prompts for hr professionals", "ai prompts for human resources", "hr manager productivity prompts", "chatgpt hr templates 2026"]
-pubDate: 2026-06-19
+pubDate: 2026-07-01
 featured: true
 promptCount: 25
 ---
 
-These prompts are for HR managers with real work due today — not someone building a system from scratch. Every prompt below produces a finished draft you can edit lightly and send, file, or read aloud in a meeting. Fill in the variables, paste into ChatGPT or Claude, and use what comes back.
+These 25 prompts cover the HR work that lands on your desk every week: performance reviews, difficult conversations, job ads, onboarding messages, exit interviews, and more. Each one is ready to paste into ChatGPT or Claude—fill in the variables, hit enter, and you get something you can edit lightly and use.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for HR-specific tone control across documents, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration when you need five versions of the same message.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration.
 
 ---
 
-## Performance Reviews and Feedback Conversations
+## Performance Reviews and Ratings
 
-> You are an HR manager writing a year-end performance review for an individual contributor.
+> You are an HR manager writing a year-end performance review.
 >
 > Employee: {employee_name}
-> Job title: {job_title}
-> Tenure: {tenure_in_years} years at the company
-> Overall rating: {rating} — choose one: Exceeds Expectations / Meets Expectations / Below Expectations
-> Top wins this year (paste 3 to 5 bullet points): {wins}
-> Areas needing development (paste 2 to 3 bullet points): {development_areas}
-> Promotion under consideration: {promotion_status} — choose one: yes / no / flagged for next cycle
-> Tone: {tone} — choose one: direct / supportive / formal
+> Role: {job_title}, {tenure} at the company
+> Rating: {rating} — options: exceeds expectations / meets expectations / below expectations
+> Top wins this year:
+> {three_to_five_wins_in_bullets}
+> Growth areas:
+> {two_to_three_struggles_in_bullets}
+> Tone: {tone} — options: direct / supportive / formal
+> Promotion being considered: {promotion_status} — options: yes / no / not yet
 >
-> Write a 400 to 500 word performance review using the SBI model (Situation, Behaviour, Impact). Open by naming one specific win with measurable impact. Address development areas in the middle as forward investment, not failure. Close with two concrete goals for the next 12 months tied to the role. Do not use bullet points — write in full paragraphs suitable for an HR system record.
+> Write a 400 to 450 word performance review using the SBI model (Situation, Behaviour, Impact). Open with a sentence that names the employee and a specific win. Cover growth areas in the middle, framed as next-step development rather than failure. Close with two concrete forward-looking goals that link to the role. Do not use the words "passionate", "rockstar", or "synergy".
 
-**When to use it:** The week before review calibration meetings, when you have manager notes but nothing write-up-ready.
+**When to use it:** The week before review submissions are due when you have eight reviews to write and half a day to do it.
 
-**Pro tip:** If the rating is "Below Expectations" and promotion is "no," tell ChatGPT that in {promotion_status} explicitly. Without that signal it will soften the development section to the point where a lawyer or the employee could read it as a Meets rating.
+**Pro tip:** If the employee is borderline on promotion, change {promotion_status} to "not yet" and let the closing goals section carry that message. Putting "no" produces language that can feel final in writing—"not yet" gives you a defensible paper trail if they ask HR to revisit it in six months.
 
 ---
 
-> You are an HR manager preparing a manager for a difficult mid-year feedback conversation.
+> You are an HR manager writing a mid-year check-in summary for a junior employee.
 >
-> Manager's name: {manager_name}
-> Employee receiving feedback: {employee_name}
-> The core performance issue: {performance_issue} (e.g. "missing sprint deadlines by an average of 3 days for 6 weeks")
-> Prior conversations on this topic: {prior_conversations} — choose one: none / one informal / one documented
-> Risk level: {risk_level} — choose one: low / medium / at-risk of PIP
-> Meeting length available: {meeting_length} minutes
+> Employee: {employee_name}
+> Role: {job_title}
+> Months in role: {months_in_role}
+> Manager's verbal feedback (paraphrase): {manager_notes}
+> One measurable result they achieved: {specific_metric_or_outcome}
+> One area the manager flagged: {flagged_area}
+> Current trajectory: {trajectory} — options: on track / ahead of pace / needs support
 >
-> Write a coaching script the manager reads before the meeting — not a word-for-word script, but a 300-word talking-points brief covering: how to open without accusation, the two or three specific observations to name, one question to ask before proposing solutions, and how to close with a clear next step. Flag any phrasing to avoid that could create a legal liability.
+> Write a 250 to 300 word mid-year check-in summary in plain, direct language. Open with the measurable result. Address the flagged area honestly but constructively in the middle. End with one specific action the employee should focus on before year-end. This is a document the manager will share directly with the employee.
 
-**When to use it:** Monday morning before a Tuesday 1-on-1 that a manager flagged to you Friday afternoon as "I'm not sure how to handle this."
+**When to use it:** Mid-June or mid-December when managers submit check-in notes late and you have to write the clean summaries yourself.
 
-**Pro tip:** Paste the {prior_conversations} detail precisely. If there was one prior conversation, ChatGPT will include language about pattern versus incident. If you leave it vague, the script will be weaker and potentially contradict your documented record.
+**Pro tip:** When {months_in_role} is under four months, swap "flagged area" framing to "early development focus" in your variable input—the AI will mirror that softer framing throughout and you avoid language that reads as a warning flag for someone barely past probation.
 
 ---
 
-> You are an HR business partner writing a follow-up email after a performance conversation that did not go well.
+> You are an HR manager drafting a performance improvement plan narrative for a formal PIP document.
 >
-> Employee name: {employee_name}
-> What was discussed: {meeting_summary} (2 to 4 sentences of what was said)
-> Employee's reaction: {employee_reaction} — choose one: defensive / tearful / disengaged / argumentative
-> What was agreed (if anything): {agreed_next_steps}
-> Sender tone: {sender_tone} — choose one: firm / empathetic / neutral-professional
-> Days since the meeting: {days_since_meeting}
+> Employee: {employee_name}
+> Role: {job_title}
+> Core performance issue: {performance_issue_in_one_sentence}
+> Documented incidents (dates and brief descriptions): {incident_log_in_bullets}
+> Required improvement targets: {three_measurable_targets}
+> Review period: {pip_duration} — e.g. 30 days / 60 days / 90 days
+> Manager name: {manager_name}
 >
-> Write a 200 to 250 word follow-up email that restates what was discussed without relitigating it, confirms any agreed next steps, and leaves the door open for the employee to ask questions. This email may be reviewed later by an employment attorney. Avoid hedging language that softens what was agreed to on the record.
+> Write the narrative section of a PIP in 350 to 400 words. Use neutral, factual language throughout. Structure it as: (1) statement of the issue with reference to the documented incidents, (2) specific measurable targets the employee must hit by the end of the review period, (3) support the company is providing, (4) consequence if targets are not met. Do not include legal conclusions or statements of intent to terminate.
 
-**When to use it:** The morning after a conversation that went sideways, before the employee has a chance to write their own version of events to their personal inbox.
+**When to use it:** When Legal or a senior manager has asked HR to produce the written PIP narrative before a formal meeting this week.
 
-**Pro tip:** If {agreed_next_steps} is "nothing was agreed," tell ChatGPT that directly. It will write an email that documents the conversation without implying false consensus — which is legally safer than a vague "great talking today" message.
+**Pro tip:** Run the output past your employment counsel before issuing—this prompt produces clean, neutral language but "do not include legal conclusions" is a guardrail, not a legal review. Keep the incident log bullets factual (date, observable behaviour, impact) or the AI will fill gaps with inferred intent, which creates liability.
 
 ---
 
-> You are an HR manager writing a peer recognition nomination on behalf of a team lead who asked for help.
+> You are an HR manager writing a performance review for a high performer who is being fast-tracked for promotion to a people-manager role for the first time.
 >
-> Nominee: {nominee_name}
-> Nominator (team lead): {nominator_name}
-> Recognition program name: {program_name}
-> Specific situation where the nominee stood out: {situation} (2 to 3 sentences)
-> Impact on the team or project: {impact}
-> One word that describes this person's working style: {descriptor}
-> Word limit for the nomination: {word_limit}
+> Employee: {employee_name}
+> Current role: {current_job_title}
+> Target role: {target_job_title}
+> Evidence of leadership readiness: {two_to_three_leadership_examples}
+> Technical strengths to reference: {two_technical_strengths}
+> One developmental gap for the new role: {leadership_gap}
+> Tone: {tone} — options: enthusiastic-but-grounded / formal / conversational
 >
-> Write a nomination submission that fits within {word_limit} words, uses the STAR structure (Situation, Task, Action, Result), and reads like a human wrote it — not a performance review. Open with the result, then explain the situation. Avoid the words "passionate," "dedicated," and "team player."
+> Write a 450 to 500 word review using the STAR framework (Situation, Task, Action, Result). Anchor the opening to their individual contributor results. Use the middle to build the case for leadership readiness using the examples provided. Acknowledge the developmental gap honestly and frame it as the main growth edge for year one in the new role. Close with a recommendation statement that a promotion committee could read directly.
 
-**When to use it:** When a team lead Slacks you "I was told to submit a nomination by Friday but I have no idea what to write."
+**When to use it:** When you are building the promotion pack for a calibration meeting and the manager has given you rough notes rather than a polished write-up.
 
-**Pro tip:** The banned words list matters. "Passionate" and "dedicated" appear in roughly 70% of AI-generated nominations and cause review committees to discount submissions. Add any other overused words from your specific program's feedback history to the prompt.
+**Pro tip:** The closing recommendation statement is the most-used part of this output. If the calibration committee uses a scoring rubric, paste the rubric criteria into the {leadership_gap} variable slot and the AI will align the gap framing to your actual criteria rather than inventing generic ones.
 
 ---
 
-> You are an HR manager writing a 90-day written warning for a performance issue.
+> You are an HR manager writing a written record of a verbal performance conversation for the employee file.
 >
-> Employee name: {employee_name}
-> Job title: {job_title}
+> Employee: {employee_name}
+> Role: {job_title}
+> Date of conversation: {conversation_date}
+> Who was present: {attendees}
+> Issue discussed: {issue_summary_in_two_sentences}
+> Employee's response during the meeting: {employee_response}
+> Agreed next steps: {agreed_actions_in_bullets}
+>
+> Write a 200 to 250 word file note in third-person, factual language. Include date, attendees, the issue raised, a neutral summary of the employee's response, and the agreed actions with owners. End with a single sentence confirming the employee was informed this note would be placed on file. Do not editorialize or include subjective assessments of the employee's attitude.
+
+**When to use it:** The same afternoon a verbal warning meeting happens, before the details go cold.
+
+**Pro tip:** "Employee's response" is where managers give you subjective language like "she was defensive." Rewrite it before pasting—use observable description ("employee stated she was unaware of the policy") so the file note cannot be read as a bias record.
+
+---
+
+## Hiring and Job Ads
+
+> You are an HR manager writing a job advertisement for an external careers page.
+>
+> Role: {job_title}
 > Department: {department}
-> Performance issue being documented: {issue_description} (be specific: dates, metrics, incidents)
-> Prior informal warnings: {prior_warnings} — number and format (e.g. "two verbal, one email")
-> Improvement required: {improvement_required} (specific, measurable behaviour change)
-> Review date: {review_date}
-> HR manager name signing the letter: {hr_manager_name}
+> Three non-negotiable requirements: {three_must_have_requirements}
+> Two preferred (not required) qualifications: {two_nice_to_haves}
+> Key day-to-day responsibilities (bullet form): {four_to_six_responsibilities}
+> Salary range: {salary_range}
+> Work arrangement: {work_arrangement} — options: fully remote / hybrid / on-site
+> Company culture in three words: {three_culture_words}
 >
-> Write a formal 90-day performance improvement warning letter, 350 to 450 words, suitable for an employee file. Use factual, neutral language. Reference the prior warnings. State clearly what must change, by when, and what the consequence is if it does not. Do not use euphemisms. Format with a header block, body paragraphs, and a signature line.
+> Write a job ad that is 350 to 400 words. Lead with a two-sentence opening that describes the problem this role solves, not the company history. List responsibilities as outcomes, not duties ("You will own X" not "Responsible for X"). Put the salary range in the ad. Close with a two-sentence application instruction. Avoid gendered language and corporate jargon.
 
-**When to use it:** When legal or the VP of HR asks you to issue something more formal than an email conversation but the manager hasn't provided a structured write-up.
+**When to use it:** When a hiring manager has sent you a five-year-old job description and needs a live ad by end of day.
 
-**Pro tip:** Drop {issue_description} in verbatim from manager notes, not paraphrased. ChatGPT preserves your specifics and you retain the manager's original language on record, which matters if this escalates to a tribunal or claim.
+**Pro tip:** Pasting the old job description verbatim into {four_to_six_responsibilities} usually produces bloated output. Give the AI four to six outcomes in plain bullets—"reduce time-to-hire below 30 days"—and the ad will read like a 2026 posting, not a 2019 one.
 
 ---
 
-## Recruitment and Job Advertising
-
-> You are an HR manager writing a job advertisement to post on LinkedIn and the company careers page.
->
-> Job title: {job_title}
-> Team this role sits in: {team_name}
-> Three non-negotiable requirements: {must_haves} (list them)
-> Two nice-to-haves that would help a candidate stand out: {nice_to_haves}
-> One thing about this team that would appeal to the right candidate: {team_selling_point}
-> Salary range (if disclosable): {salary_range}
-> Location and work model: {location_and_model} (e.g. "London, hybrid 3 days in office")
-> Tone of voice for this company: {tone} — choose one: corporate / startup-casual / technical-precise
->
-> Write a 350 to 400 word job advertisement. Open with one sentence about the problem this hire will solve — not a company history paragraph. List requirements in two short sections: Must Have and Good to Have. Close with two sentences about the team culture and one clear application instruction. Do not use "rockstar," "ninja," "passionate," or "fast-paced environment."
-
-**When to use it:** When a hiring manager sends you a JD that reads like an internal requirements doc and needs to actually attract candidates before the role closes.
-
-**Pro tip:** The opening sentence is the only part most candidates read before deciding whether to continue. If your {team_selling_point} is vague ("great culture"), rewrite it as a concrete outcome ("you'll own the product roadmap from day one"). ChatGPT can only work with what you give it.
-
----
-
-> You are an HR manager writing a rejection email to a candidate who reached the final interview stage but was not selected.
+> You are an HR manager writing a candidate rejection email after a final-round interview.
 >
 > Candidate name: {candidate_name}
 > Role they applied for: {job_title}
-> Stage they reached: {interview_stage} (e.g. "final panel, three rounds")
-> Time since their last interview: {days_since_interview} days
-> One honest reason they were not selected (without legal risk): {rejection_reason} (e.g. "the selected candidate had direct experience in regulated markets we prioritised")
-> Whether you want to keep them warm for future roles: {keep_warm} — yes / no
+> Interview stage reached: {interview_stage} — e.g. final panel / second interview / take-home task
+> One genuine positive from the process: {genuine_positive_observation}
+> Reason for rejection (internal only, do not state directly): {internal_reason}
+> Tone: {tone} — options: warm / professional / brief
 >
-> Write a 150 to 200 word rejection email. Thank them specifically for the stage they reached. Give one honest and non-vague reason for the decision. If {keep_warm} is yes, include one genuine sentence about future consideration — not a boilerplate "we'll keep your CV on file." If {keep_warm} is no, close cleanly. Do not apologise more than once.
+> Write a rejection email of 120 to 150 words. Open with thanks for their time. Name one specific positive you observed (use {genuine_positive_observation}). Deliver the decision clearly in one sentence without hedging or apologising excessively. Do not give the {internal_reason} or hint at it. Close with a sentence leaving the door open for future roles if appropriate. Subject line included.
 
-**When to use it:** When you have 12 final-stage rejections to send before end of week and the generic template your company uses has a 40% "reply angry" rate.
+**When to use it:** After a final panel when the hiring manager has confirmed the decision and you need to notify the runner-up the same day.
 
-**Pro tip:** The single most complained-about rejection email trait is vagueness ("we had many strong candidates"). Giving {rejection_reason} one honest sentence reduces hostile replies. If you genuinely cannot share a reason due to legal guidance, set {rejection_reason} to "undisclosable" and ChatGPT will write around it without fabricating one.
+**Pro tip:** Candidates who reach final rounds often reply asking for feedback. If you are not prepared to give detailed feedback, do not include the phrase "feel free to reach out"—it triggers reply volume you cannot honour. Use "we wish you well in your search" as the close instead.
 
 ---
 
-> You are an HR manager preparing a structured interview scorecard summary for a hiring panel debrief.
+> You are an HR manager writing an offer letter covering email to accompany a formal contract.
 >
+> Candidate name: {candidate_name}
 > Role: {job_title}
-> Candidate name: {candidate_name}
-> Interviewers who attended: {interviewer_names_and_roles}
-> Competencies assessed: {competencies} (list 3 to 5, e.g. "stakeholder management, data analysis, communication under pressure")
-> Individual scores submitted (paste raw): {raw_scores}
-> Biggest point of disagreement between panellists: {disagreement}
-> Hiring manager's lean: {hm_lean} — hire / no hire / undecided
->
-> Write a 250 to 300 word debrief summary document the HR manager reads aloud to open the panel debrief meeting. Summarise each competency score, flag where scores diverge by more than one point, and name the disagreement directly so the panel can discuss it. Close with two questions the HR manager will put to the group to reach a decision. Do not express a personal recommendation.
-
-**When to use it:** Five minutes before a debrief meeting when the hiring manager asks "can you just summarise where we are?"
-
-**Pro tip:** If one interviewer submitted no scorecard, note that in {raw_scores} as "no submission." ChatGPT will flag the gap in the summary, which protects you from a post-hire complaint that the process was incomplete.
-
----
-
-> You are an HR manager writing an offer letter for a new hire.
->
-> Candidate name: {candidate_name}
-> Job title: {job_title}
 > Start date: {start_date}
 > Base salary: {base_salary}
-> Bonus structure (if any): {bonus_details}
-> Probationary period: {probation_period}
-> Reporting manager: {reporting_manager_name}
-> Special conditions agreed verbally: {special_conditions} (e.g. "remote-first arrangement, reviewed at 6 months")
+> Key benefits to highlight: {two_to_three_benefits}
+> Hiring manager name: {hiring_manager_name}
+> Deadline to accept: {acceptance_deadline}
 >
-> Write a formal offer letter, 300 to 350 words, covering: the role and start date, compensation, bonus, probation terms, any special conditions, and a clear instruction for how to accept. Use formal but human language — not legal boilerplate. End with a warm one-sentence close. Do not include jurisdiction-specific legal clauses; those will be added by legal separately.
+> Write a 200 to 250 word email to accompany the formal offer letter. Open with a direct congratulations in the first sentence—no preamble. Summarise role, start date, salary, and key benefits in a short paragraph. Tell them clearly what they need to do next and by when. Name the hiring manager and invite the candidate to contact them with questions. Warm but not effusive. Subject line included.
 
-**When to use it:** When you've got verbal acceptance and need to get something out in writing today before the candidate's other offer expires.
+**When to use it:** When the contract has been approved by Legal and you are packaging it to send within the hour.
 
-**Pro tip:** Always include {special_conditions} even if it's uncomfortable to put in writing. An offer letter that omits a verbally agreed flexible arrangement is a retention liability the day the employee joins and the manager doesn't honour it.
+**Pro tip:** Include {acceptance_deadline} even if it feels pushy—candidates who receive offers without a deadline take 40 to 60% longer to respond on average, which stalls your headcount plan. Five to seven business days is standard and professionally acceptable.
 
 ---
 
-> You are an HR manager writing a 30-second recruiter sourcing message to send via LinkedIn to a passive candidate.
+> You are an HR manager writing an internal job posting for an open role being filled from within the company first.
 >
-> Candidate's current role: {current_role}
-> Your open role: {open_role}
-> One specific thing from their profile that made them relevant: {relevance_hook} (e.g. "you led the EMEA payroll migration at Siemens in 2024")
-> One concrete thing about the role that isn't in the job ad: {exclusive_detail} (e.g. "this team is about to expand from 4 to 12 people over 18 months")
-> Your name: {your_name}
-> Tone: {tone} — choose one: warm-direct / professional / conversational
+> Role: {job_title}
+> Department: {department}
+> Why the role is open: {reason_for_opening} — e.g. growth / backfill / restructure
+> Eligibility criteria: {eligibility_criteria} — e.g. minimum tenure, performance standing
+> Application process: {application_steps}
+> Posting closes: {closing_date}
+> Hiring manager: {hiring_manager_name}
 >
-> Write a LinkedIn outreach message, 75 to 100 words maximum. Reference {relevance_hook} in the first sentence to prove you read their profile. State the role in one sentence. Offer the {exclusive_detail} as a reason to reply. Close with a low-friction ask — not "are you interested?" but something easier to say yes to. Do not use "exciting opportunity," "hope this finds you well," or "I came across your profile."
+> Write a 250 to 300 word internal job posting. Lead with what the role does and why it matters to the business right now. Include eligibility clearly so managers know who can apply. Describe the application process in a numbered list. Close with the deadline and a contact name. Do not oversell the role or include stock phrases like "exciting opportunity".
 
-**When to use it:** When you have a hard-to-fill role and the inbound applicants aren't at the right level, so you're going direct.
+**When to use it:** When you are required to post internally for a minimum number of days before going external and need the post live by morning.
 
-**Pro tip:** The 75 to 100 word constraint is non-negotiable — LinkedIn InMails over 120 words have measurably lower response rates. If ChatGPT outputs more, add "Cut to 80 words exactly" as a follow-up message.
+**Pro tip:** If the reason for opening is a backfill after a departure, avoid stating that—"growth of the team" or "expanding scope" works if accurate. If it is a pure backfill and you use that framing, internal candidates who know the departed employee will flag it as dishonest.
 
 ---
 
-## Employee Relations and Conflict
-
-> You are an HR manager facilitating a mediation meeting between two employees who have had a sustained interpersonal conflict.
+> You are an HR manager writing a structured interview scorecard narrative summary for a hiring panel debrief.
 >
-> Employee A name and role: {employee_a}
-> Employee B name and role: {employee_b}
-> Nature of the conflict: {conflict_summary} (3 to 4 sentences — facts only, no blame)
-> Number of prior HR interventions: {prior_interventions}
-> Whether either employee has raised a formal grievance: {formal_grievance} — yes / no / pending
-> Desired outcome of this meeting: {desired_outcome} (e.g. "working agreement, not friendship")
-> Your name as mediator: {mediator_name}
+> Candidate name: {candidate_name}
+> Role: {job_title}
+> Interviewers and their scores: {interviewer_scores_in_bullets} — e.g. "Jana K: 4/5 — strong on technical, weaker on stakeholder management"
+> Consensus hire decision: {decision} — options: strong hire / hire / no hire / hold
+> Strongest evidence for the decision: {top_evidence_in_two_sentences}
+> Main reservation if any: {main_reservation_or_none}
 >
-> Write the opening statement {mediator_name} delivers at the start of the mediation session, 200 to 250 words. Set the ground rules, name the purpose without assigning blame, acknowledge that both employees have been impacted, and explain what will and will not happen in the session. The tone must be neutral — do not lean toward either party. End with a single question to open the conversation.
+> Write a 200 to 250 word debrief summary that could be stored in the ATS against this candidate. Open with the decision and score range. Summarise the panel's reasoning using the evidence provided. State the main reservation neutrally if one exists. End with a one-sentence next step. Third-person, factual, no subjective personality assessments.
 
-**When to use it:** The hour before a mediation session you've been asked to run with no time to prepare a structured opening.
+**When to use it:** Immediately after a panel debrief call while the conversation is fresh, so there is a clean record in the ATS before people forget what was said.
 
-**Pro tip:** If {formal_grievance} is "yes" or "pending," tell ChatGPT explicitly. It will adjust the opening to avoid language that could be read as pre-judging the grievance outcome — which matters if this goes to an employment tribunal later.
+**Pro tip:** Do not include specific interviewer names against negative observations in the stored summary—"the panel noted a gap in X" is cleaner than "Jana K flagged concerns about X" when candidates request access to their data under privacy legislation.
 
 ---
 
-> You
+## Difficult Conversations and Employee Relations
+
+> You are an HR manager preparing a script for a disciplinary meeting.
+>
+> Employee name: {employee_name}
+> Nature of the issue: {disciplinary_issue_in_one_sentence}
+> Documented evidence to reference: {evidence_summary_in_bullets}
+> Previous warnings if any: {prior_warnings} — options: none / verbal warning on {date} / written warning on {date}
+> Likely outcome of this meeting: {likely_outcome} — e.g. written warning / final written warning
+> Who else is in the room: {other_attendees} — e.g. line manager, union rep, note-taker
+>
+> Write a 350 to 400 word meeting script for the HR manager leading the meeting. Structure it as: (1) opening — purpose of meeting, who is present, right to representation confirmed, (2) presenting the evidence — factual, calm, no opinion statements, (3) inviting the employee to respond, (4) deliberation statement, (5) outcome delivery with next steps. Flag in brackets where the HR manager should pause for the employee's response. Do not script the employee's lines.
+
+**When to use it:** The morning before a disciplinary meeting you have had less than 24 hours to prepare for.
+
+**Pro tip:** The "(pause for response)" markers are more important than the script itself—untrained managers in the room skip them and run the whole meeting as a monologue, which creates procedural fairness risk. Print the script and circle the pause points before going in.
+
+---
+
+> You are an HR manager writing a same-day follow-up email after a difficult conversation about attendance.
+>
+> Employee name: {employee_name}
+> Date of conversation: {conversation_date}
+> Attendance issue discussed: {attendance_issue_summary}
+> What was agreed: {agreed_actions_in_bullets}
+> Review date set: {review_date}
+> Manager's name: {manager_name}
+>
+> Write a 150 to 200 word follow-up email from HR to the employee. Summarise the conversation in two sentences without repeating the full issue. List the agreed actions in a numbered list. State the review date clearly. Close with a single sentence reminding the employee that HR and their manager are available if they need to discuss anything further. Neutral, factual, not punitive in tone. Subject line included.
+
+**When to
