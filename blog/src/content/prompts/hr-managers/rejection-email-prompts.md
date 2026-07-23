@@ -1,226 +1,228 @@
 ---
-title: "25 ChatGPT Prompts for Candidate Rejection Emails HR Managers Can Use in 2026"
-description: "25 ready-to-use ChatGPT prompts for candidate rejection emails. Save time, stay compliant, and keep candidates warm for future roles."
+title: "25 ChatGPT Prompts for Candidate Rejection Emails in 2026"
+description: "25 ready-to-use ChatGPT prompts for candidate rejection emails. HR Managers get polished, on-brand rejections drafted in under a minute."
 profession: "HR Managers"
 category: "Recruitment"
 contentType: prompt
-tags: ["chatgpt prompts for candidate rejection emails", "ai prompts for recruitment emails", "candidate rejection email templates", "hr rejection email prompts", "job applicant decline email prompts"]
+tags: ["chatgpt prompts for candidate rejection emails", "ai rejection email prompts", "hr rejection email templates ai", "candidate decline email chatgpt", "recruitment rejection letter prompts"]
 pubDate: 2026-07-23
 featured: true
 promptCount: 25
 ---
 
-This page is for HR Managers who need to send rejection emails today, not tomorrow. Each prompt below produces a finished email you can lightly edit and send — no rewrites, no blank-page moments. Paste the prompt into ChatGPT or Claude, fill in the variables, and you're done.
+These prompts are for HR Managers who need to send rejection emails today, not next week. Paste the prompt into ChatGPT or Claude, fill in the variables, and get a finished email you can send with minor edits. All 25 prompts cover real rejection scenarios: post-application, post-interview, internal candidates, salary misaligns, and more.
 
-These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for HR-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration across high-volume rejection batches.
+These prompts pair well with [Jasper AI](https://jasper.ai/affiliates) for HR Managers-specific tone control, or [Copy.ai](https://www.copy.ai/affiliates) for fast iteration across high-volume rejection rounds.
 
 ---
 
-## Post-Application Rejections (Before Interview)
+## Post-Application Rejection Emails (No Interview)
 
-> You are an HR Manager sending a rejection email to a candidate who applied for a role but was not selected for interview.
+> You are an HR Manager sending a rejection email to a candidate who applied for an open role but did not progress to the interview stage.
 >
 > Candidate name: {candidate_name}
 > Role they applied for: {job_title}
 > Department: {department}
-> Reason for not progressing (internal only, do not state verbatim): {internal_reason — e.g. underqualified, overqualified, role paused, stronger applicant pool}
+> Reason for rejection (internal only, do not state verbatim): {rejection_reason — e.g. underqualified, role filled internally, volume close}
 > Company tone: {warm_and_human / professional_and_brief / formal}
-> Keep door open for future roles: {yes / no}
->
-> Write a 120 to 160 word rejection email. Open by thanking them for applying. Do not state the internal reason. Give one honest, neutral sentence about the decision. If keeping the door open, close with a specific invitation to check future openings or join a talent pool. Use the candidate's first name throughout. No corporate jargon.
-
-**When to use it:** Monday morning when you're clearing a weekend application pile before the hiring manager's 10am kickoff call.
-
-**Pro tip:** If the internal reason is "role paused," do not hint at it here. Candidates sometimes reply asking for a timeline, which creates legal and expectation risk. Use "we've moved forward with candidates whose experience more closely matches our current requirements" regardless of the real reason.
-
----
-
-> You are an HR Manager sending a high-volume batch rejection for a role that attracted significantly more applicants than expected.
->
-> Role: {job_title}
-> Total applicants: {total_applicant_count}
-> Stage rejected at: {application_screening}
-> Primary shortlist criterion that most applicants did not meet: {key_missing_criterion — e.g. "five or more years in B2B SaaS sales"}
 > Company name: {company_name}
-> Tone: {brief_and_respectful}
 >
-> Write a 90 to 120 word rejection email that can be sent to all screened-out applicants. It must acknowledge the volume of applications without sounding dismissive, name the key criterion honestly (without it reading as an excuse), and close with a one-line well-wish. Do not use "unfortunately" as the first word. Do not include placeholders for personalisation beyond the candidate's first name.
+> Write a 120 to 150 word rejection email. Use the candidate's first name. Thank them for applying. State clearly they will not progress. Do not give the internal rejection reason. Close with one genuine, specific line that leaves a good impression — reference the role or company if relevant. No hollow phrases like "we were blown away by the calibre."
 
-**When to use it:** After closing applications on a role that had 300+ applicants and you need to clear the queue before compliance flags stale applications.
+**When to use it:** Monday morning when you're clearing a backlog of applications from the week before and need to close 40 candidates before the hiring manager's update call.
 
-**Pro tip:** "Unfortunately" as an opener has become so overused that it reads as automated. Starting with "After reviewing your application…" or "We received a strong response to this role…" performs measurably better for employer brand sentiment.
+**Pro tip:** If your ATS auto-fills rejection emails with the job title, double-check that {job_title} matches exactly what the candidate saw in the posting. Mismatches on job titles in rejections generate unnecessary reply emails asking for clarification.
 
 ---
 
-> You are an HR Manager writing a rejection email for a referred candidate — someone who was introduced by an existing employee — who did not make it past the application screening stage.
+> You are an HR Manager sending a bulk rejection email to candidates who applied within the last 30 days and did not meet the minimum qualifications listed in the job description.
+>
+> Role: {job_title}
+> Minimum qualification not met (internal note, do not quote directly): {unmet_qualification — e.g. no degree, missing license, below minimum years of experience}
+> Application volume this round: {application_count}
+> Hiring timeline: {open / filled / paused}
+> Company name: {company_name}
+> Tone: {warm / neutral / formal}
+>
+> Write a 100 to 130 word rejection email that works for all these candidates without sounding copy-pasted. Do not reference the specific qualification gap. Do not say "we had many qualified applicants" unless the role is genuinely competitive. Close with a single honest sentence about whether the company has future openings worth watching.
+
+**When to use it:** When a role received 200+ applications and you need a single email you can send to everyone who didn't clear the screening filter without it reading like a mail merge.
+
+**Pro tip:** Remove "we had many strong candidates" unless it's true. Candidates who were clearly underqualified find that line condescending. A neutral close ("we'll keep your application on file for 12 months") lands better.
+
+---
+
+> You are an HR Manager rejecting a candidate who applied speculatively — they sent a CV without a live role being advertised.
 >
 > Candidate name: {candidate_name}
-> Referring employee name: {referrer_name}
-> Role applied for: {job_title}
-> Reason not progressing: {specific_gap — e.g. "missing required certification", "seven years below minimum experience threshold"}
-> Tone: {warm_and_honest}
-> Will the referrer be notified separately: {yes / no}
+> Their stated area of interest: {area_of_interest — e.g. marketing, finance, engineering}
+> Whether any relevant roles are likely in the next 6 months: {yes / no / possibly}
+> Company name: {company_name}
+> Whether to invite them to a talent pool: {yes / no}
+> Tone: {conversational / professional}
 >
-> Write a 150 to 180 word rejection email to the referred candidate. Acknowledge the referral warmly without over-promising. Be direct about the gap without making the referrer look bad for recommending them. Do not suggest they reapply in a set timeframe unless you can guarantee it. Close with a genuine, non-generic sentiment.
+> Write a 130 to 160 word reply to a speculative application. Acknowledge that they reached out proactively. Be honest about current headcount. If inviting to a talent pool, say what that actually means in practice (e.g. "we'll contact you if a relevant role opens — you won't receive automated updates"). Do not promise a role. Do not be vague about next steps.
 
-**When to use it:** When a senior employee has referred someone and you need the candidate to hear the news from HR before the employee hears it through the grapevine.
+**When to use it:** When your careers inbox has 15 speculative CVs from the last fortnight and you've been ignoring them because there's no clean response. Clear them in one session.
 
-**Pro tip:** If the referrer has not been told yet, add "Will the referrer be notified separately: no" and the prompt will avoid phrasing that implies the candidate already knows this. Send both communications within the same hour.
+**Pro tip:** Only include the talent pool offer if you actually maintain one and check it when roles open. Candidates added to fictional talent pools who never hear back trust your brand less than if you'd just said no cleanly.
 
 ---
 
-> You are an HR Manager rejecting a candidate who applied for a role that has since been put on hold or cancelled internally.
+> You are an HR Manager sending a rejection to a candidate who applied for a senior leadership role ({job_title}) and did not progress past application screening.
+>
+> Candidate name: {candidate_name}
+> Seniority of role: {seniority — e.g. Director, VP, C-Suite}
+> Primary reason for not progressing (internal, do not quote): {internal_reason — e.g. insufficient P&L experience, no sector background}
+> Whether they were referred by someone internally: {yes / no — if yes, note referrer's name for context: {referrer_name}}
+> Tone: {highly professional / warm and direct}
+> Company name: {company_name}
+>
+> Write a 150 to 180 word rejection email suitable for a senior candidate. The tone should reflect that this person is a peer or near-peer professionally. Do not over-explain. Acknowledge the seniority of the role and the time they invested in their application. If referred internally, acknowledge that without naming the referrer. Close with a line that keeps the professional relationship intact.
+
+**When to use it:** When a referred candidate at the Director level or above didn't make the shortlist and you need to write something that won't embarrass the person who made the referral.
+
+**Pro tip:** Senior candidates often know the hiring manager personally. Write this email as if the hiring manager might be forwarded it. One careless line about "fit" can create a political headache.
+
+---
+
+> You are an HR Manager rejecting a candidate who applied for a role that has now been put on hold or cancelled — it was never filled.
+>
+> Candidate name: {candidate_name}
+> Role they applied for: {job_title}
+> Reason role is on hold: {reason — e.g. headcount freeze, restructure, budget cut — internal only}
+> How far they progressed: {application only / phone screen / first interview}
+> Whether to invite them to reapply if the role reopens: {yes / no}
+> Company name: {company_name}
+>
+> Write a 140 to 170 word rejection email explaining the role is no longer moving forward. Do not disclose internal budget or restructure details. Be honest that the decision is about the role, not the candidate. If they progressed to interview, acknowledge the time they invested. If inviting reapplication, give a concrete action — e.g. "keep an eye on our careers page" or "email me directly." Do not leave them with vague hope.
+
+**When to use it:** When a hiring freeze hits mid-process and you have 8 candidates who interviewed last week expecting to hear back with next steps.
+
+**Pro tip:** "The role has been paused" is better than "the role has been cancelled" — it's more accurate in most freeze scenarios and reduces the chance of candidates assuming the company is in trouble and posting about it.
+
+---
+
+## Post-First Interview Rejection Emails
+
+> You are an HR Manager rejecting a candidate after a first-round interview.
 >
 > Candidate name: {candidate_name}
 > Role: {job_title}
-> Stage reached: {application_only / first_round_interview / final_stage}
-> Reason for hold (internal): {budget_freeze / restructure / headcount_review / role_redesigned}
-> Disclosure level: {do_not_mention_reason / can_acknowledge_role_is_on_hold}
-> Tone: {professional_and_apologetic}
+> Interview format: {phone screen / video / in-person}
+> Primary reason not progressing (internal, do not quote): {internal_reason}
+> Whether to give any feedback: {yes — brief / no}
+> Tone: {warm / professional / brief}
+> Company name: {company_name}
 >
-> Write a 130 to 160 word rejection email. If disclosure level is "do_not_mention_reason", use neutral language that closes the process without explaining why. If "can_acknowledge_role_is_on_hold", include one honest sentence about the business situation. Either way, leave the door open for the candidate to express interest in future openings. Do not make commitments about timelines.
+> Write a 150 to 180 word post-first-interview rejection email. Thank them for their time. Confirm they won't be progressing. If feedback is yes, give one specific, non-damaging observation — not a vague line like "we had stronger candidates." If feedback is no, close without apology. Do not say "we'll keep you in mind" unless that is literally true and actionable.
 
-**When to use it:** After a leadership freeze call on Friday afternoon leaves you with a live candidate pipeline you need to close down on Monday.
+**When to use it:** Friday afternoon after a week of first-round screens when you need to close out candidates before the shortlist goes to the hiring manager on Monday.
 
-**Pro tip:** Never write "the role may be re-opened in the future" — it invites candidates to follow up monthly. Write "we'll keep your details on file if relevant opportunities arise" instead. It's honest and sets no expectation.
+**Pro tip:** "One specific, non-damaging observation" means something like "we're prioritising candidates with direct experience in X" — not "your communication style wasn't quite right." The second type generates reply emails asking for more detail and sometimes complaints.
 
 ---
 
-> You are an HR Manager sending a rejection email to a candidate who applied speculatively — without a live vacancy — and whose profile does not match any current or near-term need.
+> You are an HR Manager writing a rejection email for a candidate who interviewed well but was not the strongest fit for the specific role — and you want to redirect them to a different open role at the same company.
 >
 > Candidate name: {candidate_name}
-> Area of expertise they highlighted: {candidate_expertise}
-> Current hiring priorities at the company: {hiring_priority_areas — e.g. "engineering and customer success"}
-> Any genuine future fit: {yes / no}
-> If yes, which area: {potential_fit_area}
-> Tone: {genuine_and_brief}
+> Role they interviewed for: {original_job_title}
+> Alternative role you're redirecting them to: {alternative_job_title}
+> Why the alternative role is a better fit: {fit_reason — 1 to 2 sentences}
+> Interview stage reached: {first / second / panel}
+> Company name: {company_name}
 >
-> Write a 100 to 130 word email. Do not brush them off with "we'll keep your CV on file" unless you mean it. If there is genuine future fit, say which area and invite them to apply when a role opens. If there is no fit, close the door clearly and kindly. One sentence maximum on what the company is currently focused on hiring.
+> Write a 170 to 200 word email that rejects them from the original role but actively redirects them to the alternative. Make the redirect feel genuine, not like a consolation prize. Explain in one specific sentence why the other role suits their background. Include a clear next step — e.g. "reply to this email if you'd like to be considered" or "apply via this link." Do not promise anything about the alternative role's timeline.
 
-**When to use it:** When your careers inbox has a stack of speculative CVs and you've been ignoring them for three weeks because there's no easy answer.
+**When to use it:** When a strong candidate isn't right for the role they applied to but you have another open req that actually fits them and you don't want to lose them entirely.
 
-**Pro tip:** If you genuinely plan to keep their CV, move it to a named talent pool folder the moment you send this. If you're not going to look at it again, don't say you will. False hope creates angry candidates who remember your brand.
+**Pro tip:** This only works if you've genuinely reviewed their CV against the alternative role. Candidates who get redirected to obviously irrelevant roles see through it instantly and your employer brand takes the hit.
 
 ---
 
-## Post-First-Round Interview Rejections
-
-> You are an HR Manager writing a rejection email after a candidate's first-round interview did not lead to a second round.
->
-> Candidate name: {candidate_name}
-> Role: {job_title}
-> Interview format: {phone_screen / video_call / in_person}
-> Interviewer name (for reference): {interviewer_name}
-> Primary reason not progressing (internal): {primary_reason — e.g. "communication style not a match for the team", "technical knowledge below panel threshold", "salary expectation misalignment"}
-> Shareable feedback approved: {yes / no}
-> If yes, one sentence of honest feedback: {feedback_line}
-> Tone: {warm_and_professional}
->
-> Write a 150 to 200 word rejection email. Thank the candidate for their time and name the interviewer. If feedback is approved, include it as one specific, constructive sentence. If not approved, close the door respectfully without vague phrases like "we found stronger candidates." End with a genuine wish for their search.
-
-**When to use it:** Wednesday afternoon after the hiring manager has given you their decision from Tuesday's interviews and you've confirmed what feedback, if any, can be shared.
-
-**Pro tip:** "We found stronger candidates" is the rejection phrase candidates hate most — it's true but tells them nothing. Even when you can't share detail, "we're looking for a specific blend of X and Y that emerged more strongly in another application" is 80% more useful and just as safe legally.
-
----
-
-> You are an HR Manager sending a rejection email after a phone screen where the candidate's salary expectations were significantly above the approved budget.
+> You are an HR Manager rejecting a candidate who reached the first interview stage but whose salary expectations were significantly above the budgeted range for the role.
 >
 > Candidate name: {candidate_name}
 > Role: {job_title}
-> Candidate's stated salary expectation: {candidate_salary_expectation}
-> Approved budget range: {approved_budget_range}
-> Gap: {gap_amount — e.g. "roughly £15k above our current band"}
-> Whether the band may flex in future: {yes / no / unknown}
-> Tone: {honest_and_direct}
+> Salary range for role: {salary_range — e.g. £45,000 to £52,000}
+> Candidate's stated expectation: {candidate_expectation — e.g. £65,000}
+> Whether salary range was advertised in the job posting: {yes / no}
+> Company name: {company_name}
 >
-> Write a 130 to 160 word rejection email. Be honest that the salary expectation is the reason — do not hide it behind vague language. State the approved range only if company policy allows. If the band may flex in future, say so and invite them to reconnect in a specific timeframe. If it won't flex, close clearly. No apologetic padding.
+> Write a 140 to 160 word rejection email that is honest about the salary mismatch being a factor. Do not imply the candidate's expectations are unreasonable. Acknowledge the gap is a business constraint, not a commentary on their worth. If the range was advertised, note that — it avoids confusion. Close with a neutral line. Do not suggest they reconsider their salary.
 
-**When to use it:** After a screen where you both knew within five minutes the numbers weren't going to work, and you want to respect their time with a straight answer.
+**When to use it:** When you know the candidate is qualified but the salary expectation came out in the screen and there's no budget flex — and you'd rather tell them honestly than string them along.
 
-**Pro tip:** Sharing the band in the email only makes sense if it's already public or if you'd share it in a second conversation. If your company doesn't publish bands, write "our current approved range for this role" without the number — it still reads as honest.
+**Pro tip:** "We wish you the best" after a salary rejection email reads as dismissive. A neutral close like "We hope you find a role that meets both your experience and your compensation goals" lands with more respect.
 
 ---
 
-> You are an HR Manager writing a rejection email after a first-round video interview for a junior role, where the candidate showed genuine potential but lacked the experience level the team needs right now.
+> You are an HR Manager sending a post-first-interview rejection to a candidate who was visibly enthusiastic about the role and has followed up twice since the interview.
 >
 > Candidate name: {candidate_name}
 > Role: {job_title}
-> Years of experience candidate has: {candidate_experience_years}
-> Years of experience the role requires: {required_experience_years}
-> Specific strength the candidate demonstrated: {specific_strength — e.g. "strong analytical instinct", "clear enthusiasm for the product"}
-> Entry-level pipeline or graduate scheme available: {yes / no}
-> Tone: {encouraging_and_honest}
+> Days since interview: {days_since_interview}
+> Number of follow-up messages received: {follow_up_count}
+> Decision outcome: rejected
+> Tone: {warm and honest / professional and brief}
+> Company name: {company_name}
 >
-> Write a 160 to 200 word rejection email. Name the specific strength genuinely — not as a consolation prize. Be clear about the experience gap without making it sound like a permanent verdict. If an entry-level pipeline exists, name it specifically and say how to apply. Close with energy, not pity.
+> Write a 130 to 160 word rejection email. Acknowledge their follow-ups without making it awkward. Be clear this is a final decision. Do not over-explain. Close with a genuine note — not hollow encouragement. The email must be human without being personal.
 
-**When to use it:** When a recent graduate nailed the interview in attitude but the hiring manager needs someone who can hit the ground running without six months of ramp.
+**When to use it:** When a candidate has been chasing for a week and you've been putting it off because you feel bad — send this and clear it.
 
-**Pro tip:** Don't write "we'd love to see you apply again in a few years" unless you have a genuine re-engagement process. It reads as hollow. If you have a talent community or graduate scheme, link it. If you don't, say "we hope your search leads somewhere that matches where you are right now" and leave it there.
+**Pro tip:** Do not reference all their follow-ups individually. One acknowledgment ("I appreciate you following up") is enough. Cataloguing their messages reads as passive-aggressive.
 
 ---
 
-> You are an HR Manager writing a rejection email after a first-round interview where the candidate was strong but a more experienced internal candidate is being moved into the role.
+> You are an HR Manager sending a rejection email after a first interview where the candidate was strong overall but one non-negotiable requirement was not met.
 >
 > Candidate name: {candidate_name}
 > Role: {job_title}
-> Stage reached: {first_round / second_round}
-> Reason (internal): {internal_promotion}
-> Whether to disclose internal promotion: {yes / no}
-> How competitive the candidate was: {top_three / shortlisted / just_below_shortlist}
-> Tone: {respectful_and_candid}
+> Non-negotiable requirement they don't meet: {requirement — e.g. right to work in the country, required certification, security clearance level}
+> Whether this was stated in the job ad: {yes / no}
+> Whether they could meet it in future: {yes — timeframe: {timeframe} / no / unclear}
+> Company name: {company_name}
 >
-> Write a 150 to 180 word rejection email. If disclosing internal promotion, include one brief honest sentence — candidates respect the transparency and it prevents "did I fail?" spirals. If not disclosing, use language that acknowledges how competitive the process was without fabricating a reason. Do not suggest the candidate did anything wrong. Close with a genuine offer to keep their details for upcoming roles if the pipeline warrants it.
+> Write a 140 to 170 word rejection email. Be explicit that the missing requirement is the deciding factor. If it was listed in the job ad, say so without blame. If it's something they could meet in future (e.g. obtain a certification), give one concrete line about reapplying later. Do not soften the "no" to the point where they think there's still a chance.
 
-**When to use it:** When your company promoted from within after the process started and you owe external candidates an honest close.
+**When to use it:** When a candidate didn't have the right to work, a mandatory qualification, or a clearance level you can't sponsor or work around, and you need to close the conversation cleanly.
 
-**Pro tip:** Disclosing an internal promotion often increases candidate goodwill, not resentment — most people understand it. The risk is only if the internal move itself was handled poorly. Check with your legal or comms team if the promotion is sensitive before disclosing.
+**Pro tip:** If the requirement wasn't clearly stated in the job ad and the candidate progressed to interview before you discovered the gap, acknowledge that briefly — "this should have been clearer in our job description." It reduces complaints.
 
 ---
 
-> You are an HR Manager writing a same-day rejection email after a first-round interview where the candidate was clearly not suitable and the hiring manager wants to move quickly.
+## Post-Final Interview Rejection Emails
+
+> You are an HR Manager sending a rejection email to a finalist candidate — someone who reached the final round but was the second choice.
 >
 > Candidate name: {candidate_name}
 > Role: {job_title}
-> Interview date: {interview_date}
-> Hours since interview: {hours_since_interview — e.g. "four hours", "same morning"}
-> Hiring manager's decision: {definite_no}
-> Approved feedback to share: {none / one_line — e.g. "the technical depth we need wasn't demonstrated at this stage"}
-> Tone: {professional_and_brief}
+> Number of final round candidates: {finalist_count}
+> Whether to offer feedback: {yes / no}
+> Specific honest feedback if yes: {feedback — 1 to 2 sentences, constructive}
+> Tone: {warm and direct / highly professional}
+> Company name: {company_name}
 >
-> Write a 100 to 130 word rejection email that can go out today. Fast doesn't mean cold — acknowledge they gave their time. Keep it short, keep it respectful, don't manufacture warmth that isn't there. If feedback is available, include it in one sentence. Close cleanly.
+> Write a 200 to 240 word rejection email for a finalist. Acknowledge explicitly that they reached the final stage. Make it clear this was a close decision without being vague or using "we went with a stronger candidate." If feedback is yes, give it in one specific sentence. Close with a genuine statement about keeping in touch — only if true — or a clean close if not. Do not leave them with false hope.
 
-**When to use it:** When the hiring manager messages you before they've even left the building saying "that's a no" and you want to close it before the candidate spends the weekend hoping.
+**When to use it:** When a candidate made it to the final two and you need to deliver a rejection that reflects how close they were without being so vague they email back asking what happened.
 
-**Pro tip:** Same-day rejections are almost always kinder than making someone wait four days. The only exception is if the "no" is so fast it looks automated — in that case, wait until the next morning to send so the timestamp shows a human reviewed it overnight.
+**Pro tip:** Finalist candidates often apply again, refer others, or become clients. This email is worth 10 extra minutes. The phrase "it was a genuinely difficult decision" is overused — be specific instead: "between the two finalists, the deciding factor was X."
 
 ---
 
-## Post-Final-Stage and Offer-Declined Rejections
-
-> You are an HR Manager writing a final-stage rejection email to a candidate who reached the last round of interviews but did not receive an offer.
+> You are an HR Manager rejecting a final-round candidate for a technical role where the hiring decision came down to a specific technical skills gap identified during the assessment.
 >
 > Candidate name: {candidate_name}
 > Role: {job_title}
-> Number of interview stages completed: {stages_completed}
-> How long the process took: {process_duration — e.g. "six weeks"}
-> Reason not selected (internal): {internal_reason — e.g. "panel split, other candidate had more directly relevant sector experience"}
-> Shareable feedback: {yes / no}
-> If yes, feedback: {feedback_one_to_two_sentences}
-> Tone: {warm_genuinely_appreciative_and_honest}
+> Technical skill gap identified: {skill_gap — e.g. limited experience with distributed systems at scale, no hands-on ML model deployment}
+> Whether they were otherwise strong: {yes / no}
+> Whether you'd encourage them to reapply in future: {yes / no}
+> Company name: {company_name}
 >
-> Write a 200 to 250 word rejection email. Acknowledge the significant time investment explicitly — this person gave weeks of their life to this process. If feedback is available, give it directly and specifically, not softened into meaninglessness. Do not use "we'll keep you in mind" as a filler close — only include it if it's true and you have a concrete follow-up mechanism. This email should feel like it was written by a person, not processed.
+> Write a 190 to 220 word rejection email. Name the technical gap specifically — do not use vague language like "technical fit." Frame it as a requirement of this specific role, not a general weakness. If encouraging reapplication, suggest a concrete development path in one sentence. Close cleanly. Do not say "we were impressed" unless you're prepared to back it up.
 
-**When to use it:** After a final panel decision where the candidate was genuinely strong and you know this email will land hard.
+**When to use it:** When a candidate who passed every soft skills bar and culture conversation was rejected purely on a technical gap and deserves a specific answer about why.
 
-**Pro tip:** Final-stage rejections are the most likely emails to be shared publicly — on LinkedIn, Glassdoor, Reddit. Write this one as if it will be read by 1,000 people. Candidates who lose at the final stage often have large networks and long memories. A good email here generates referrals and positive reviews. A bad one doesn't.
-
----
-
-> You are an HR Manager writing a rejection email to a candidate who received a verbal offer but withdrew before signing, and the role has since been offered to someone else. You need to formally close their file.
->
-> Candidate name: {candidate_name}
-> Role: {job_title}
-> Reason they withdrew: {candidate_stated_reason — e.g. "accepted a competing offer", "personal circumstances", "role scope changed"}
-> Whether you'd re-engage them for future roles: {yes / no}
-> Tone: {professional_and
+**Pro tip:**
